@@ -1,0 +1,13 @@
+model,effort,run,exit,status,turns,seconds,cost_usd,output_tokens
+claude-haiku-5-5,low,1,0,success,10,26.344,0.01018209,4690
+claude-haiku-5-5,low,2,0,success,9,24.333,0.00932822,4407
+claude-haiku-5-5,high,1,0,success,26,167.322,0.04357797,31409
+claude-haiku-5-5,high,2,0,success,18,96.392,0.03299558,18895
+claude-sonnet-5-5,low,1,0,success,6,34.032,0.10602539999999999,2724
+claude-sonnet-5-5,low,2,0,success,5,28.256,0.11848330000000001,2433
+claude-sonnet-5-5,high,1,0,success,12,55.749,0.3086203,5965
+claude-sonnet-5-5,high,2,0,success,15,68.833,0.33708020000000005,6445
+claude-opus-5-5,low,1,0,success,6,44.464,0.257218,3438
+claude-opus-5-5,low,2,0,success,8,39.22,0.2517662,3343
+claude-opus-5-5,high,1,0,success,18,164.909,1.6116855999999997,11499
+claude-opus-5-5,high,2,0,success,16,189.783,2.0967946000000004,18084
