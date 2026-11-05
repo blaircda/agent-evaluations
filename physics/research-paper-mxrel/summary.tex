@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{booktabs,array,tabularx}
+\usepackage[T1]{fontenc}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\title{Summary of agent reports on the M$p$T / holography paper}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\noindent There are 12 reports: three models (Haiku, Sonnet, Opus 5.5), two effort levels (low, high), and two runs each.
+
+\section*{Counts}
+
+\paragraph{Principal achievement.} All 12 reports give the same answer: the near-horizon (Maldacena/IMSY) limit in the bulk is the \emph{same} BPS/M$p$T decoupling limit that defines matrix theory at asymptotic infinity. This unifies matrix theory, AdS/CFT, non-Lorentzian holography and $T\bar T$. Reports differ mainly in how much weight they give the $p$-brane $T\bar T$ flow equations. Six reports call them the most concrete or checkable result (Opus high~1, Opus high~2, Sonnet high~1, Sonnet high~2, Sonnet low~2, Haiku high~2). Three reports checked the flow equation numerically: Haiku high~1 ($p=1$), Opus high~1 ($p=2$--$5$) and Opus high~2 ($p=0$--$5$).
+
+\paragraph{Principal drawback.} The reports nearly agree here. All 12 note that the non-Lorentzian bulk geometries are not shown to solve the M$p$T supergravity equations of motion and torsional constraints. They differ in which point they lead with:
+\begin{center}
+\begin{tabular}{p{0.75\textwidth}c}
+\toprule
+Headline drawback & Count\\
+\midrule
+Claims are kinematic: the DLCQ$^n$/DLCQ$^m$ conjecture is bookkeeping, and no observable is matched & 8\\
+New bulk geometries are unverified (no EOM check, ad hoc $\ell$/$N$ rescaling) & 3\\
+The ``intrinsic'' $T\bar T$ generation of the bulk is not established ($\Omega(r)$ is put in by hand, $\lambda$ is position-dependent) & 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Next direction.} The reports disagree most here.
+\begin{center}
+\begin{tabular}{p{0.75\textwidth}c}
+\toprule
+Proposed follow-up & Count\\
+\midrule
+Formulate M$p$T supergravity and verify the backgrounds (plus isometries) & 6\\
+Quantitative test of one DLCQ$^1$/DLCQ$^2$ pair (symmetries, protected spectrum) & 3\\
+Isometry algebra of a single bulk geometry vs.\ boundary symmetries & 1\\
+Position-dependent $T\bar T$ deformation at $p=1$ (F1/NS5) & 1\\
+Non-abelian (and supersymmetric) $p$-brane $T\bar T$ flow & 1\\
+\bottomrule
+\end{tabular}
+\end{center}
+The non-abelian flow is the usual runner-up: about eight reports describe it as higher impact but lower feasibility.
+
+\section*{Breakdown by model}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Next direction & Haiku & Sonnet & Opus\\
+\midrule
+M$p$T supergravity / verify backgrounds & 2 & 4 & 0\\
+Test a specific DLCQ$^1$/DLCQ$^2$ pair & 0 & 0 & 3\\
+Isometry algebra only & 1 & 0 & 0\\
+Position-dependent $T\bar T$ at $p=1$ & 1 & 0 & 0\\
+Non-abelian $T\bar T$ flow & 0 & 0 & 1\\
+\midrule
+Drawback: kinematic / non-predictive & 1 & 3 & 4\\
+Drawback: unverified geometries & 2 & 1 & 0\\
+Drawback: $T\bar T$ generation not intrinsic & 1 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Sonnet gives the most uniform answers: all four reports propose building M$p$T supergravity. Opus is the only model that proposes testing a concrete pair with matched observables. Two of its reports choose the D4/M0T example, and Opus high~2 shows that it lifts exactly to null-compactified AdS$_7\times S^4$. Haiku's answers vary the most.
+
+\section*{Per-report table}
+
+\small
+\begin{tabularx}{\textwidth}{l l L L}
+\toprule
+Model & Run & Drawback (headline) & Next direction\\
+\midrule
+Haiku & low 1 & DLCQ conjecture untested beyond known cases & Check M2/D2 rescaled geometries against M$p$T sugra EOM\\
+Haiku & low 2 & Geometries not checked against EOM & M$p$T sugra consistency check ($p=2,3$, bosonic)\\
+Haiku & high 1 & Geometries unverified; ad hoc $\ell$ rescaling & Isometry algebra of a bulk geometry vs.\ boundary symmetries\\
+Haiku & high 2 & Intrinsic $T\bar T$ bulk generation not established & Position-dependent $T\bar T$ at $p=1$ for F1/NS5\\
+\midrule
+Sonnet & low 1 & Geometries not checked against EOM; no observables & Build M0T/M2T sugra, verify, isometries, finite $T$\\
+Sonnet & low 2 & Structural, not dynamical; conjecture non-predictive & Build M0T/M2T sugra, verify, isometries, SUSY\\
+Sonnet & high 1 & Largely kinematic; DLCQ conjecture is bookkeeping & M$p$T sugra EOM, test ansatz, isometries, finite $T$\\
+Sonnet & high 2 & Kinematic and classificatory; unverified & M$p$T sugra EOM, classify $\Omega(r)$ ansatz, isometries\\
+\midrule
+Opus & low 1 & Rests on kinematics; no observable matched & Test M2/ABJM DLCQ$^1$/DLCQ$^2$ pair (index, algebra)\\
+Opus & low 2 & Reorganisation of known dualities, non-predictive & Non-abelian/SUSY $T\bar T$ flow vs.\ non-abelian DBI\\
+Opus & high 1 & Kinematic; no observable on any new pair & D4/M0T pair in M0T sugra; symmetries, BPS spectrum\\
+Opus & high 2 & Counting limits; no prediction that can fail & D4/M0T via AdS$_7\times S^4$ null uplift; spectrum test\\
+\bottomrule
+\end{tabularx}
+
+\end{document}

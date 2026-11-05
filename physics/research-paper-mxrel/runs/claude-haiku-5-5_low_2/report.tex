@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{hyperref}
+
+\title{Referee-Style Report: \emph{Matrix Theory Reloaded: A BPS Road to Holography}}
+\author{Blair, Lahnsteiner, Obers, Yan (arXiv preprint IFT-UAM/CSIC-24-139, NORDITA 2024-033)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1. Principal achievement}
+
+The paper gives a unified target-space picture of the BPS decoupling limits that lead to matrix theories on D$p$-branes (M$p$T), and uses it to build holography. Three points stand out:
+
+\begin{itemize}
+  \item \textbf{Geometry.} The BPS limit (fine-tuning the RR potential so that brane tension equals charge) produces a flat or curved non-Lorentzian target space with a codimension-$(p+1)$ foliation and a $p$-brane boost symmetry. The paper derives this from a Lorentzian metric by rescaling with $\omega \to \infty$, then generalises it to curved backgrounds using vielbeins.
+  \item \textbf{Holography.} Applying one such limit to the asymptotic region of a curved D$p$-brane geometry reproduces the near-horizon limit in the bulk. Applying two limits in succession yields new holographic examples, some with non-Lorentzian bulk. This leads to the conjecture that holography is a DLCQ$^n$/DLCQ$^m$ correspondence with $m>n$, with AdS$_5$/CFT$_4$ as the case DLCQ$^0$/DLCQ$^1$.
+  \item \textbf{$T\bar T$ link.} Undoing the BPS limit appears as a $p$-brane generalisation of the $T\bar T$ deformation. In the Polyakov formulation this becomes a marginal $\lambda\bar\lambda$ current--current deformation. The paper derives flow equations for the D$p$-brane DBI action, with the 3d flow for the D2/M2 case given as a clean example. This is a new and concrete way to view the emergence of the bulk geometry without a limiting procedure.
+\end{itemize}
+
+The synthesis is valuable. It connects matrix theory, non-relativistic string theory, non-Lorentzian holography and $T\bar T$ within one framework.
+
+\section*{2. Principal drawback}
+
+The central holographic claims are not tested against equations of motion. The new non-Lorentzian bulk backgrounds (Section~5) are obtained by hand-rescaling the harmonic-function length scale $\ell$ with $\omega$, which the paper interprets as a large-$N$ rescaling. The authors state explicitly that they do not verify these geometries solve the equations of motion and torsional constraints of M$p$T supergravity, and that their supersymmetry and charges are not established. The DLCQ$^n$/DLCQ$^m$ correspondence is a conjecture supported by examples, not a derivation. Several of the flow equations are obtained for abelian, bosonic D-brane actions, and the paper restricts its matrix-theory discussion to $p\le 3$ because of strong-coupling issues. The result is a strong framework whose key new predictions still lack independent checks.
+
+\section*{3. Most worthwhile follow-up (feasibility versus impact)}
+
+\textbf{Proposal:} check whether the rescaled near-horizon M$p$T backgrounds solve the M$p$T limit of type II supergravity, at least to leading order in $1/\omega$ and in a truncated bosonic sector (metric, dilaton, RR $(p+2)$-form, torsion constraints).
+
+\begin{itemize}
+  \item \textbf{Why this one.} It targets the paper's most explicit open item. A positive result would make the non-Lorentzian bulk geometries credible, and a negative result would show which rescalings are inconsistent. Either outcome is informative for the DLCQ conjecture.
+  \item \textbf{Feasibility.} High. The method is a symbolic computation. It requires the M$p$T supergravity equations, which the cited non-relativistic supergravity papers provide, and a computer algebra system (for example Cadabra, or SymPy or Mathematica for smaller cases). The starting point is the $p=2$ or $p=3$ example, where the computation stays tractable.
+  \item \textbf{Impact.} Moderately high. It bears directly on the holography claims and on which non-Lorentzian holographic duals are physically allowed. It also tests the link between the rescaling and large-$N$ physics that the paper leaves open.
+\end{itemize}
+
+A more ambitious alternative is to derive the non-abelian extension of the $p$-brane $T\bar T$ flow. This would have higher impact but lower feasibility, since no clear route to the non-abelian DBI action is known. I would pursue the supergravity consistency check first, since it can give a definite answer within a few months.
+
+\end{document}

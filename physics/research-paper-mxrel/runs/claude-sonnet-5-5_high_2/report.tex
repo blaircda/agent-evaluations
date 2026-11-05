@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\newcommand{\TT}{T\bar T}
+
+\title{Referee-style Report on\\ ``Matrix Theory Reloaded: A BPS Road to Holography''\\
+{\large (Blair, Lahnsteiner, Obers, Yan)}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\paragraph{Summary of the paper.}
+The paper revisits the decoupling limits that define matrix theory on D$p$-branes (``matrix $p$-brane theory'', M$p$T), emphasising that they are BPS limits in which the ten-dimensional target space becomes non-Lorentzian (a $p$-brane Newton--Cartan-type geometry with a codimension-$(p+1)$ foliation). Three questions are posed and answered: (1) how to classify such limits (via duality orbits of M-theory in the DLCQ); (2) how this non-Lorentzian geometry at asymptotic infinity relates to the Lorentzian AdS-type bulk; (3) how the bulk can be generated intrinsically, which leads to a $p$-brane generalisation of the $\TT$ deformation and to new flow equations for DBI actions.
+
+%--------------------------------------------------------------------
+\section*{1. Principal achievement}
+
+The main achievement is the \emph{geometric identification of the near-horizon limit with the asymptotic BPS decoupling limit}. Writing the D$p$-brane near-horizon geometry as
+$ds^2=\mathbb{\Omega}(r)\,dx^A dx_A+\mathbb{\Omega}(r)^{-1}dx^{A'}dx^{A'}$ with $\mathbb{\Omega}=(r/\ell)^{(7-p)/2}$, the authors observe that this is the M$p$T limit parameter $\omega$ promoted to a radially dependent function, which is allowed by an emergent dilatation symmetry. Large $r$ then reproduces the flat non-Lorentzian M$p$T geometry seen by the SYM at infinity. This single observation does a lot of work:
+\begin{itemize}[nosep]
+\item it clarifies, in an elegant and checkable way, how the Maldacena/IMSY near-horizon limits and the BFSS/matrix-theory limit are the same limit seen on the two sides of the duality, and it answers why a non-Lorentzian space couples to $\mathcal N=4$ SYM while the bulk is Lorentzian;
+\item it reproduces known cases (AdS$_5\times S^5$, IMSY geometries, and AdS$_3\times S^3\times M_4$ from a double D1--D5 limit) and gives a uniform recipe for generating new, non-Lorentzian near-horizon geometries by applying a second limit to off-aligned D$p$/D$q$ systems;
+\item reading the limit backwards gives a precise sense in which the bulk is a $\TT$-like deformation of the asymptotic geometry, and yields explicit, new, classical $p$-brane flow equations, e.g.\ the general-$p$ equation deforming free scalars to the Dirac--Nambu--Goto action for any $p$, the three-dimensional flow equation for $p=2$, and the $p=1$ equation including the gauge field that explains why plain $\TT$ does not give the D1 DBI action. These are concrete results that stand independently of the holographic interpretation.
+\end{itemize}
+The paper also gives a useful, if largely organisational, synthesis of non-relativistic string theory, matrix string theory, M$p$T and DLCQ.
+
+%--------------------------------------------------------------------
+\section*{2. Principal drawback}
+
+The principal drawback is that the \emph{holographic claims are kinematic and classificatory rather than dynamical, and remain unverified}. In particular:
+\begin{itemize}[nosep]
+\item The headline proposal, ``holography $=$ DLCQ$^n$/DLCQ$^m$ correspondence'' with $m>n$, is a conjecture supported by bookkeeping (counting how many harmonic-function ``1''s are dropped) in a handful of examples (single-stack D$p$, M2/M5, D1--D5). It makes no independent prediction, no observable is matched on both sides, and it is not clear what would falsify it. It is also not clear that it adds content beyond ``near-horizon limit $=$ BPS limit at infinity''.
+\item The new non-Lorentzian bulk geometries are obtained by inserting by hand an extra $\omega$-dependent rescaling of the harmonic-function scale (effectively a rescaling of $N$). The authors acknowledge in the Outlook that they have \emph{not} verified that these geometries solve the equations of motion and torsional constraints of M$p$T supergravity, that their isometries, supersymmetries and charges are not computed, and that the physical interpretation of the rescaling of $N$ is unclear. Hence the claimed ``non-Lorentzian holography'' is not yet established as a duality; it is a family of candidate backgrounds.
+\item The ``$\TT$ deformation generates the bulk'' statement relies on formal duality arguments and on promoting a constant coupling to a field-dependent one using a dilatation symmetry. It is not a deformation of the dual field theory in the usual double-trace sense (the authors note this differs from earlier holographic uses of $\TT$), and the flow equations are classical, bosonic and abelian. For $p=3$ they are given only to linear order in $\lambda$, and for $p>3$ only at zeroth order, so the $\mathcal N=4$ case that motivates the paper is not fully covered. For $p>3$ (and generally at asymptotic infinity for $p>3$) the description also becomes strongly coupled, so large parts of the discussion are restricted to $p\le 3$.
+\end{itemize}
+A secondary issue is presentation: the manuscript is very long and mixes review, new results and conjecture, so it is hard to separate what is derived from what is proposed.
+
+%--------------------------------------------------------------------
+\section*{3. Most promising follow-up research idea}
+
+\paragraph{Proposal.}
+\emph{Derive the M$p$T supergravity equations of motion (by taking the $\omega\to\infty$ limit of the type II equations with the critical RR potential, equivalently via worldsheet beta functions) and use them to test and classify the $\mathbb{\Omega}(r)$ ansatz for non-Lorentzian near-horizon geometries; then compute the isometry algebras of the solutions and match them to the symmetries of the corresponding non-relativistic or foliated field theories.}
+
+\paragraph{Why this one.}
+\begin{itemize}[nosep]
+\item \emph{Feasibility.} It directly addresses the gap the authors themselves flag. The paper already supplies the ansatz (the $\TT$-deformed M$p$T geometry written in terms of $\mathbb{\Omega}$ and $\tilde{\mathbb{\Omega}}$ in Sec.~5), and the equations of motion follow from a controlled scaling limit of known supergravity, so the first step is a finite, algebraic calculation with a clear success criterion (the ansatz either solves the equations or it does not). Related M2 results in non-relativistic M-theory exist for cross-checks. No new conceptual input is required.
+\item \emph{Impact.} If the candidates solve the equations, the non-Lorentzian holography programme gets a firm footing; if they do not, the failure shows exactly which constraints (e.g.\ the torsional ones) fix $\mathbb{\Omega}(r)$, turning the ansatz into a genuine classification tool for intersecting-brane duals. Computing isometries (and, as the authors suggest, finite temperature) then provides the first non-trivial, falsifiable test of the DLCQ$^n$/DLCQ$^{n+1}$ picture, because the bulk isometries must match the symmetry of the dual non-relativistic theory.
+\item \emph{Compared with the alternatives.} Extending the flow equations to the non-abelian or supersymmetric case, for instance whether the $p=2$ equation applies to BLG/ABJM and flows to a non-abelian M2 DBI-type action, is attractive, but it is harder (no agreed non-abelian DBI action and subtle ordering ambiguities) and its payoff is more model-specific. It is a good second project once the supergravity side is under control.
+\end{itemize}
+
+\end{document}

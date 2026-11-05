@@ -1,0 +1,32 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{Referee-style comments on\\ ``Matrix Theory Reloaded: A BPS Road to Holography''}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{1. Principal achievement}
+The paper turns a well-known collection of facts into one organising principle. The decoupling limit that gives BFSS matrix theory, and its matrix $p$-brane (M$p$T) cousins, is recast as a \emph{BPS decoupling limit}. In this limit a critical RR field cancels the brane tension, the target space becomes non-Lorentzian (foliated), and gravitational forces between wrapped branes act instantaneously. The central observation is that the \emph{same} limit, applied to a backreacted D$q$-brane geometry, reproduces exactly the Maldacena near-horizon limit (it ``drops the 1'' in the harmonic function). The authors work this out explicitly: one limit gives standard AdS/CFT; two successive limits systematically generate new holographic pairs with non-Lorentzian bulks; and multicritical limits such as D1--D5 handle intersecting branes. Lifted to M-theory, each BPS limit is a DLCQ. This gives a single conjecture, the DLCQ$^n$/DLCQ$^m$ ($m>n$) correspondence, with AdS$_5$/CFT$_4$ as the case DLCQ$^0$/DLCQ$^1$. A second payoff is conceptual. Undoing the limit order by order in $\omega^{-2}$ is a $T\bar T$-type deformation, so the bulk near-horizon geometry can be read as an intrinsic deformation of the flat non-Lorentzian geometry at asymptotic infinity. The same reasoning yields new $T\bar T$-like flow equations for the D$p$-brane DBI action and for the M2-brane. The three-dimensional M2 flow is particularly simple. The unification is clean, constructive and covers many cases.
+
+\section*{2. Principal drawback}
+The headline claim, the DLCQ$^n$/DLCQ$^m$ conjecture, rests on kinematics. It is supported by matching scaling limits of classical supergravity solutions and actions, not by any dynamical or quantum check. In particular:
+\begin{itemize}
+\item The new non-Lorentzian bulk geometries are not shown to solve the equations of motion and torsional constraints of the relevant M$p$T supergravity. That theory is not formulated; the authors say so themselves. Their (super)symmetries, charges and isometry groups are also not computed.
+\item The second limit needed for non-Lorentzian bulks uses a by-hand rescaling of $\ell$, which amounts to a rescaling of $N$. Its physical meaning, including what sources it, is left open. The alternative of smeared solutions adds an ambiguity about which geometries are actually relevant for holography.
+\item No observable is matched across a proposed new duality: no spectrum, no protected correlator, no index, no thermodynamics. The well-known subtleties of the DLCQ of quantum field theory, and of strong coupling or non-geometric regions at asymptotic infinity for $p\ge 3$, are noted but not resolved.
+\item The $T\bar T$ flows are derived only for bosonic, abelian actions. So the claim that ``matrix theory deforms to DBI'' is not demonstrated for the non-abelian theories that actually appear in holography.
+\end{itemize}
+As a result, the framework reorganises known dualities convincingly, but it does not yet show that any genuinely \emph{new} correspondence is dynamically true. The paper is also very long, and the conjecture is spread across many sections, which makes it hard to tell what is derived from what is proposed.
+
+\section*{3. Most worthwhile follow-up (feasibility vs.\ impact)}
+\textbf{Recommendation:} carry out a first quantitative test of one genuinely non-Lorentzian instance of the conjecture, DLCQ$^1$/DLCQ$^2$, built from M2-branes in non-relativistic M-theory, i.e.\ the M2 near-horizon limit combined with an additional M0T/DLCQ limit. The steps are:
+\begin{enumerate}
+\item Confirm that the doubly-limited M2 geometry solves the known equations of non-relativistic (M0T-type) 11d supergravity. Partial results exist (Lambert et al.; Bergshoeff et al.), so this is tractable. Compute its isometry superalgebra, expected to be a contraction of $\mathfrak{osp}(8|4)$.
+\item On the field-theory side, identify the dual. It should be the corresponding limit of ABJM: a Bargmann/Schr\"odinger-invariant, BPS-truncated ``matrix ABJM'' theory, in which dynamics localise on moduli spaces of solitons.
+\item Match a protected quantity: the symmetry superalgebra, the spectrum of BPS operators against Kaluza--Klein modes on the limiting background, or a limit of the superconformal index, which can be taken directly from the known ABJM index.
+\end{enumerate}
+\emph{Feasibility.} Every ingredient (the supergravity limit, the ABJM index, the algebra contractions) exists already. The work is an explicit and well-posed computation for a small group.
+\emph{Impact.} A match would turn the DLCQ$^n$/DLCQ$^m$ proposal from a classification scheme into a tested statement about a new class of holographic dualities, and would give a solvable laboratory for non-Lorentzian holography. A mismatch would be equally informative, since it would locate exactly where the kinematic argument fails. As a natural second step, apply the paper's 3d M2 $T\bar T$-like flow to the non-abelian (BLG/ABJM) theory, to test whether it undoes the limit beyond the abelian level.
+
+\end{document}

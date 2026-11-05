@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\title{Report on \emph{Matrix Theory Reloaded: A BPS Road to Holography}\\[2pt]
+\large (Blair, Lahnsteiner, Obers, Yan; file \texttt{paper.tex})}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent The paper revisits the BPS decoupling limits that give matrix theory on D$p$-branes (M$p$T), and asks how they relate to holography. Three questions are posed in the introduction; the three sections below answer the three items requested in \texttt{AGENTS.md}.
+
+\section{Principal achievement}
+
+The central result is a geometric identification. Matrix theory arises from a BPS decoupling limit of the D$p$-brane worldvolume theory, which in the flat background is the limit $\omega\to\infty$ of the metric $\omega\,\mathrm{d}x^A\mathrm{d}x^B\eta_{AB}+\omega^{-1}\mathrm{d}x^{A'}\mathrm{d}x^{A'}$. This produces a non-Lorentzian target space with a codimension-$(p+1)$ foliation. For the near-horizon AdS$_5\times S^5$ geometry, the bulk metric
+\[
+\Bigl(\tfrac{r}{\ell}\Bigr)^2\mathrm{d}x^A\mathrm{d}x^B\eta_{AB}+\Bigl(\tfrac{\ell}{r}\Bigr)^2\bigl(\mathrm{d}r^2+r^2\mathrm{d}\Omega_5^2\bigr)
+\]
+has exactly the M3T form with $\omega=(r/\ell)^2$. The near-horizon limit in the bulk and the asymptotic matrix-theory limit on the boundary are therefore the same BPS limit, which answers Question 2 precisely.
+
+The paper then draws two consequences from this:
+\begin{itemize}
+\item The bulk geometry is an intrinsic deformation of the asymptotic non-Lorentzian geometry. Undoing the BPS limit gives a $p$-brane generalisation of $T\bar T$ (Question 3).
+\item This deformation gives flow equations, of the form $\partial\mathcal L/\partial\lambda$ equal to a function of $T_{\alpha\beta}$, that take free scalars to the Dirac--Born--Infeld action. The case $p=1$ reproduces the standard $T\bar T$ flow, and $p=2$ gives an explicit new three-dimensional flow (the paper's membrane $T\bar T$ equation in the introduction).
+\end{itemize}
+
+The DLCQ$^n$/DLCQ$^m$ picture then organises the whole duality web of limits in a single framework. Taken together, this is a coherent and unusually broad framework that ties matrix theory, AdS/CFT, non-Lorentzian geometry and $T\bar T$ together.
+
+\paragraph{Check on the $p=1$ flow.} The paper states that its general $p$-brane flow equation reduces, at $p=1$ with $F=0$, to the standard $T\bar T$ flow. I checked this numerically on the explicit free-boson (Nambu--Goto) solution, using a covariant density $\sqrt{-\gamma}$ and finite-difference derivatives. At $\lambda=0.1$ and $\lambda=0.3$ the three quantities $\partial_\lambda\mathcal L$, $\tfrac12\det T_{\alpha\beta}$ and $-\operatorname{tr}\mathcal T/(2\lambda)$ agree to six digits. The claim holds on this solution.
+
+\section{Principal drawback}
+
+The new holographic claims are not yet tested dynamically. The paper establishes geometry and limits, but it does not check that the new backgrounds are solutions of a theory. Four points support this:
+\begin{enumerate}
+\item The non-Lorentzian bulk geometries beyond AdS (Sections on non-Lorentzian holography) are not shown to satisfy the equations of motion and torsional constraints of M$p$T supergravity. The Outlook says so explicitly, and M$p$T supergravity is not formulated in the paper.
+\item The examples depend on an extra rescaling of the length $\ell$ in the harmonic function, which the authors introduce ``by hand''. They say its physical meaning is ``not completely clear'' and treat it as ``a trick''. It is also equivalent to rescaling $N$, which relates it to a large-$N$ limit whose interpretation remains open.
+\item The DLCQ$^n$/DLCQ$^m$ correspondence, which the abstract presents as the paper's conjecture for holography, comes with no spectrum, correlator or symmetry test.
+\item The $p$-brane $T\bar T$ flow equations are classical, bosonic and abelian. They are complete only for $p=1,2$. For $p=3$ they are given only to linear order in the flow parameter, and for $p>3$ only at zeroth order.
+\end{enumerate}
+The first two points are the most serious. Without them, the flagship non-Lorentzian holographic examples remain kinematic (geometry plus limits) rather than verified backgrounds of a theory, and the paper's central new claim is untested.
+
+\section{Most worthwhile follow-up: feasibility versus impact}
+
+\textbf{Recommendation:} compute the isometry algebra of one simple non-Lorentzian bulk geometry from the paper, and compare it with the symmetry algebra of the boundary M$p$T theory.
+
+\noindent The paper names this calculation itself in the Outlook: ``compute the isometry group of this type of non-Lorentzian geometries.''
+
+\begin{itemize}
+\item \textbf{Concrete steps.} Take the simplest explicit example in the paper, preferably the lowest $p$ with an explicit geometry. Write down the Killing equations appropriate to the vielbein (torsional Newton--Cartan) structure and solve them with a computer algebra system such as SageMath or Cadabra. Compare the resulting Killing algebra with the $p$-brane boost and the Galilean-type symmetries of the boundary M$p$T theory.
+\item \textbf{Outcomes.} If the bulk symmetries match the boundary, this supports the DLCQ$^n$/DLCQ$^{n+1}$ picture at the level of symmetries. If they do not, the proposed duals are in trouble or need modification, and either result is publishable.
+\item \textbf{Feasibility: high.} The metrics are explicit, the method is standard, and the work needs no new formalism beyond the vielbein Killing condition, so it is a modest, self-contained project.
+\item \textbf{Impact: high.} It is the most direct first test of the paper's central new claim, and it gives the dynamical check that the paper currently lacks. It is also a prerequisite for the supergravity equation-of-motion check, which is the natural next step but needs M$p$T supergravity to be formulated first.
+\end{itemize}
+
+\noindent By comparison, a non-abelian $p$-brane $T\bar T$ flow (which would deform matrix theory to DBI) is arguably higher impact but has low feasibility and is open-ended. Extending the construction to heterotic strings is a longer-term programme, as the paper's Outlook also suggests.
+
+\end{document}

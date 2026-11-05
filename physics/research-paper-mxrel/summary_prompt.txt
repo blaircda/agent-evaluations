@@ -1,0 +1,1 @@
+Please read the agent-generated report.tex files in the directories in this directory, and compile a summary.tex here with a very brief count of what each report chose as success, drawback and next direction. Include tables breaking down what each model chose.

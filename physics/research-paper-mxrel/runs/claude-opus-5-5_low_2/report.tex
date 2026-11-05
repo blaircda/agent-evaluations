@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\title{Report on ``Matrix Theory Reloaded: A BPS Road to Holography''\\
+\small Blair, Lahnsteiner, Obers, Yan}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{1. Principal achievement}
+The paper offers a single organising principle for three subjects that are
+usually treated separately: matrix theories, holography, and non-Lorentzian
+string/M-theory. The key observation is that the decoupling limits giving
+matrix theories on D$p$-branes (the ``M$p$T'' limits) are \emph{BPS} limits.
+Applied to the curved brane background, the same limit automatically produces
+the Maldacena near-horizon limit. When uplifted to M-theory, each such limit is
+a DLCQ. This leads to the conjecture that holography is a
+DLCQ$^n$/DLCQ$^m$ correspondence ($m>n$). In this language AdS$_5$/CFT$_4$ is
+DLCQ$^0$/DLCQ$^1$, D1--D5 gives an example with $m>n+1$, and applying two
+limits in sequence gives new dualities with non-Lorentzian bulks. A second,
+more concrete result comes from reading off how the brane actions depend on the
+decoupling parameter $\lambda=\omega^{-2}$. This gives explicit $T\bar T$-like
+flow equations for the D$p$-brane DBI action and the M2-brane. The
+three-dimensional M2 flow,
+$\partial_\lambda\mathcal{L}=\tfrac14\sqrt{-\det\tau}\,[\mathrm{tr}\,\mathcal{T}^2-(\mathrm{tr}\,\mathcal{T})^2+2\lambda\det\mathcal{T}]$,
+is especially simple. In the bulk, undoing the near-horizon limit then appears
+as a deformation that generates the brane geometry out of the flat
+non-Lorentzian geometry at asymptotic infinity. This is a fresh view of why the
+bulk exists.
+
+\section*{2. Principal drawback}
+The central conjecture is mostly a reorganisation of known dualities and is not
+yet a predictive statement. The paper does not give a dynamical test that would
+separate DLCQ$^n$/DLCQ$^m$ from the standard near-horizon argument. The new
+non-Lorentzian holographic examples are the least secure part. Their bulk
+geometries come from an ad hoc extra rescaling of the harmonic function, which
+amounts to rescaling $N$, and its physical meaning is unclear. The authors
+also say openly that they have not checked that these geometries solve the
+equations of motion and torsional constraints of M$p$T supergravity. That
+theory has not itself been formulated, and the symmetries, charges and
+supersymmetry of the solutions have not been worked out. The geometric picture
+at asymptotic infinity has further weak points. Quantum corrections may
+dominate there, the dilaton runs to strong coupling for $p>3$, and the
+non-Lorentzian structure may depend on the choice of coordinates. Finally, the
+$T\bar T$ flows are derived only for bosonic, abelian actions, while the claimed
+link to matrix theory needs the non-abelian, supersymmetric case.
+
+\section*{3. Most worthwhile follow-up}
+Balancing feasibility and impact, I recommend \emph{extending the $p$-brane
+$T\bar T$ flow equations to the non-abelian (and ideally supersymmetric) case
+and testing them on matrix theory.} A concrete programme:
+\begin{itemize}
+\item Apply the flow, e.g.\ the M2 equation or its D$p$ analogue, to
+U$(N)$ SYM as the initial condition. Solve it order by order in $\lambda$.
+Compare the result with the known $\alpha'$ expansion of the non-abelian DBI
+action: the symmetrised trace at $F^4$, and the known commutator ambiguities at
+$F^6$ and beyond.
+\item Use the M$p$T parametrisation of Myers' action as a target, and check
+whether the flow fixes the ordering ambiguities.
+\item For $p=2$, apply the flow to BLG/ABJM to look for an M-theoretic
+non-abelian ``DBI'' endpoint.
+\end{itemize}
+This is feasible because it is a well-posed classical field-theory computation
+that builds directly on equations the paper has already derived. The
+$F^4$ term gives an immediate check. The potential impact is large. A successful
+flow would turn the paper's main conjecture into something testable: undoing
+the DLCQ/near-horizon limit would become a solvable deformation of matrix
+theory, and it might fix the long-standing non-abelian DBI ordering problem.
+If the flow fails to reproduce the $F^4$ term, that would be equally
+informative about how far the framework can be trusted. A more ambitious but
+riskier alternative is to formulate M$p$T supergravity and verify the
+non-Lorentzian bulk solutions.
+
+\end{document}

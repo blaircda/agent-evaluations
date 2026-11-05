@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+
+\title{Referee-style Report: \emph{Matrix Theory Reloaded: A BPS Road to Holography}}
+\author{Comments on \texttt{paper.tex}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1. Principal achievement}
+
+The paper gives a unified target-space account of the BPS decoupling limits that produce matrix $p$-brane theories (M$p$T) on D$p$-branes, and it uses that account to connect matrix theory to holography. Three results stand out:
+
+\begin{itemize}
+\item \textbf{Geometry of the limit.} The limit $\omega\to\infty$ produces a flat non-Lorentzian background with a codimension-$(p+1)$ foliation and a $p$-brane boost symmetry. The paper generalises this to curved backgrounds through vielbeins, and it shows that the near-horizon limit of a D$p$-brane geometry is equivalent to a BPS decoupling limit applied at asymptotic infinity. This gives a concrete mechanism by which AdS/CFT appears as a decoupling limit of a single brane stack.
+\item \textbf{A holographic classification scheme.} Applying two successive limits yields new holographic pairs, some with non-Lorentzian bulk geometry. The paper packages these into a DLCQ$^n$/DLCQ$^m$ conjecture, in which each extra DLCQ on the field-theory side corresponds to one extra near-horizon limit in the bulk. The D1-D5 system is worked through as an example of DLCQ$^0$/DLCQ$^2$.
+\item \textbf{Intrinsic $T\bar T$-type flows.} The bulk geometry is reinterpreted as a $p$-brane generalisation of the $T\bar T$ deformation acting on the non-Lorentzian field theory. This removes the need for a limiting procedure. Explicit flow equations are derived for D$p$-brane DBI actions, and the $p=1$ case reduces to standard $T\bar T$.
+\end{itemize}
+
+The most useful single contribution is the first: it turns a vague analogy between matrix theory and AdS/CFT into a precise statement about which decoupling limit produces which bulk geometry.
+
+\section*{2. Principal drawback}
+
+The central claims are stronger than the evidence the paper provides. The authors say so themselves in the Outlook, but the abstract and introduction do not reflect the qualification.
+
+\begin{itemize}
+\item \textbf{Non-Lorentzian bulk geometries are not checked against equations of motion.} The new bulk solutions, which come from rescaling the harmonic-function length scale $\ell$ or from smearing, are not shown to solve the M$p$T limit of supergravity, including its torsional constraints. The Outlook explicitly lists this as unverified. The bulk side of the new non-Lorentzian holographic pairs therefore rests on an ansatz, not a solution.
+\item \textbf{The DLCQ$^n$/DLCQ$^m$ conjecture is not tested beyond known cases.} The only non-trivial checks are the classic AdS/CFT examples, which the framework was built to reproduce, and the D1-D5 example. No new prediction is made and checked, so the conjecture is at present a reorganisation of known examples.
+\item \textbf{The $T\bar T$-type flows are only partly derived.} The general equation is solved for free scalars with an abelian gauge field. The $p=3$ equation is given only to linear order in $\lambda_p$, and the non-abelian case, which is what matrix theory needs, is left open. The authors acknowledge that the endpoint for non-abelian theories is unknown.
+\end{itemize}
+
+The second drawback is the most serious for impact, because the holographic claims are the paper's headline.
+
+\section*{3. Most worthwhile follow-up idea}
+
+\textbf{Proposed project:} Check whether the rescaled non-Lorentzian near-horizon geometries for the M2-brane and D2-brane cases solve the equations of motion and torsional constraints of the corresponding non-relativistic (M$p$T) supergravity.
+
+\begin{itemize}
+\item \textbf{Why this one.} The paper flags this check as open. It is a concrete, bounded calculation with a clear success criterion: the metric either satisfies the non-relativistic equations of motion or it does not. Both outcomes are informative. A positive result would make non-Lorentzian holography a real solution class. A negative result would identify which ansatz fails and sharpen the rules for constructing such duals.
+\item \textbf{Feasibility.} The M2-brane non-relativistic supergravity is already analysed in the literature the paper cites (Lambert et al.\ and Bergshoeff et al.), so there is a template to follow. The D2 case, with its gauge field, is a natural first extension. The work is a few months of computation for a graduate student.
+\item \textbf{Impact.} It tests the paper's most important physical claim directly. It also bears on the open questions about isometry groups and finite-temperature non-Lorentzian holography that the Outlook raises.
+\end{itemize}
+
+An alternative with higher ceiling but lower feasibility is to derive the non-abelian extension of the $p=2$ flow equation. That would connect the $T\bar T$ picture to the matrix-theory side and could turn the DBI-to-matrix link into a genuine deformation statement. It is harder, because the non-abelian structure is not yet fixed, so I rank it second.
+
+\end{document}
