@@ -120,4 +120,4 @@ I include this as an illustrative example; for the models tested it's clearly to
 
 The (not particularly illuminating) takeaways:
 - Poor performance by Sonnet 5.5 at low effort, scoring only 19.5/20, while all other agents scored 20/20.
-- An even poorer performance by the human (me) who wrote the solutions, with the grading agent catching two typos. 
+- An even poorer performance by the human (me) who gave the instructions and wrote the solutions: all agents figured out what to do despite AGENTS.md naming the exam file incorrectly, while the grading agent caught two typos in the solutions file. Sic transit gloria mundi...
