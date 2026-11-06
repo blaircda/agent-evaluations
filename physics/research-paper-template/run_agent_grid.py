@@ -96,7 +96,8 @@ with open(summary_log, "w") as out:
     proc = subprocess.run(
         ["claude", "-p", summary_prompt,
          "--model", summary_model, "--effort", summary_effort,
-         "--allowedTools", "Read,Write,Edit,Bash"
+         "--allowedTools", "Read,Write,Edit,Bash",
+        "--output-format", "stream-json", "--verbose"],
          ],
         stdout=out, stderr=subprocess.PIPE, text=True,
     )
