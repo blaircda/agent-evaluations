@@ -25,9 +25,9 @@ Contents:
 
 ```paper.tex``` replace with your own tex file
 
-```run_agent_check.py``` script which runs agents to write reports on ```paper.tex``` and outputs a summary of the run data and (using another agent) a summary of the reports
+```run_agent_grid.py``` script which runs agents to write reports on ```paper.tex``` and outputs a summary of the run data and (using another agent) a summary of the reports
 
-The outputs of the ```run_agent_check.py``` are:
+The outputs of the ```run_agent_grid.py``` are:
 
 ```logs``` (not included here) JSON lines log files with the output streams of each agent run
 
