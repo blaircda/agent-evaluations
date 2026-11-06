@@ -81,7 +81,7 @@ for model, effort, i in itertools.product(MODELS, EFFORTS, range(1, AGENTS + 1))
         if new:
             w.writeheader()
         w.writerow(row)
-    summary_txt = Path("summary.csv")
+    summary_txt = Path("summary.txt")
     new = not summary_txt.exists()
     with open(summary_txt, "a", newline="") as f:
         f.write(f"\n===== {log} =====\n")
@@ -97,7 +97,6 @@ with open(summary_log, "w") as out:
         ["claude", "-p", summary_prompt,
          "--model", summary_model, "--effort", summary_effort,
          "--allowedTools", "Read,Write,Edit,Bash",
-        "--output-format", "stream-json", "--verbose"],
-         ],
+         "--output-format", "stream-json", "--verbose"],
         stdout=out, stderr=subprocess.PIPE, text=True,
     )
