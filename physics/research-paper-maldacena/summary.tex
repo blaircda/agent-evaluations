@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs,tabularx,array}
+\usepackage[T1]{fontenc}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\title{Summary of agent reports on Maldacena,\\ ``The Large $N$ Limit of Superconformal Field Theories and Supergravity''}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-3em}
+
+\section*{Scope}
+Six runs: three models (Haiku~5.5, Sonnet~5.5, Opus~5.5), each at two effort levels (low, high), one run each.
+Each report was classified by what it chose as (1)~the principal achievement, (2)~the principal drawback, and (3)~the follow-up most worth pursuing.
+With one run per cell these counts describe behaviour only. They are not statistically meaningful.
+
+\section*{Overall counts}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{l L c}
+\toprule
+Question & Category & Count \\
+\midrule
+Achievement & Conjecture of an exact duality between string/M-theory on $AdS\times$(compact space) and the brane superconformal field theory (leading case: IIB on $AdS_5\times S^5$ $\leftrightarrow$ $\mathcal N=4$ $U(N)$ SYM), supported by symmetry matching and the $R^4\propto gN$ dictionary & 6/6 \\
+\midrule
+Drawback & (a) No operational bulk--boundary dictionary: boundary conditions unspecified, no operator/field map, no rule for correlators & 4/6 \\
+ & (b) Dynamical content untested: evidence is kinematic or protected, and explicit strong-coupling predictions are unchecked & 2/6 \\
+\midrule
+Next direction & (A) Build the field/operator dictionary (KK spectrum $\leftrightarrow$ chiral primaries, $m^2R^2=\Delta(\Delta-4)$, on-shell action as CFT generating functional), then compute correlators & 2/6 \\
+ & (B) Precision tests at finite $N$ and coupling with later exact methods (bootstrap, localization, integrability) & 2/6 \\
+ & (C) Probe-brane tests of the paper's own claims (probe action coefficients, or the Higgsed-probe BPS spectrum) & 2/6 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+All six reports also listed the same secondary weaknesses: the unexplained numerical factor in the entropy ($3/4$, named explicitly by both Opus runs), the ``sketchy'' lower-supersymmetry cases, and the $AdS_2$/Reissner--Nordstr\"om puzzle. Drawback categories (a) and (b) overlap. The split shows which point each report put first.
+
+\section*{Breakdown by model and effort}
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{l l L L L}
+\toprule
+Model & Effort & Achievement & Drawback & Next direction \\
+\midrule
+Haiku 5.5 & low & Exact-duality conjecture; stresses $SU(2,2|4)$ match and testable probe action & (b) Strong-coupling claims unchecked; probe action only partly derived & (C) Derive 4- and 6-derivative D3-probe terms and compare with the superconformal constraint \\
+Haiku 5.5 & high & Exact-duality conjecture with a quantitative geometric dictionary; greybody agreement & (b) Evidence mostly kinematic; boundary conditions open; predictions unchecked & (C) Test the $\sqrt{N_{\rm open}}$ open-string tower on a Higgsed probe against field-theory BPS states \\
+\midrule
+Sonnet 5.5 & low & Non-perturbative gravity $=$ QFT equivalence; ``dictionary-in-embryo'' ($U\leftrightarrow$ energy, $1/N\leftrightarrow$ quantum gravity) & (a) No operator/field map or correlator rule; boundary conditions unspecified & (B) Integrability + localization: BPS Wilson loops and half-BPS correlators, with $1/N$ and $\alpha'$ corrections \\
+Sonnet 5.5 & high & Non-perturbative gravity $=$ QFT equivalence; conceptual breakthrough that unifies earlier results & (a) No dictionary; evidence indirect; large-$N$ control heuristic & (B) Conformal bootstrap + localization to bound higher-derivative bulk couplings \\
+\midrule
+Opus 5.5 & low & Exact-duality conjecture; strong/weak duality, non-perturbative quantum gravity, seed of holographic RG & (a) No dictionary, so tests are limited to protected quantities & (A) Dictionary programme: KK/operator matching, generating functional, correlators and Wilson loops \\
+Opus 5.5 & high & Exact-duality conjecture; one decoupling limit read in two ways; realises 't~Hooft's large-$N$ string & (a) Not operational; the one unprotected test (entropy, $3/4$) fails; also flags a duplicated equation label & (A) Same programme, plus the prediction $\Delta_{\rm Konishi}\sim(gN)^{1/4}$; notes this is the GKP--Witten programme \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{Observations}
+\begin{itemize}
+\item \textbf{Achievement:} all six runs agree. They differ only in emphasis.
+\item \textbf{Drawback:} the split follows the model, not the effort level. Both Haiku runs framed the weakness as a lack of tests. Both Sonnet runs and both Opus runs framed it as a missing dictionary.
+\item \textbf{Next direction:} each model picked one category at both effort levels, so the split again follows the model. Haiku stayed inside the paper's own calculations, which is the most conservative choice. Opus proposed the historically decisive follow-up (Gubser--Klebanov--Polyakov / Witten 1998). Sonnet drew on post-2000 methods. Sonnet-high and Opus-high both said they used knowledge from after the paper. Haiku-high instead recommended a literature survey.
+\item \textbf{Effort:} at higher effort the reports were longer and more specific, for example adding named predictions and caveats. The category chosen did not change in any of the three models.
+\item \textbf{Housekeeping:} the instructions asked for auxiliary files to be deleted, but four runs left them behind. \texttt{report.aux} remains in Haiku-high and Opus-high. \texttt{report.aux} and \texttt{report.log} remain in Haiku-low and Sonnet-high. According to its log, Haiku-low's \texttt{rm} was blocked by a permission prompt.
+\end{itemize}
+
+\end{document}
