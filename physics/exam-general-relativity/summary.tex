@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.5cm,landscape]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{document}
+
+\begin{center}
+{\bf\Large General Relativity Final Examination: Marking Summary}
+\end{center}
+
+Each agent's \texttt{answers.tex} in \texttt{runs/} was marked against \texttt{solutions.tex}.
+There are 20 marks in total: Q1 (2), Q2 (3; a: 2, b: 1), Q3 (4; a: 2, b: 2), Q4 (5; a: 2, b: 1, c: 2), Q5 (6; a: 1, b: 2, c: 3).
+Questions are numbered 1--5 as they appear in the paper.
+
+\textbf{Notes on the reference solutions.} \texttt{solutions.tex} gives the de Sitter scale factor as $a(t)=L^2\cosh^2(t/L)$. That is $a^2$; the scale factor is $a(t)=L\cosh(t/L)$. Every agent gave $L\cosh(t/L)$, and this was marked correct. The reference also writes $\hat\Gamma_{[\nu\rho]}{}^\mu=\Gamma_{\nu\rho}{}^\mu$ in Q2b where it means the symmetric part, $\hat\Gamma_{(\nu\rho)}{}^\mu$. Agents were marked on the physics, not on these slips.
+
+\vspace{1em}
+\begin{center}
+\small\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{l l c c c c c c P{9.5cm}}
+\toprule
+Model & Effort & Q1 & Q2 & Q3 & Q4 & Q5 & \textbf{Total} & Comments \\
+ & & /2 & /3 & /4 & /5 & /6 & \textbf{/20} & \\
+\midrule
+claude-haiku-5-5 & low  & 2 & 3 & 4 & 5   & 6 & \textbf{20}   & All parts correct, with full working. Answers are mislabelled ``Question 2''--``Question 6'' (the point values were read as question numbers); no marks deducted. Q3b has a garbled remark (``$r$ is not a good coordinate \ldots\ but $v$ is''; it is $t$ that fails), but the main argument is right. \\
+claude-haiku-5-5 & high & 2 & 3 & 4 & 5   & 6 & \textbf{20}   & All parts correct. Derives the Kretschmann scalar from orthonormal-frame Riemann components. Checks both Friedmann equations. Gives the interferometer phase shift $\Delta\phi=4\pi L h/\lambda$. \\
+claude-sonnet-5-5 & low & 2 & 3 & 4 & 4.5 & 6 & \textbf{19.5} & Concise and correct throughout, apart from Q4c. The derivation and the square Penrose diagram are correct, but the shaded region labelled ``visible to an observer at $\chi=0$'' (the triangle above $\eta=0$ next to the pole) is the causal future of a point on the worldline, not the observer's causal past. It also contradicts the caption, which correctly says the visible region is bounded by the anti-diagonal ($-0.5$). \\
+claude-sonnet-5-5 & high & 2 & 3 & 4 & 5  & 6 & \textbf{20}   & All parts correct and thorough. Proves the Lorenz gauge is attainable. Shows the light cones tipping inside the horizon in EF coordinates. Gives the proper time $\pi GM$ to the singularity. Gives the chirp scalings $f\propto(t_c-t)^{-3/8}$. \\
+claude-opus-5-5 & low  & 2 & 3 & 4 & 5   & 6 & \textbf{20}   & All parts correct. Includes a Friedmann check, horizon analysis on the Penrose diagram, and the chirp mass. One minor slip in non-required material: $K(r{=}2GM)$ is quoted as $3/(4G^2M^2)$ instead of $3/(4G^4M^4)$. No marks deducted. \\
+claude-opus-5-5 & high & 2 & 3 & 4 & 5   & 6 & \textbf{20}   & All parts correct; the most complete script. Shows the result is independent of the connection-index convention and links it to the Levi-Civita uniqueness theorem. Includes infall proper time, tidal-force estimates, and the inverse EF metric. The Penrose diagram labels the static patch and the event and particle horizons. Discusses the quadrupole power, $\dot f$, the chirp mass, antenna patterns and the standard siren. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+\textbf{Overall.} Five of the six scripts scored full marks; claude-sonnet-5-5 (low) lost half a mark. The scripts differ mainly in depth and supporting material, not correctness. The high-effort Opus and Haiku answers were the most detailed; the low-effort Sonnet answer was the shortest.
+All six runs compiled \texttt{answers.pdf}. Several left LaTeX auxiliary files behind because the sandbox's permission checks blocked deletion. This is not assessed in the marks.
+
+\end{document}

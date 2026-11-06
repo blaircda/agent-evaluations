@@ -82,3 +82,42 @@ saving the arXiv source of [the most cited hep-th paper of all time](https://arx
 ```python3 run_agent_grid.py```
 
 The agent reports play this very straight...
+
+## Solving examination questions 
+
+### Template
+[Template](exam-template)
+
+Contents:
+
+```AGENTS.md``` instructions for the agents
+
+```config.py``` sets models, effort levels, number of agents, files to use
+
+```exam.tex``` replace with your own exam tex file
+
+```solutions.tex``` replace with your own exam solutions tex file
+
+```run_agent_grid.py``` script which runs agents to write answers to ```exam.tex``` and outputs a summary of the run data; it then launches another agent to grade the exam answers using ```solutions.tex```
+
+The outputs of the ```run_agent_grid.py``` are:
+
+```logs``` (not included here) JSON lines log files with the output streams of each agent run
+
+```runs``` a directory for each agent run, named according to the model and effort level, containing a copy of ```AGENTS.md``` and ```exam.tex``` and the agent's report as ```answers.tex``` and ```answers.pdf```
+
+```summary.csv``` data summary: model, effort, time, output tokens, API cost..., and LLM-marked grades
+
+```summary.txt``` agent text output summary, extracted from the logs
+
+```summary.tex```, ```summary.pdf``` agent generated summary of the reports
+
+### Example: one of my 2020 General Relativity exams
+
+[exam-general-relativity](exam-general-relativity)
+
+I include this as an illustrative example; for the models tested it's clearly too easy to differentiate anything much except length of answer between different models.
+
+The (not particularly illuminating) takeaways:
+- Poor performance by Sonnet 5.5 at low effort, scoring only 19.5/20, while all other agents scored 20/20.
+- An even poorer performance by the human (me) who wrote the solutions, with the grading agent catching two typos. 
