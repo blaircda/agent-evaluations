@@ -15,7 +15,7 @@ From this you can observe qualitative differences between different models, as w
 Initially only running different Claude models (Haiku 5.5, Sonnet 5.5, Opus 5.5).
 
 ### Template
-[Template](research-paper-template)
+[research-paper-template](research-paper-template)
 
 Contents:
 
@@ -86,7 +86,7 @@ The agent reports play this very straight...
 ## Solving examination questions 
 
 ### Template
-[Template](exam-template)
+[exam-template](exam-template)
 
 Contents:
 
