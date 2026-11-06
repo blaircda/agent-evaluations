@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+
+\title{Report on ``Matrix Theory Reloaded: A BPS Road to Holography''\\
+\large (C.~D.~A.~Blair, J.~Lahnsteiner, N.~A.~Obers, Z.~Yan)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\paragraph{Summary of the paper.}
+The paper re-examines the decoupling limits that define matrix theory on D$p$-branes (``matrix $p$-brane theory'', M$p$T), stressing that they are BPS limits.
+In these limits the ten-dimensional target space becomes non-Lorentzian, with a codimension-$(p+1)$ foliation and $p$-brane Galilean boosts.
+Applying the same limit to a back-reacted D$p$-brane solution produces the near-horizon limit.
+Two such limits applied in succession give further holographic geometries, including non-Lorentzian bulks.
+The authors then uplift to M-theory and conjecture that holography is a DLCQ$^{n}$/DLCQ$^{m}$ correspondence with $m>n$.
+Finally, they run the limits in reverse and show that this undoes a $p$-brane generalisation of the $T\bar T$ deformation.
+This yields new classical flow equations from free scalars to the Dirac--Nambu--Goto action for all $p$, and from scalars plus a gauge field to the D$p$-brane DBI action for $p=1,2$.
+
+\section*{1. Principal achievement}
+
+The main achievement is conceptual unification.
+The paper shows that the asymptotic matrix-theory limit and the Maldacena/IMSY near-horizon limit are one and the same BPS limit, seen at infinity and in the bulk respectively.
+The AdS metric is exactly the geometrised version of the limit, with $(r/\ell)^2$ playing the role of the parameter $\omega$.
+This explains why $\mathcal N=4$ SYM can be coupled to a non-Lorentzian M3T geometry at infinity while its bulk dual is Lorentzian AdS$_5\times S^5$.
+It is also a systematic recipe for generating new bulk geometries, which reproduces and extends recent proposals for non-Lorentzian holography.
+The reading of the bulk as an ``intrinsic'' $T\bar T$-type deformation of the asymptotic geometry is new.
+It also gives a concrete spin-off, a family of higher-dimensional $T\bar T$-like flow equations.
+The $p=0,1$ cases reduce to known results, and the $p=2$ equation is strikingly simple.
+Taken together, this ties matrix theory, AdS/CFT, non-Lorentzian geometry and $T\bar T$ into one framework that makes explicit computations possible.
+
+\section*{2. Principal drawback}
+
+The main drawback is that the headline claims are supported by pattern-matching on examples rather than by independent checks, and the paper itself admits this in the Outlook.
+\begin{itemize}
+\item The DLCQ$^{n}$/DLCQ$^{m}$ ``conjecture'' is a classification statement.
+It is not tested against any holographic observable, such as correlators, symmetries, thermodynamics or spectra.
+It is also unclear whether it makes predictions beyond what the duality web of decoupling limits already implies.
+\item The non-Lorentzian bulk geometries are built by hand, by rescaling the harmonic-function scale $\ell$ with $\omega$.
+The authors state that they have not verified that these solve the equations of motion and torsional constraints of the M$p$T supergravity limit, which has not been written down.
+Their charges, supersymmetries and isometries are not analysed, and the physical meaning of the rescaling of $N$ is left open.
+\item The new flow equations are classical, bosonic and abelian.
+The full equations are given only for $p=1,2$, while $p=3$ is given only to linear order in the flow parameter, and for $p>3$ only the zeroth-order terms are given.
+Matrix theory is non-abelian and supersymmetric, so the flow ``from SYM to DBI'' is not actually realised.
+The fact that the $T\bar T$ link produces the bulk geometry only through a limiting procedure also leaves its dynamical meaning unclear (for example, as an operator deformation of the dual field theory).
+\end{itemize}
+In addition, the interpretation relies on the asymptotic region, where the paper concedes that non-geometric or quantum effects can dominate, and on a Poincar\'e-patch analysis only.
+The paper is also very long and covers a lot of ground, which dilutes the focus.
+
+\section*{3. Most worthwhile follow-up idea}
+
+\paragraph{Proposal: construct M$p$T supergravity and use it to test the non-Lorentzian holographic dictionary.}
+Start from the ten-dimensional type II field equations, take the BPS limit at the level of the equations of motion, and obtain the field equations of M$p$T supergravity.
+Doing this first for $p=0,1$ is natural, because the non-relativistic and torsional Newton--Cartan supergravities that already exist can guide the construction.
+Then:
+\begin{enumerate}
+\item verify that the paper's near-horizon and double-limit geometries (including the off-aligned D$q$/M$p$T examples) actually solve these equations, and fix which of the localised or smeared versions are physical;
+\item compute their isometry algebras, Killing spinors and brane charges, and identify the dual non-relativistic field theories and their symmetries (for example, a $p$-brane Galilean conformal algebra);
+\item use the first checks that can be made at finite $N$, such as thermodynamics of the finite-temperature solutions or two-point functions of protected operators, to see whether the DLCQ$^n$/DLCQ$^{n+1}$ counting has genuine content.
+\end{enumerate}
+
+\emph{Why this one.}
+In terms of feasibility, it is well-defined, bounded and technical, with a template from existing $p=0,1$ non-relativistic supergravity.
+It needs no new conceptual breakthrough, and the paper's own geometries provide ready-made test cases.
+In terms of impact, it addresses the central gap above.
+Success would turn the conjecture and the non-Lorentzian examples into established duals, and failure would be equally informative.
+It would also supply the framework (a bulk effective theory) that the other directions need.
+
+The alternatives are less attractive on balance.
+Extending the flow equations to the non-abelian and supersymmetric case, for instance by applying the $p=2$ flow to BLG/ABJM, is potentially high impact but much harder, because no non-abelian DBI action is known.
+Completing the $p=3$ flow equation to all orders is feasible but of narrower interest.
+Carrollian or IKKT-type extensions are speculative at present.
+
+\end{document}

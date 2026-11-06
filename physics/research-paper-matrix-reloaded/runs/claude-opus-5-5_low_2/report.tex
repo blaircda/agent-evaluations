@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\title{Report on ``Matrix Theory Reloaded: A BPS Road to Holography''}
+\author{}
+\date{6 November 2026}
+\begin{document}
+\maketitle
+
+\paragraph{Summary.}
+The paper reinterprets the decoupling limits behind matrix theories on D$p$-branes (``M$p$T'' limits) as BPS limits that make the target space non-Lorentzian. It shows that applying such a limit to a curved D-brane background induces the near-horizon limit, and that combining limits gives further holographic pairs, some with non-Lorentzian bulks. After uplifting to M-theory, it conjectures that holography is a DLCQ$^n$/DLCQ$^m$ correspondence ($m>n$). In this language AdS$_5$/CFT$_4$ is DLCQ$^0$/DLCQ$^1$. The paper also shows that undoing a limit is a $p$-brane generalisation of $T\bar T$, and it derives $T\bar T$-like flow equations for the DBI action.
+
+\section*{1. Principal achievement}
+The main achievement is a single organising principle that ties together several areas usually studied separately: matrix theory, the near-horizon limit of AdS/CFT, non-Lorentzian (Newton--Cartan-type) geometry, and $T\bar T$ deformations. The key technical point is that the BPS decoupling limit on the brane side is the same operation as the near-horizon limit in the bulk. This gives a systematic way to generate holographic pairs: apply one limit for D3/M2/M5, two limits for the D1--D5 system, and get new non-Lorentzian bulk duals as by-products. It also gives a concrete reading of the extra DLCQ that relates matrix theory to AdS/CFT. A further contribution is the set of $p$-brane $T\bar T$ flow equations, read off from the $\omega$-dependence of the DBI action. The simple three-dimensional flow shared by the D2 and M2 branes stands out; it is a natural higher-dimensional analogue of $T\bar T$ that may be useful outside string theory. The M0T superalgebra, obtained as an In\"on\"u--Wigner contraction, places the framework on algebraic ground.
+
+\section*{2. Principal drawback}
+The central claim, the DLCQ$^n$/DLCQ$^m$ conjecture, rests on matching limits and geometric scalings rather than on dynamics. The paper reproduces known dualities and suggests new ones, but it never computes a correlator, spectrum, entropy or protected quantity that would test any of the \emph{new} non-Lorentzian dualities. Several foundations are also left open, as the authors themselves note:
+\begin{itemize}
+\item The non-Lorentzian bulk geometries are not shown to solve the equations of motion or the torsional constraints of an M$p$T supergravity, which has not itself been formulated in general.
+\item The ad hoc rescaling of $\ell$ (and hence of $N$) used to build these geometries has no clear physical interpretation.
+\item For $p>3$, the asymptotic region is strongly coupled or dominated by quantum corrections. This weakens the geometric picture exactly where the extra DLCQ is supposed to live.
+\item The analysis uses only the Poincar\'e patch.
+\item The $T\bar T$ flows are derived only for bosonic, abelian actions. Showing that the actual matrix theory (non-abelian SYM) flows to the bulk geometry is therefore still a heuristic argument.
+\end{itemize}
+Taken together, the conjecture is an attractive reorganisation of known results, but it is not yet falsifiable.
+
+\section*{3. Most worthwhile follow-up}
+\emph{Recommendation: build M$p$T supergravity for one well-controlled case, take M2T (or the non-relativistic M2 limit of M-theory) as the first case, and use it to check the paper's non-Lorentzian bulk geometries. Then compute their symmetry superalgebra and compare it with the contracted M$p$T superalgebra of the dual matrix theory.}
+
+\begin{itemize}
+\item \textbf{Feasibility.} The ingredients exist. The non-relativistic M2 limit of 11d supergravity and its M2 solutions have already been studied (Lambert et al., Bergshoeff et al.). The paper already contains the method for In\"on\"u--Wigner contractions and gives the candidate geometries explicitly. The work is concrete, largely classical, and suitable for a PhD student or postdoc over 6--12 months.
+\item \textbf{Impact.} This would be the first non-trivial consistency test of the new non-Lorentzian holographic pairs. It would test whether the geometries are true solutions, whether the $N$-rescaling corresponds to physical charges, and whether bulk isometries match boundary symmetries. Each of these checks either supports or rules out the DLCQ$^n$/DLCQ$^m$ conjecture. It would also provide the bulk side needed for later dynamical tests, such as two-point functions and thermodynamics at finite temperature.
+\item \textbf{Comparison with alternatives.} Extending the $p$-brane $T\bar T$ flows to non-abelian or supersymmetric actions (for example ABJM with the 3d flow) could have larger impact. It is much harder, though, because flows of non-abelian DBI actions face ordering ambiguities. A systematic classification of decoupling limits for intersecting branes is easier but less decisive. The supergravity and symmetry test balances feasibility and impact best.
+\end{itemize}
+\end{document}

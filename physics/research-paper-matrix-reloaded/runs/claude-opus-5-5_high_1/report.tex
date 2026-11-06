@@ -1,0 +1,130 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=3pt}
+\newcommand{\TT}{$T\bar T$}
+
+\title{Report on \emph{``Matrix Theory Reloaded: A BPS Road to Holography''}\\[2pt]
+\large (Blair, Lahnsteiner, Obers, Yan)}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+
+\paragraph{Summary of the paper.}
+The paper treats the decoupling limit that gives matrix theory on D$p$-branes as a
+\emph{BPS decoupling limit} of the whole of type~II string theory. This limit defines
+``matrix $p$-brane theory'' (M$p$T), whose ten-dimensional target space is non-Lorentzian, with a
+codimension-$(p+1)$ foliation and $p$-brane Galilean boosts. The authors then make three claims:
+\begin{enumerate}[label=(\roman*)]
+\item applying the M$p$T limit at the asymptotic infinity of the D$p$-brane supergravity solution
+  induces exactly the Maldacena/IMSY near-horizon limit. Applying two such limits, aligned with
+  different branes, produces non-Lorentzian bulk geometries, among them the proposals of Lambert
+  \emph{et al.};
+\item after uplifting to M-theory, each BPS limit is a DLCQ. This leads to the conjecture that
+  holography in general is a DLCQ$^n$/DLCQ$^m$ correspondence ($m>n$): AdS$_5$/CFT$_4$ is
+  DLCQ$^0$/DLCQ$^1$ and D1--D5 is DLCQ$^0$/DLCQ$^2$;
+\item running the limit in reverse is a $p$-brane generalisation of the \TT{} deformation. This gives
+  explicit classical flow equations: free scalars flow to Nambu--Goto in any dimension, the
+  Maxwell-plus-scalars equations hold for $p=1,2$, and only perturbative results are given for
+  $p\geq3$. When the parameter is made radius dependent, $\omega\to\Omega(r)$, the
+  deformation gives the near-horizon bulk metric.
+\end{enumerate}
+
+\section*{1. Principal achievement}
+
+The main achievement is to unify the subject: a single operation organises results that were
+previously separate. The BPS (critical RR-field) decoupling limit defines matrix theory on flat
+D-branes. Applied to the curved brane solution, the \emph{same} limit is the near-horizon limit.
+The paper shows that the limit at fixed $\alpha'$, with the critical $C^{(p+1)}$, is equivalent to
+the Maldacena scaling ($g_{\rm YM}$ and $v=R/\alpha'$ fixed). It also explains why the near-horizon
+geometry approaches the flat M$p$T geometry again as $r/\ell\to\infty$: the conformal factor
+$\Omega(r)$ plays the role of $\omega$ there. This answers a clear question, namely which
+geometry $\mathcal{N}=4$ SYM ``sees'' at infinity.
+
+More importantly, the framework is \emph{generative}. Requiring the limit to stay finite gives
+simple selection rules: $q=p+4$ for aligned branes, and $p+q=10$ with $m+n=4$ in general. These
+rules recover the web of non-Lorentzian dualities of Lambert \emph{et al.}, which had been
+constructed bottom-up, and place them alongside AdS/CFT, multicritical limits, non-relativistic
+M-theory and spin matrix theory in one duality web. The most concrete new result is the
+flow equation
+\[
+\partial_\lambda\mathcal{L}=\tfrac{1}{2\lambda^2}\Bigl\{\operatorname{tr}(\mathbb 1-\lambda\mathcal T)-(p-1)\bigl[\det(\mathbb 1-\lambda\mathcal T)\bigr]^{1/(p-1)}-2\Bigr\}.
+\]
+It deforms $D$ free scalars in $p+1$ dimensions into the static-gauge Nambu--Goto $p$-brane. It
+reduces to \TT{} for $p=1$ and to the Gross \emph{et al.} quantum-mechanical deformation for
+$p=0$, and it gives a simple membrane equation for $p=2$. It also explains why ordinary \TT{}
+applied to 2D Maxwell theory does not give DBI. All of this can be checked independently.
+
+\section*{2. Principal drawback}
+
+The main weakness is a gap between kinematics and dynamics. Almost all of the evidence for the
+central holographic claims consists of matching scalings of classical supergravity solutions and
+worldvolume actions. No observable is computed and compared on both sides of any new duality.
+Specifically:
+\begin{itemize}
+\item For $n=0$ the authors themselves describe the result as a rephrasing of the standard story.
+  The new content is the case $n\ge1$, and there the non-Lorentzian bulk backgrounds are
+  \emph{not shown to solve} the M$p$T supergravity equations or their torsion constraints, which
+  are not yet formulated. Several of these backgrounds also need an \emph{ad hoc} rescaling
+  $\ell^{7-q}\propto\omega^{\#}$ (effectively a large-$N$ scaling) whose physical meaning the
+  authors say is unclear.
+\item The DLCQ$^n$/DLCQ$^m$ conjecture is not stated sharply. No dictionary is given: there is no
+  statement of which bulk fields source which operators, nor of what is supposed to be equal. The
+  inductive support is thin. $n=0$ is known; $n=1$ rests on proposals that are themselves largely
+  untested; $n=2$ relies on spin matrix theory, whose third DLCQ ``may be associated''; for
+  $n\ge3$ there are no examples. As it stands the conjecture works as a classification scheme
+  more than as a falsifiable statement.
+\item The ``intrinsic'' generation of the bulk by \TT{} takes $\Omega(r)$ as input from
+  the known solution. Promoting $\omega\to\Omega(r)$ uses a dilatation symmetry, but
+  nothing in the deformation fixes $\Omega$. The flow equations are classical, bosonic
+  and abelian, and the $F$-dependent equations are complete only for $p\le2$. None of the quantum
+  properties that make \TT{} special (solvable spectrum, factorisation) is established for $p>1$.
+\end{itemize}
+
+\section*{3. Recommended follow-up: a dynamical test of DLCQ$^1$/DLCQ$^2$ via the M-theory uplift}
+
+\paragraph{Idea.} Take the paper's flagship non-Lorentzian example: the M0T limit of the D4-brane
+near-horizon geometry, conjectured to be dual to the M0T limit of 5D SYM (equivalently the null
+reduction of the 6D $(2,0)$ theory, i.e.\ quantum mechanics on instanton moduli space). Then
+\emph{exploit the uplift}. M0T is the IIA reduction of DLCQ M-theory, and the D4 lifts to an M5
+wrapping the null circle. So the bulk is the near-horizon M5 geometry AdS$_7\times S^4$ with a
+lightlike circle along the boundary. This turns the open question of whether the bulk solves M0T
+supergravity into a statement about a known Lorentzian solution. It also removes the strong
+coupling at infinity for $p=4$ that the authors themselves flag. With this in hand one can compute
+on both sides:
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Symmetries.} Compute the Killing (super)algebra of the non-Lorentzian background
+  (the $p=0$, $q=4$ case of the paper's near-horizon solution) in terms of
+  $(\tau,E,\varphi,c)$. Show that it equals the centraliser of the null momentum in
+  $\mathfrak{osp}(8^*|4)$, a Schr\"odinger-type superalgebra, and match it to the symmetries of
+  the field theory. The authors list this computation as ``natural and important''.
+\item \emph{Dictionary.} Show that the flat M0T data $(\tau,E)$ at asymptotic infinity act as
+  sources for the field theory's non-relativistic stress tensor (``non-Lorentzian GKPW''). This
+  would make precise the paper's claim that the SYM couples to the asymptotic non-Lorentzian
+  geometry.
+\item \emph{Protected spectrum and thermodynamics.} Compare the supergravity Kaluza--Klein
+  spectrum at fixed null momentum $N$ with BPS states of the instanton quantum mechanics.
+  Construct the non-extremal (black-brane) version of the limit, which also touches the paper's
+  suggested finite-temperature direction, and check the $N^3$-type entropy scaling.
+\end{enumerate}
+
+\paragraph{Why this one.} \emph{Feasibility:} every ingredient exists already. The
+AdS$_7\times S^4$ Kaluza--Klein spectrum, the superalgebra and the near-extremal M5 solution are
+standard; the limits are algebraic; and step~(a) alone is a self-contained result.
+\emph{Impact:} it would be the first test of the conjecture that goes beyond limits. If it
+succeeds, the non-Lorentzian geometry becomes a working holographic tool and the inductive step
+from $n=0$ to $n=1$ gains real support. If it fails, for example through the known subtleties of
+null compactifications (zero modes, a small lightlike circle), we learn where the DLCQ$^n$ picture
+breaks. Either result is informative. The recipe then carries over by duality to the other
+members of the web, such as the M2-brane and non-relativistic-string examples. The alternatives
+score lower on this balance. Quantising the new $p=2$ membrane \TT{} flow could have high impact
+but is technically uncertain, and writing down the general M$p$T supergravity equations is a large
+and somewhat open-ended task. The uplift route gets a dynamical test without needing either.
+
+\end{document}

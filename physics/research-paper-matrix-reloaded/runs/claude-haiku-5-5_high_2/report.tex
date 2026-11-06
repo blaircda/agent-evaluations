@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\title{Report on \emph{Matrix Theory Reloaded: A BPS Road to Holography}}
+\author{Blair, Lahnsteiner, Obers, Yan (IFT-UAM/CSIC-24-139; NORDITA 2024-033)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Scope.} This report is based on the introduction, the holography and
+DLCQ-conjecture sections, the $T\bar T$ sections, the flow-equation summary and
+the Outlook of \texttt{paper.tex}. I did not work through the matrix-theory
+sections (2 and 3) in detail.
+
+\section*{1. Principal achievement}
+
+The paper shows that the BPS decoupling limit that gives matrix theory on a
+D$p$-brane (M$p$T) and the near-horizon limit that gives the bulk AdS geometry
+are the same operation, seen from two sides. Applying the M$p$T limit at
+asymptotic infinity of a D$p$-brane background induces the near-horizon limit in
+the bulk. For $p=3$ this reproduces the Maldacena limit, and the near-horizon
+AdS$_5\times S^5$ geometry is shown to asymptotically approach the flat
+non-Lorentzian M3T geometry. This gives a geometric and unified way to classify
+holographic duals.
+
+The paper also derives $p$-brane generalisations of the $T\bar T$ flow. The
+general flow equation is
+\begin{equation*}
+\frac{\partial\mathcal L}{\partial\lambda}=\frac{1}{2\lambda^2}\Bigl\{\operatorname{tr}(\mathbb 1-\lambda\tilde T)-(p-1)\bigl[\det(\mathbb 1-\lambda\tilde T)\bigr]^{\frac{1}{p-1}}-2\Bigr\},
+\end{equation*}
+which gives the explicit $p=2$ equation $\tfrac14[\operatorname{tr}(\tilde T^2)-(\operatorname{tr}\tilde T)^2]+\tfrac{\lambda}{2}\det\tilde T$. The solution for $D$ free scalars is the Nambu--Goto-type Lagrangian $\mathcal L=\lambda^{-1}\bigl[1-\sqrt{-\det(\eta+\lambda\,\partial X\partial X)}\bigr]$. I checked the $p=2$ reduction by hand and the $p=1$ trace form numerically: for the Nambu--Goto solution, $-\operatorname{tr}\tilde T/(2\lambda)$ equals $\tfrac12\det T$ at a generic test point (two scalars). So the statement that the $p=1$ case reduces to $T\bar T$ holds on this solution.
+
+Finally, the paper conjectures a DLCQ$^n$/DLCQ$^m$ correspondence ($m>n$). In this scheme, AdS$_5$/CFT$_4$ is DLCQ$^0$/DLCQ$^1$, and the D1--D5 AdS$_3$/CFT$_2$ case is DLCQ$^0$/DLCQ$^2$.
+
+\section*{2. Principal drawback}
+
+The headline claim, that the bulk geometry is generated \emph{intrinsically} by a $p$-brane $T\bar T$ deformation, is not derived. The deformation parameter $\omega$ is promoted by hand to a function $\Omega(r)$. Its profile is then identified with the known D$p$-brane near-horizon solution, $\Omega=(r/\ell)^{(7-p)/2}$ (Eq.~(mptdtg)). The flow equations do not themselves determine this profile. The Outlook states that the authors did not verify that these geometries solve the M$p$T supergravity equations of motion and torsion constraints, so the intrinsic construction remains a proposal.
+
+Two further limitations reduce the strength of the results:
+\begin{itemize}
+\item The flow equations are classical, bosonic and abelian. They are complete only for $p=1,2$. For $p=3$ they are given to linear order in $\lambda$, and for $p>3$ only the zeroth-order terms are given. Supersymmetric and non-abelian versions are left open.
+\item The DLCQ$^n$/DLCQ$^m$ correspondence is a conjecture. Its support consists of matching geometries and classifying examples. I found no quantitative test, such as a spectrum or correlator comparison across the claimed duality. The case $n\geq 2$ is explicitly open.
+\end{itemize}
+
+\section*{3. Most worthwhile follow-up}
+
+\textbf{Derive the bulk profile from the non-Lorentzian equations of motion instead of inserting it.}
+Take the $p$-brane $T\bar T$-deformed ansatz (Eq.~(mptsl022)) in the $p=2$ (M2) case. This is the simplest flow equation, and the M2-brane non-relativistic M-theory analyses the paper cites for this regime (\texttt{Lambert:2024uue}, \texttt{Bergshoeff:2024nin}) provide the equations. Keep $\Omega(r)$ as an unknown function, substitute into the equations of motion and torsion constraints, and ask whether they force the power-law profile of the near-horizon solution, or exclude it.
+
+\begin{itemize}
+\item \emph{Feasibility:} the task is a symbolic calculation in a computer-algebra system, using equations that already exist in the literature. It fits a few weeks for one researcher. The main risk is convention mismatch between the cited papers, which would need careful checking.
+\item \emph{Impact:} this turns the paper's central conceptual claim, the answer to Question 3, into a checked statement. If the profile is forced, the intrinsic construction is supported in a concrete case. If it is obstructed, the result identifies which part of the proposal needs modification. Either outcome bears on the DLCQ classification and on non-Lorentzian holography more generally.
+\end{itemize}
+
+\emph{Alternatives considered:} a full non-abelian or supersymmetric $p$-brane flow would be more general but much harder. A quantitative test of the DLCQ$^n$/DLCQ$^m$ conjecture would need strong-coupling field-theory input and is likely out of reach in the near term.
+
+\end{document}

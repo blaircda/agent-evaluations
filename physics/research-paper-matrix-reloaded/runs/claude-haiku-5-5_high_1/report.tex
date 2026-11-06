@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{0pt}
+
+\title{Report on ``Matrix Theory Reloaded: A BPS Road to Holography''}
+\author{Assessment of Blair, Lahnsteiner, Obers and Yan (IFT-UAM/CSIC-24-139, NORDITA 2024-033)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Principal achievement}
+
+The paper places the BPS decoupling limits of type II string theory and M-theory (the matrix $p$-brane theories M$p$T) in one framework and uses it to connect matrix theory with holography. Two results carry most of the weight.
+
+\begin{itemize}
+\item \emph{The near-horizon limit is an asymptotic BPS limit.} The near-horizon AdS$_5\times S^5$ metric, $(r/\ell)^2\,\mathrm{d}x^A\mathrm{d}x^B\eta_{AB}+(\ell/r)^2(\mathrm{d}r^2+r^2\mathrm{d}\Omega_5^2)$, has the same form as the flat M3T background with the scale $\omega$ replaced by $(r/\ell)^2$. The bulk near-horizon limit and the asymptotic matrix-theory limit are therefore the same kind of BPS decoupling limit, applied to different regions. The paper extends this to general D$p$-branes and to intersecting branes, which gives a geometric account of how the Maldacena and IMSY limits relate to matrix theory.
+\item \emph{A new family of $p$-brane $T\bar T$ flows.} Undoing the BPS limit gives flow equations that deform a free $(p{+}1)$-dimensional field theory towards the Dirac--Nambu--Goto (DBI) action. For $p=1$ they reduce to the standard $T\bar T$ flow. For $p=2$ the flow is fully explicit and is the same for the D2- and M2-brane. For $D$ free scalars the paper gives the explicit solution, a Nambu--Goto Lagrangian for a $p$-brane in $D+p+1$ dimensions.
+\end{itemize}
+
+The proposed DLCQ$^n$/DLCQ$^m$ correspondence is a useful organising principle that unifies the known examples (AdS/CFT, the D1--D5 AdS$_3$ case, and the non-Lorentzian examples of Lambert et al.).
+
+\section{Principal drawback}
+
+The central holographic claims are proposed at the level of geometry and conjecture, and are not tested. Three points make this concrete.
+
+\begin{enumerate}
+\item \emph{The new non-Lorentzian bulk backgrounds are not verified.} The near-horizon geometries obtained from curved M$p$T backgrounds, and the multicritical geometries from double limits, are not checked against the M$p$T supergravity equations of motion and torsional constraints. The authors say this explicitly in the Outlook. Their supersymmetry, charges and isometries are also not analysed. Until these checks are done, it is not established that these geometries solve any theory, let alone that they are duals of a specific field theory.
+
+\item \emph{The ``intrinsic'' bulk construction takes the answer as input.} The paper says the bulk geometry is generated ``without resorting to any limiting procedure''. In practice, the background-dependent coupling is set by the known profile $\Omega(r)=(r/\ell)^{(7-p)/2}$, and the paper itself says that the resulting ansatz must still be inserted into the supergravity equations to see whether it works. Promoting $\omega$ to a function of position is justified by a dilatation-symmetry argument and ``formal duality relationships'', not by a worked-out derivation from the flow equation.
+
+\item \emph{The flow equations and the conjecture are incomplete.} The flow equations are stated to hold at least classically, and they are abelian. They are complete only for $p=1,2$; for $p=3$ they are given only to linear order in the flow parameter, and the non-abelian DBI case is left open. The DLCQ$^n$/DLCQ$^m$ correspondence is stated schematically, and its only checks are the known AdS/CFT, IMSY and D1--D5 examples. For $p>3$ the matrix theories are not perturbatively defined, so the discussion there is limited to geometry.
+\end{enumerate}
+
+\section{Most worthwhile follow-up}
+
+\textbf{Recommendation: verify and characterise the non-Lorentzian near-horizon backgrounds.} Concretely:
+\begin{enumerate}
+\item Substitute the explicit M$p$T near-horizon ansatz (single-stack and multicritical) into the M$p$T supergravity equations and torsional constraints, using a computer-algebra system, to find which backgrounds solve them and for which $p$.
+\item For each surviving solution, compute the isometry algebra. The paper calls this ``a natural and important calculation'' and does not carry it out. Then compare the result with the M$p$T superalgebra derived in the paper, in particular the M0T superalgebra.
+\end{enumerate}
+
+\emph{Feasibility: high.} The backgrounds are written out explicitly, and the calculation is a finite, computer-checkable task inside the existing Newton--Cartan formalism. Either outcome is definite. A verified, symmetry-characterised background is a prerequisite for any holographic dictionary. A negative result would also be informative: it would constrain which brane configurations can give valid non-Lorentzian holographic duals.
+
+\emph{Impact: moderate to high.} This turns the paper's ansatz-level non-Lorentzian holography into checked solutions with known symmetries, and it addresses the paper's open question on supersymmetry and charges.
+
+\emph{Alternative considered.} Deriving $\Omega(r)$ from a $p$-brane $T\bar T$ flow with a background-dependent coupling would test the paper's most striking claim, that the bulk is generated intrinsically, and would have greater impact. However, the paper only motivates that flow heuristically, so feasibility is lower. I rank it second.
+
+\end{document}
