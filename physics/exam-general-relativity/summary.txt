@@ -22,27 +22,6 @@ Choices and caveats:
 - I used the convention $\nabla_\mu V^\rho = \partial_\mu V^\rho + \hat\Gamma_{\mu\nu}{}^\rho V^\nu$ for Q3. The conclusions do not depend on this choice.
 - I did not use the Claude Docs tools, because you asked for LaTeX files.
 - Two of my own scratch logs were written to `/tmp` during compilation. I deleted them. Pdflatex also left `answers.aux`, `answers.log` and `answers.out` in the working directory, which are normal build byproducts.
-I wrote the answers to all six questions in `answers.tex` and compiled them with pdflatex to `answers.pdf` (7 pages, no errors or warnings). Every question has its calculational steps shown.
-
-Summary of the answers:
-
-- **Q2:** The Riemann tensor transforms index by index with Jacobians. Contracting the upper index with the first lower index gives $R'_{\mu\nu} = \frac{\partial x^\beta}{\partial x'^\mu}\frac{\partial x^\delta}{\partial x'^\nu}R_{\beta\delta}$, so the Ricci tensor is a tensor.
-- **Q3a:** The connection is not torsion-free: $T^\rho{}_{\mu\nu} = \tfrac16 H^\rho{}_{\mu\nu}$. It is metric compatible, because the two $H$ terms in $\hat\nabla g$ cancel by antisymmetry.
-- **Q3b:** The extra term $H_{\nu\rho\sigma}\dot x^\nu\dot x^\rho$ vanishes because $H$ is antisymmetric and $\dot x^\nu\dot x^\rho$ is symmetric. So the geodesics are the same.
-- **Q4a:** $r=2GM$ is a coordinate singularity, and the Kretschmann scalar is finite there. $r=0$ is the real curvature singularity ($K = 48G^2M^2/r^6$), and it lies in your future.
-- **Q4b:** With $dv = dt + dr/f$, the metric becomes $ds^2 = -f\,dv^2 + 2\,dv\,dr + r^2 d\Omega^2$, which is regular at $r=2GM$.
-- **Q5a:** The metric is FRW with $k=+1$ and $a = L\cosh(t/L)$. It describes accelerating expansion with $\Lambda = 3/L^2$. The closed slicing is a caveat, since observations favour flat space.
-- **Q5b:** A conformal factor preserves null and causal curves, so the causal structure is unchanged.
-- **Q5c:** The substitution gives $dt = L\sec\eta\,d\eta$ and $ds^2 = L^2\sec^2\eta(-d\eta^2 + d\Omega_3^2)$. The Penrose diagram is a square with $\mathcal{I}^\pm$ at top and bottom and the pole worldlines as the vertical sides.
-- **Q6a:** In harmonic gauge the linearised equation reduces to $\Box\bar h_{\mu\nu} = -16\pi G T_{\mu\nu}$, a wave equation.
-- **Q6b:** The proper distances are $L_x(1+\tfrac12 h_+)$ and $L_y(1-\tfrac12 h_+)$.
-- **Q6c:** The answer covers inspiral, merger and ringdown, the interferometer response, and a schematic TikZ sketch of the strain.
-
-Choices and caveats:
-- The Penrose diagram and the Q6c strain sketch are schematic TikZ drawings, not to scale.
-- I used the convention $\nabla_\mu V^\rho = \partial_\mu V^\rho + \hat\Gamma_{\mu\nu}{}^\rho V^\nu$ for Q3. The conclusions do not depend on this choice.
-- I did not use the Claude Docs tools, because you asked for LaTeX files.
-- Two of my own scratch logs were written to `/tmp` during compilation. I deleted them. Pdflatex also left `answers.aux`, `answers.log` and `answers.out` in the working directory, which are normal build byproducts.
 
 ===== logs/claude-haiku-5-5_high_1.jsonl =====
 [Agent text output:] I have the exam: five questions worth 20 points, all to be answered with calculations shown. I'll write `answers.tex` with TikZ for the two sketches (Penrose diagram and chirp), then compile.
@@ -58,26 +37,10 @@ Choices I made:
 - **Question 5(c):** The waveform is a schematic sketch, not a numerical simulation. The merger stage is described qualitatively.
 
 The build left `answers.aux` and `answers.log` in the working directory. Nothing outside it was created or changed.
-`answers.tex` and `answers.pdf` are in `agent_sandbox/work`. The PDF compiles cleanly with pdflatex (7 pages, no errors or warnings). All five questions (20 points) are answered with the calculational steps shown, and the two sketches (Penrose diagram, binary chirp) are drawn in TikZ.
-
-Choices I made:
-- **Question 3(a):** I quoted the standard orthonormal Riemann components of Schwarzschild and summed their squares to get the Kretschmann scalar 48G²M²/r⁶, rather than deriving the components from the Christoffel symbols.
-- **Question 2:** The metric-compatibility and geodesic arguments use the convention where the derivative index is the first lower index. I noted that the other ordering gives the same result.
-- **Question 4(a):** Beyond the requested scale factor a(t) = L cosh(t/L), I added a note that this closed-universe model is only a rough candidate, since observations favour a spatially flat universe and the model contains no matter.
-- **Question 5(c):** The waveform is a schematic sketch, not a numerical simulation. The merger stage is described qualitatively.
-
-The build left `answers.aux` and `answers.log` in the working directory. Nothing outside it was created or changed.
 
 ===== logs/claude-sonnet-5-5_low_1.jsonl =====
 [Agent text output:] Likely `\mathscr` (needs mathrsfs). Fix.
 [Agent text output:] I answered all five questions in `agent_sandbox/work/answers.tex`, with the calculational steps shown. It compiles with pdflatex to `answers.pdf` (4 pages) with no errors. I haven't opened the PDF, so I haven't checked how the diagrams look.
-
-My first compile failed because the file used `\mathscr` without the `mathrsfs` package. I added the package and recompiled.
-
-The Penrose diagram for Question 5(c) and the gravitational-wave chirp sketch for Question 6(c) are drawn with TikZ.
-
-I only created files inside the working directory.
-I answered all five questions in `agent_sandbox/work/answers.tex`, with the calculational steps shown. It compiles with pdflatex to `answers.pdf` (4 pages) with no errors. I haven't opened the PDF, so I haven't checked how the diagrams look.
 
 My first compile failed because the file used `\mathscr` without the `mathrsfs` package. I added the package and recompiled.
 
@@ -105,38 +68,10 @@ The answers, in the exam's order:
    - **Binary:** I cover inspiral, merger and ringdown and the LIGO interferometer, with a sketched waveform.
 
 The text and the exam's own numbering are unchanged apart from my answers. The directory also has `exam.tex` and `AGENTS.md`; I deleted the pdflatex `.aux`, `.log` and `.out` files. I wrote nothing outside the working directory except temporary page images in `/tmp`.
-I've answered all five questions in `answers.tex` and compiled it with pdflatex to `answers.pdf` (8 pages). The final compile ran with no errors or warnings. I looked at the Penrose diagram and the waveform sketch as rendered pages and fixed overlapping labels in the diagram. I only looked at those two figures as images, not the rest of the pages.
-
-The answers, in the exam's order:
-1. **Riemann and Ricci:** I give the tensor transformation law for the Riemann tensor. The Ricci contraction is then shown to transform as a tensor using the chain rule, which turns the Jacobian product into a delta.
-2. **Connection with H:** The connection has torsion $\frac16 H_{\mu\nu}{}^\rho$, so it is not torsion-free. It is metric compatible because $H$ is totally antisymmetric. Its geodesics match Levi-Civita because $H_{\mu\nu\sigma}$ contracts with the symmetric $\dot x^\mu\dot x^\nu$ and drops out.
-3. **Schwarzschild:**
-   - **Singularities:** $r=2GM$ is only a coordinate singularity. The genuine one is $r=0$, where the Kretschmann scalar $48G^2M^2/r^6$ diverges.
-   - **Eddington–Finkelstein:** I derive $ds^2=-f\,dv^2+2\,dv\,dr+r^2d\Omega^2$, which is regular at $r=2GM$.
-4. **de Sitter:**
-   - **Cosmology:** The scale factor is $a=L\cosh(t/L)$, and it satisfies the Friedmann equation with $\Lambda=3/L^2$.
-   - **Causal structure:** Rescaling a metric by a conformal factor leaves its light cones unchanged.
-   - **Penrose diagram:** The substitution gives $dt=L\,d\eta/\cos\eta$ and a conformally static metric, drawn as a square in TikZ with the horizons shown.
-5. **Gravitational waves:**
-   - **Waves from the gauge choice:** Lorenz gauge reduces the linearised equation to a wave equation.
-   - **Proper distances:** I derive $\Delta s\approx L_x(1+\tfrac12 h_+)$ and $L_y(1-\tfrac12 h_+)$.
-   - **Binary:** I cover inspiral, merger and ringdown and the LIGO interferometer, with a sketched waveform.
-
-The text and the exam's own numbering are unchanged apart from my answers. The directory also has `exam.tex` and `AGENTS.md`; I deleted the pdflatex `.aux`, `.log` and `.out` files. I wrote nothing outside the working directory except temporary page images in `/tmp`.
 
 ===== logs/claude-opus-5-5_low_1.jsonl =====
 [Agent text output:] I left a messy Kretschmann remark; fix it.
 [Agent text output:] I've written answers to every question, with the working shown, in `answers.tex`. It compiled to a 5-page `answers.pdf` with pdflatex, with no errors. I checked the build output only; I haven't looked over the PDF pages themselves, including the two diagrams.
-
-- **Q1:** I wrote down how the Riemann tensor transforms, then contracted two of its indices to get the Ricci tensor. That shows it transforms as a tensor.
-- **Q2:** The new connection has torsion (equal to H/6) but is still metric compatible. It has the same geodesics as the usual one, because the H term is antisymmetric and drops out of the geodesic equation.
-- **Q3:** r = 2GM is only a coordinate singularity; r = 0 is the real one, where curvature blows up. In Eddington–Finkelstein coordinates the metric becomes ds² = −f dv² + 2 dv dr + r² dΩ², which is regular at r = 2GM.
-- **Q4:** This is a closed expanding-universe metric with scale factor a(t) = L cosh(t/L) and a positive cosmological constant. I explained why rescaling the metric keeps the light cones the same. After the change of variable, the metric is a rescaling of the Einstein static universe. I drew the resulting square Penrose diagram, with its horizons marked.
-- **Q5:**
-  - **a)** In the right gauge the equation becomes a wave equation.
-  - **b)** I derived both proper-distance results.
-  - **c)** I covered inspiral, merger and ringdown and how the interferometer detects the wave, and drew a sketch of the signal.
-I've written answers to every question, with the working shown, in `answers.tex`. It compiled to a 5-page `answers.pdf` with pdflatex, with no errors. I checked the build output only; I haven't looked over the PDF pages themselves, including the two diagrams.
 
 - **Q1:** I wrote down how the Riemann tensor transforms, then contracted two of its indices to get the Ricci tensor. That shows it transforms as a tensor.
 - **Q2:** The new connection has torsion (equal to H/6) but is still metric compatible. It has the same geodesics as the usual one, because the H term is antisymmetric and drops out of the geodesic equation.
@@ -171,25 +106,6 @@ I've written answers to every question, with the working shown, in `answers.tex`
   - (c) I explained inspiral, merger and ringdown, sketched the chirp signal with pgfplots, and described how the interferometer arms measure ΔL = hL.
 
 While checking the figures I briefly wrote preview images to `/tmp`, which broke the rule against creating files outside the working directory. I deleted them straight away and redid the previews inside the working directory, then removed those too. Apart from your original files, the folder now holds only `answers.tex`, `answers.pdf`, and LaTeX's auxiliary build files (`.aux`, `.log`, `.out`).
-I've written the answers to every question in `exam.tex`, showing the working, in `answers.tex` and compiled them with pdflatex into `answers.pdf` (9 pages). The final build had no errors and no overfull boxes, and I checked both figures by rendering them as images.
-
-- **Q1:** I wrote out how the Riemann tensor transforms, then contracted it to get the Ricci tensor. One coordinate-change factor and its inverse multiply to the identity, which leaves the transformation rule for a (0,2) tensor.
-- **Q2:**
-  - (a) The new connection has torsion equal to H/6, so it is **not torsion-free** unless H = 0. It **is metric-compatible**, because the H terms cancel by antisymmetry. I also show that the result doesn't depend on which index convention you use for the connection.
-  - (b) In the geodesic equation the H term multiplies a symmetric factor (velocity times velocity), so it drops out and the geodesics are the same as before.
-- **Q3:**
-  - (a) The metric is singular at r = 2GM, r = 0, and θ = 0, π. A curvature invariant (Kretschmann scalar, 48G²M²/r⁶) is finite at r = 2GM but blows up at r = 0. So only r = 0 is a real danger, and once inside the horizon you reach it within a proper time of at most πGM.
-  - (b) I derived ds² = −f dv² + 2 dv dr + r² dΩ². It is smooth and invertible at r = 2GM, and the paths of light rays show that the horizon is a one-way surface.
-- **Q4:**
-  - (a) This is a cosmological (FLRW) metric with closed spatial slices and scale factor a(t) = L cosh(t/L). I checked that it satisfies the Friedmann equation with cosmological constant Λ = 3/L².
-  - (b) Rescaling the metric by a positive factor doesn't change which directions are timelike, null or spacelike, so the light cones and causal structure are the same.
-  - (c) The coordinate change gives ds² = L²/cos²η (−dη² + dΩ₃²). I drew the Penrose diagram in TikZ as a square with spacelike top and bottom edges (future and past infinity) and the horizons marked.
-- **Q5:**
-  - (a) In Lorenz gauge the equation reduces to the wave equation, so the solutions are gravitational waves.
-  - (b) I showed that freely falling particles stay at fixed coordinates, then integrated the proper distance along each axis to get the two results asked for.
-  - (c) I explained inspiral, merger and ringdown, sketched the chirp signal with pgfplots, and described how the interferometer arms measure ΔL = hL.
-
-While checking the figures I briefly wrote preview images to `/tmp`, which broke the rule against creating files outside the working directory. I deleted them straight away and redid the previews inside the working directory, then removed those too. Apart from your original files, the folder now holds only `answers.tex`, `answers.pdf`, and LaTeX's auxiliary build files (`.aux`, `.log`, `.out`).
 
 ===== logs/gemini-3.8-flash_low_1.jsonl =====
 [Agent text output:] I have read [exam.tex](exam.tex) and followed all instructions in [AGENTS.md](AGENTS.md) exactly:
@@ -197,13 +113,6 @@ While checking the figures I briefly wrote preview images to `/tmp`, which broke
 1. **Complete Solutions**: All five examination questions (Questions 1 through 5, numbered as Questions 1 to 5 corresponding to the 2, 3, 4, 5, and 6-point questions on the examination paper) have been thoroughly solved with all calculational steps explicitly shown.
 2. **Source Code**: Saved in [answers.tex](answers.tex) in the working directory.
 3. **Compilation**: Successfully compiled using `pdflatex` to [answers.pdf](answers.pdf) with cross-references resolved and figures (Penrose diagram and binary waveform sketch) rendered in TikZ.
-
-I have read [exam.tex](exam.tex) and followed all instructions in [AGENTS.md](AGENTS.md) exactly:
-
-1. **Complete Solutions**: All five examination questions (Questions 1 through 5, numbered as Questions 1 to 5 corresponding to the 2, 3, 4, 5, and 6-point questions on the examination paper) have been thoroughly solved with all calculational steps explicitly shown.
-2. **Source Code**: Saved in [answers.tex](answers.tex) in the working directory.
-3. **Compilation**: Successfully compiled using `pdflatex` to [answers.pdf](answers.pdf) with cross-references resolved and figures (Penrose diagram and binary waveform sketch) rendered in TikZ.
-
 
 ===== logs/gemini-3.8-flash_high_1.jsonl =====
 [Agent text output:] The examination paper [exam.tex](exam.tex) has been solved in full detail following the instructions in [AGENTS.md](AGENTS.md). 
@@ -266,88 +175,8 @@ All intermediate calculational steps, tensor transformations, metric derivations
 - Source file: [answers.tex](answers.tex)
 - Compiled document: [answers.pdf](answers.pdf)
 
-The examination paper [exam.tex](exam.tex) has been solved in full detail following the instructions in [AGENTS.md](AGENTS.md). 
-
-All intermediate calculational steps, tensor transformations, metric derivations, physical explanations, and diagrams have been written to [answers.tex](answers.tex) and successfully compiled to [answers.pdf](answers.pdf) using `pdflatex`.
-
----
-
-### Summary of Solutions
-
-1. **Question 1 (2 points): Tensor Transformations & the Ricci Tensor**
-   - **Riemann Tensor Transformation:** Under a coordinate transformation $x \mapsto x'$, the $(1,3)$ Riemann tensor transforms multilinearly as:
-     $$R'^\alpha{}_{\beta\gamma\delta} = \frac{\partial x'^\alpha}{\partial x^\mu} \frac{\partial x^\nu}{\partial x'^\beta} \frac{\partial x^\rho}{\partial x'^\gamma} \frac{\partial x^\sigma}{\partial x'^\delta} R^\mu{}_{\nu\rho\sigma}$$
-   - **Ricci Tensor Transformation:** Contracting the upper index with the second lower index ($R_{\mu\nu} \equiv R^\rho{}_{\mu\rho\nu}$), the Jacobians contract via the chain rule:
-     $$\frac{\partial x'^\alpha}{\partial x^\mu} \frac{\partial x^\rho}{\partial x'^\alpha} = \delta^\rho_\mu$$
-     yielding explicitly:
-     $$R'_{\beta\delta} = \frac{\partial x^\nu}{\partial x'^\beta} \frac{\partial x^\sigma}{\partial x'^\delta} R_{\nu\sigma}$$
-     which is the exact defining transformation rule for a $(0,2)$ tensor.
-
-2. **Question 2 (3 points): Non-Riemannian Connection with Torsion 3-Form**
-   - **Torsion:** With $\hat\Gamma_{\mu\nu}{}^\rho = \Gamma_{\mu\nu}{}^\rho + \frac{1}{12} g^{\rho\sigma} H_{\mu\nu\sigma}$ and totally antisymmetric $H_{\mu\nu\sigma} = H_{[\mu\nu\sigma]}$, the torsion is:
-     $$T^\rho{}_{\mu\nu} = \hat\Gamma_{\mu\nu}{}^\rho - \hat\Gamma_{\nu\mu}{}^\rho = \frac{1}{6} g^{\rho\sigma} H_{\mu\nu\sigma} \neq 0$$
-     Hence, the connection is **not torsion-free**.
-   - **Metric Compatibility:** Evaluating $\hat\nabla_\lambda g_{\mu\nu} = -\frac{1}{12}(H_{\lambda\mu\nu} + H_{\lambda\nu\mu})$ vanishes identically by the antisymmetry in the last two indices ($H_{\lambda\nu\mu} = -H_{\lambda\mu\nu}$). Thus, the connection **is metric compatible**.
-   - **Geodesics:** In the geodesic equation, the torsion term couples as $H_{\mu\nu\sigma} \dot{x}^\mu \dot{x}^\nu = 0$ (contraction of the antisymmetric tensor $H_{\mu\nu\sigma}$ with the symmetric velocity product $\dot{x}^\mu \dot{x}^\nu$), so the geodesic equation reduces identically to the Levi-Civita geodesic equation.
-
-3. **Question 3 (4 points): Schwarzschild Singularities & Eddington-Finkelstein Coordinates**
-   - **Singularities:** Apparent singularities occur at $r = 2GM$ and $r = 0$.
-     - Evaluating the Kretschmann invariant $K = R_{\alpha\beta\gamma\delta} R^{\alpha\beta\gamma\delta} = \frac{48 G^2 M^2}{r^6}$:
-       - At $r = 2GM$, $K = \frac{3}{4 G^4 M^4} < \infty$ and proper crossing time is finite; hence, $r = 2GM$ is merely an apparent **coordinate singularity** (the event horizon).
-       - At $r = 0$, $K \to \infty$ and tidal forces diverge; hence, $r = 0$ is a **true physical curvature singularity** about which you should be genuinely concerned.
-   - **Ingoing Eddington-Finkelstein Metric:** With $v = t + r^*$, $dt = dv - f(r)^{-1} dr$, yielding:
-     $$ds^2 = -\left(1 - \frac{2GM}{r}\right) dv^2 + 2 dv dr + r^2 (d\theta^2 + \sin^2\theta d\phi^2)$$
-     At $r = 2GM$, $\det g = -r^4 \sin^2\theta \neq 0$, and all metric components are smooth and invertible. Ingoing radial null rays satisfy $v = \text{const}$, passing smoothly through $r = 2GM$, confirming that $r = 2GM$ is regular while $r = 0$ remains singular.
-
-4. **Question 4 (5 points): de Sitter Cosmology & Penrose Diagram**
-   - **Cosmological Metric & Scale Factor:** Comparing with the closed FLRW metric ($k = +1$), the scale factor is:
-     $$a(t) = L \cosh(t/L)$$
-     It describes a homogeneous and isotropic universe solving Einstein's vacuum equations with $\Lambda = 3/L^2$, modeling both primordial inflation and late-time dark energy acceleration ($t \gg L \implies a(t) \propto e^{t/L}$).
-   - **Causal Structure:** Under $g_{\mu\nu} = \Omega^2 \bar g_{\mu\nu}$ with $\Omega^2 > 0$, the signs of vector norms are strictly invariant, preserving all light cones pointwise ($\mathcal{C}_p(g) = \mathcal{C}_p(\bar g)$), null geodesics, and causal horizons.
-   - **Conformal Transformation & Penrose Diagram:** With $\cosh(t/L) = 1/\cos\eta$, $dt = \frac{L}{\cos\eta} d\eta$, giving:
-     $$ds^2 = \frac{L^2}{\cos^2\eta} \left[ -d\eta^2 + d\chi^2 + \sin^2\chi d\Omega_2^2 \right]$$
-     The conformal time range is $\eta \in [-\pi/2, \pi/2]$ and $\chi \in [0, \pi]$. The Penrose diagram is a square with spacelike past/future conformal infinities $\mathcal{I}^\pm$, timelike boundary poles $\chi = 0, \pi$, null lines at $\pm 45^\circ$, and cosmological event horizon $\eta = \pi/2 - \chi$.
-
-5. **Question 5 (6 points): Linearized Gravity & Gravitational Waves**
-   - **Wave Equation:** Imposing the Lorenz gauge $\partial^\mu \bar h_{\mu\nu} = 0$ simplifies the linearized field equation in vacuum to the relativistic wave equation:
-     $$\Box \bar h_{\mu\nu} = \left(-\frac{\partial^2}{\partial t^2} + \nabla^2\right) \bar h_{\mu\nu} = 0$$
-     demonstrating propagating waves travelling at $c=1$.
-   - **Proper Distance Calculation:** Since $\Gamma^\mu_{00} = 0$ in TT gauge, freely falling particles initially at rest stay at constant coordinate positions.
-     - Along the $x$-axis: $\Delta s \approx \int_0^{L_x} \left(1 + \frac{1}{2} h_+(t)\right) dx = L_x \left(1 + \frac{1}{2} h_+(t)\right)$.
-     - Along the $y$-axis: $\Delta s \approx \int_0^{L_y} \left(1 - \frac{1}{2} h_+(t)\right) dy = L_y \left(1 - \frac{1}{2} h_+(t)\right)$.
-   - **Binary Coalescence & LIGO Detection:**
-     - Quadrupole radiation drains orbital energy, causing the orbit to shrink and sweep up in frequency and amplitude through **inspiral** (chirp signal), reaching maximum amplitude at **merger** (relativistic plunge and coalescence), followed by exponentially damped **ringdown** as the perturbed remnant radiates quasi-normal modes ($e^{-t/\tau} \cos\omega_{\text{QNM}} t$) into a stationary Kerr black hole.
-     - A Michelson laser interferometer measures the differential arm length change $\Delta L(t) = \Delta L_x - \Delta L_y \approx L h_+(t)$ via an optical phase shift $\Delta\Phi(t) = \frac{4\pi L}{\lambda} h_+(t)$ modulating dark fringe interference.
-     - Includes a complete, mathematically continuous waveform plot and binary coalescence schematic across the three regimes.
-
----
-
-### Output Files
-- Source file: [answers.tex](answers.tex)
-- Compiled document: [answers.pdf](answers.pdf)
-
-
 ===== logs/gemini-4-argon_low_1.jsonl =====
 [Agent text output:] I have read [AGENTS.md](AGENTS.md) and [exam.tex](exam.tex), written complete step-by-step solutions to all questions in [answers.tex](answers.tex), and compiled them to [answers.pdf](answers.pdf) using `pdflatex`.
-
-### Summary of Solutions in [answers.tex](answers.tex) / [answers.pdf](answers.pdf)
-- **Question 1:** Stated the $(1,3)$ tensor transformation law for $R^\mu{}_{\nu\rho\sigma}$ and explicitly demonstrated via the chain rule ($\frac{\partial x'^\rho}{\partial x^\alpha}\frac{\partial x^\gamma}{\partial x'^\rho} = \delta^\gamma_\alpha$) that $R_{\mu\nu} = R^\rho{}_{\mu\rho\nu}$ transforms as a rank $(0,2)$ covariant tensor.
-- **Question 2:**
-  - **a)** Computed the torsion tensor $\hat{T}_{\mu\nu}{}^\rho = 2\hat{\Gamma}_{[\mu\nu]}{}^\rho = \frac{1}{6} g^{\rho\sigma} H_{\mu\nu\sigma} \neq 0$ (not torsion-free) and showed $\hat{\nabla}_\mu g_{\nu\rho} = \nabla_\mu g_{\nu\rho} - \frac{1}{12}(H_{\mu\nu\rho} + H_{\mu\rho\nu}) = 0$ by the total antisymmetry of $H_{\mu\nu\rho}$ (metric compatible).
-  - **b)** Showed that in the geodesic equation $\frac{d^2 x^\rho}{d\lambda^2} + \hat{\Gamma}_{\mu\nu}{}^\rho \frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda} = 0$, the term $H_{\mu\nu\sigma}\frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}$ vanishes identically by symmetry of $\dot{x}^\mu \dot{x}^\nu$ and antisymmetry of $H_{\mu\nu\sigma}$, leaving the Levi-Civita geodesic equation.
-- **Question 3:**
-  - **a)** Identified the metric singularities at $r = 2GM$ (coordinate singularity / event horizon), $r = 0$ (physical curvature singularity), and $\theta = 0, \pi$ (spherical polar coordinate singularities), using the Kretschmann scalar $R^{\mu\nu\rho\sigma}R_{\mu\nu\rho\sigma} = \frac{48G^2M^2}{r^6}$ and causal structure to explain why $r = 0$ is locally fatal (infinite tidal forces) while $r = 2GM$ is globally a point of no return leading inevitably to $r = 0$.
-  - **b)** Derived the Schwarzschild line element in ingoing Eddington-Finkelstein coordinates $(v,r,\theta,\phi)$, $ds^2 = -\left(1 - \frac{2GM}{r}\right)dv^2 + 2dv\,dr + r^2(d\theta^2 + \sin^2\theta d\phi^2)$, showing regularity at $r = 2GM$, divergence at $r = 0$, and the tilting of radial light cones across the horizon.
-- **Question 4:**
-  - **a)** Explained why de Sitter space is a homogeneous, isotropic FLRW spacetime ($k=+1$) with accelerated expansion driven by $\Lambda = 3/L^2 > 0$, and identified the scale factor $a(t) = L\cosh(t/L)$ (or dimensionless $\cosh(t/L)$).
-  - **b)** Showed that $g_{\mu\nu} = \Omega^2 \bar{g}_{\mu\nu}$ ($\Omega^2 > 0$) preserves the sign of $g_{\mu\nu} V^\mu V^\nu$ for all tangent vectors $V^\mu$, leaving light cones and causal structure invariant.
-  - **c)** Performed the conformal time transformation $\cosh(t/L) = 1/\cos\eta$ to obtain $ds^2 = \frac{L^2}{\cos^2\eta}(-d\eta^2 + d\chi^2 + \sin^2\chi d\Omega_2^2)$ with $\eta \in (-\pi/2, \pi/2)$, and drew the fully labelled square Penrose diagram.
-- **Question 5:**
-  - **a)** Imposed the Lorenz gauge $\partial^\rho \bh_{\mu\rho} = 0$ to reduce the linearised Einstein equation to $\Box \bh_{\mu\nu} = -16\pi G T_{\mu\nu}$ (and $\Box \bh_{\mu\nu} = 0$ in vacuum), demonstrating wave propagation at $c = 1$.
-  - **b)** Showed that freely falling particles initially at rest remain at fixed TT coordinates ($\Gamma_{00}{}^\mu = 0$) and integrated the spatial line elements to obtain $\Delta s \approx L_x(1 + \frac{1}{2}h_+(t))$ and $\Delta s \approx L_y(1 - \frac{1}{2}h_+(t))$.
-  - **c)** Explained how a Michelson interferometer (LIGO) measures the differential arm length $\Delta L(t) \approx L h_+(t)$ via laser phase shifts, detailed the physics of the **inspiral**, **merger**, and **ringdown** phases of a compact binary, and included a labelled sketch of the gravitational wave chirp-merger-ringdown waveform.
-
-I have read [AGENTS.md](AGENTS.md) and [exam.tex](exam.tex), written complete step-by-step solutions to all questions in [answers.tex](answers.tex), and compiled them to [answers.pdf](answers.pdf) using `pdflatex`.
 
 ### Summary of Solutions in [answers.tex](answers.tex) / [answers.pdf](answers.pdf)
 - **Question 1:** Stated the $(1,3)$ tensor transformation law for $R^\mu{}_{\nu\rho\sigma}$ and explicitly demonstrated via the chain rule ($\frac{\partial x'^\rho}{\partial x^\alpha}\frac{\partial x^\gamma}{\partial x'^\rho} = \delta^\gamma_\alpha$) that $R_{\mu\nu} = R^\rho{}_{\mu\rho\nu}$ transforms as a rank $(0,2)$ covariant tensor.
@@ -386,23 +215,3 @@ I have read [AGENTS.md](AGENTS.md) and [exam.tex](exam.tex), written complete st
   - **a)** Imposed the Lorenz/de Donder gauge $\partial^\rho \bh_{\mu\rho} = 0$ to reduce the linearised Einstein equation to the wave equation $\Box \bh_{\mu\nu} = -16\pi G T_{\mu\nu}$ (and $\Box \bh_{\mu\nu} = 0$ in vacuum).
   - **b)** Verified that freely falling test particles remain at constant spatial coordinates ($\Gamma^i_{00} = 0$) and integrated the spatial line elements to obtain $\Delta s \approx L_x\left(1 + \frac{1}{2}h_+(t)\right)$ along the $x$-axis and $\Delta s \approx L_y\left(1 - \frac{1}{2}h_+(t)\right)$ along the $y$-axis.
   - **c)** Explained how a Michelson laser interferometer like LIGO measures the differential proper arm-length change $\Delta L(t) \approx L h_+(t)$ via laser phase interference, connected the orbital physics of a coalescing binary to the **inspiral**, **merger**, and **ringdown** phases, and sketched the resulting waveform.
-
-I have read [AGENTS.md](AGENTS.md) and [exam.tex](exam.tex), written complete solutions with all calculational steps and diagrams in [answers.tex](answers.tex), and compiled them to [answers.pdf](answers.pdf) using `pdflatex`.
-
-### Summary of Solutions in [answers.tex](answers.tex)
-- **Question 1:** Stated the $(1,3)$ tensor transformation law for $R^\mu{}_{\nu\rho\sigma}$ and explicitly proved via the chain rule ($\frac{\partial x^{\rho'}}{\partial x^\alpha}\frac{\partial x^\beta}{\partial x^{\rho'}} = \delta^\beta_\alpha$) that $R_{\mu\nu} = R^\rho{}_{\mu\rho\nu}$ transforms as a $(0,2)$ tensor.
-- **Question 2:** 
-  - **a)** Showed that $\hat\Gamma_{\mu\nu}{}^\rho = \Gamma_{\mu\nu}{}^\rho + \frac{1}{12}g^{\rho\sigma}H_{\mu\nu\sigma}$ has non-vanishing torsion $\hat{T}_{\mu\nu}{}^\rho = \frac{1}{6}H_{\mu\nu}{}^\rho$ (hence is **not** torsion-free), and proved $\hat\nabla_\mu g_{\nu\rho} = 0$ using the total antisymmetry of $H_{\mu\nu\rho}$ (hence **is** metric compatible).
-  - **b)** Showed that $H_{\mu\nu\sigma}\dot{x}^\mu \dot{x}^\nu = 0$ by symmetry/antisymmetry contraction, so the geodesic equation for $\hat\Gamma_{\mu\nu}{}^\rho$ is identical to that of the Levi-Civita connection $\Gamma_{\mu\nu}{}^\rho$.
-- **Question 3:** 
-  - **a)** Identified the singularities at $r = 2GM$ (coordinate singularity at the event horizon) and $r = 0$ (physical curvature singularity where $R^{\mu\nu\rho\sigma}R_{\mu\nu\rho\sigma} = \frac{48G^2M^2}{r^6} \to \infty$), and explained why both $r = 0$ (infinite tidal forces) and crossing $r = 2GM$ (causal trapping inside the event horizon leading inevitably to $r = 0$) are of genuine concern.
-  - **b)** Derived the Schwarzschild line element in ingoing Eddington-Finkelstein coordinates, $ds^2 = -\left(1 - \frac{2GM}{r}\right)dv^2 + 2\,dv\,dr + r^2(d\theta^2 + \sin^2\theta\,d\phi^2)$, showing how the regularity and invertibility at $r=2GM$, the divergence at $r=0$, and the tilting of radial light cones ($\frac{dr}{dv} < 0$ for $r < 2GM$) support part a).
-- **Question 4:** 
-  - **a)** Explained why de Sitter spacetime is a candidate cosmological model (spatial homogeneity and isotropy of the FLRW form with $S^3$ spatial slices, and accelerated expansion driven by $\Lambda > 0$ relevant to inflation and dark energy) and identified the scale factor $a(t) = L\cosh(t/L)$.
-  - **b)** Showed that $g_{\mu\nu} = \Omega^2 \bar{g}_{\mu\nu}$ ($\Omega^2 > 0$) preserves the sign and zeros of $g_{\mu\nu}V^\mu V^\nu$, thus preserving timelike, null, and spacelike vectors/curves and light cones.
-  - **c)** Carried out the coordinate transformation $\cosh(t/L) = 1/\cos\eta$ to obtain $ds^2 = \frac{L^2}{\cos^2\eta}\left[-d\eta^2 + d\chi^2 + \sin^2\chi(d\theta^2 + \sin^2\theta\,d\phi^2)\right]$ with $\eta \in (-\frac{\pi}{2}, \frac{\pi}{2})$ and drew the corresponding Penrose diagram.
-- **Question 5:** 
-  - **a)** Imposed the Lorenz/de Donder gauge $\partial^\rho \bh_{\mu\rho} = 0$ to reduce the linearised Einstein equation to the wave equation $\Box \bh_{\mu\nu} = -16\pi G T_{\mu\nu}$ (and $\Box \bh_{\mu\nu} = 0$ in vacuum).
-  - **b)** Verified that freely falling test particles remain at constant spatial coordinates ($\Gamma^i_{00} = 0$) and integrated the spatial line elements to obtain $\Delta s \approx L_x\left(1 + \frac{1}{2}h_+(t)\right)$ along the $x$-axis and $\Delta s \approx L_y\left(1 - \frac{1}{2}h_+(t)\right)$ along the $y$-axis.
-  - **c)** Explained how a Michelson laser interferometer like LIGO measures the differential proper arm-length change $\Delta L(t) \approx L h_+(t)$ via laser phase interference, connected the orbital physics of a coalescing binary to the **inspiral**, **merger**, and **ringdown** phases, and sketched the resulting waveform.
-

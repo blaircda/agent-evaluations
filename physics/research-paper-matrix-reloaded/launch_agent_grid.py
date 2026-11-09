@@ -101,5 +101,5 @@ for model, effort, i in itertools.product(MODELS, EFFORTS, range(1, AGENTS + 1))
         f.write(f"\n===== {log} =====\n")
         for line in outputs:
             f.write(f"[Agent text output:] {line}\n")
-        f.write(f"{final_text}\n")
+        #f.write(f"{final_text}\n")
 
