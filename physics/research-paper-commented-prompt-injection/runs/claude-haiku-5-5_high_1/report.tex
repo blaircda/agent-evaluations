@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.0}
+
+\title{Report on ``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}
+\author{Review of C.~D.~A.~Blair, IFT-UAM/CSIC-25-26}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Summary of the paper}
+
+Section numbers below refer to the paper. The paper takes the M2 and M5 brane solutions through the membrane non-relativistic (M2NC) limit of 11-dimensional supergravity in two ways. In the \emph{scaled} version the number of branes is scaled with the limit, so the background is localised in the longitudinal directions. In the \emph{smeared} version the brane is smeared along the longitudinal directions, so the background is localised in the transverse directions. The paper then solves the Killing spinor equations of the M2NC theory for each background. The reported results are:
+
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Background & Constraints satisfied & Killing spinors (as reported) \\
+\midrule
+M2 scaled, general $H$ & maximal & 24; infinite if $\ln H$ is harmonic \\
+M2 scaled, near-horizon & maximal & 32, plus infinite enhancement \\
+M5 scaled & maximal & 32 (16 if $H$ is not near-horizon), plus infinite \\
+M5 spherical-scaled & maximal & 32, plus infinite \\
+M2 smeared & half-maximal & 8 \\
+M5 smeared & half-maximal & 8, plus infinite \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The paper also shows that longitudinal AdS$_3$ (and BTZ) is a solution of the maximal theory.
+
+\section{Principal achievement}
+
+The main achievement is an explicit Killing spinor analysis that turns the M2NC limit into a checkable statement about which limit of a brane solution fits which version of the theory. The dictionary is clean. Longitudinally localised (scaled) backgrounds satisfy the maximal constraints. Transversely localised (smeared) backgrounds satisfy only the half-maximal constraints, and the paper verifies that they are supersymmetric in that theory. This is a concrete test of the unconventional half-maximal version proposed by Bergshoeff et al.\ (2024). It also matches the field-theory expectation of Lambert and Smith (2024) that half the supersymmetries are absent. The M5 results add a second point of interest: the Killing spinor equations admit infinite-dimensional families built from solutions of the $(1+1)$-dimensional Dirac equation. These families are the feature that makes the results both interesting and puzzling.
+
+\section{Principal drawback}
+
+The headline supersymmetry results rest on a notion of counting that the paper itself says is not yet well defined. The physical status of the scaled solutions, which carry the largest counts, is also left open.
+
+\begin{enumerate}
+\item \emph{Counting.} The paper reports 32, 24, 16, 8 and ``infinite'' Killing spinors. It concedes that BPS terminology ``does not easily accommodate infinite-dimensional symmetry enhancements'' and that ``a more stringent physical criteria'' is desirable (Section 2.2). The half-maximal transformations do not close into diffeomorphisms, so the counts are not tied to any physical superalgebra or BPS bound.
+
+\item \emph{Physical status of the scaling.} The scaling $N=c^6 n$ and the divergent three-form term are inserted by hand. The paper calls the significance of the scaling ``puzzling'' and does not include a brane source. Nothing shows that the scaled backgrounds are sourced by a limit of a worldvolume action, yet the 32, 24 and infinite-dimensional results are all for these backgrounds.
+
+\item \emph{Completeness.} Several enhancements come from ansätze chosen by hand. These include $\partial_0\epsilon_-=0$ for the M2 case, the AdS-style choice of $\eta_-$ for the M5 case (which the paper describes as found by ``trial, error and recollection''), and $\gamma^\alpha\partial_\alpha\epsilon_+=0$ for the infinite families. The paper does not claim these are complete. It says a ``full accounting'' of the Killing spinors ``requires further work''.
+
+\item \emph{Inputs.} The constraint structure being tested comes from Bergshoeff et al.\ (2024). The paper notes that this relied in part on linearised calculations and simply assumes it is correct.
+\end{enumerate}
+
+\section{Most promising follow-up}
+
+\textbf{Recommendation.} Test whether the scaled solutions are sourced by a worldvolume brane action in the M2NC limit, and use the answer to fix a physical criterion for counting supersymmetries.
+
+The steps are:
+\begin{enumerate}
+\item Take a membrane worldvolume action in a non-relativistic limit (the paper's references include several, e.g.\ Kluson and Novosad). Use an M2 that is not longitudinally aligned, as the paper suggests in its Summary.
+\item Couple it to the M2NC action. Check whether the sourced three-form equation is solved by the scaled background, including what normalisation of $N$ and what divergent $C_{(3)}$ term are forced.
+\item Check the worldvolume kappa-symmetry projection of that probe brane against the Killing spinors of Section 3.1. The spinors that survive give a physical count to replace the ad hoc one.
+\end{enumerate}
+
+\textbf{Why this one.} It addresses both gaps the paper flags itself: the puzzle of the scaling and the counting problem. It starts from an explicit background and a known type of worldvolume action, so the first steps are finite calculations. A positive or negative answer is informative. A negative answer would suggest the scaled solutions are not limits of brane configurations and should be treated as a separate class.
+
+\textbf{Risk.} The bosonic check is routine. The kappa-symmetry step requires worldvolume supersymmetry for a non-relativistic brane, which may not yet be available. If it is not, the fallback is a BPS-type check through the brane's energy and charge.
+
+\textbf{Alternatives considered.} A closure of the half-maximal superalgebra, or a holographic match of the smeared D3NC background to the Lambert--Smith field theory, would have high impact but low feasibility. A full computer-algebra classification of Killing spinors for general $H$ is feasible but would extend the counts without settling what they mean.
+
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\title{\textbf{Report on ``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-2em}
+
+\section{Principal Achievement of the Paper}
+
+The primary achievement of this work is the systematic classification and explicit supersymmetry analysis of M2 and M5 brane backgrounds within 11-dimensional membrane Newton-Cartan supergravity (M2NC SUGRA). Previously, non-Lorentzian bulk geometries relevant to novel corners of the AdS/CFT correspondence were engineered primarily by taking limits of relativistic supergravity solutions directly, leaving open the question of whether such backgrounds actually solve the equations of motion and formidable constraint towers of the underlying non-relativistic supergravity theory, and whether they preserve supersymmetry. 
+
+The author resolves this by establishing a sharp dichotomy between the two standard prescriptions used to obtain non-trivial brane limits:
+\begin{itemize}
+    \item \textbf{Scaled solutions}, where the number of branes $N$ (or the harmonic function constant $L$) is rescaled by hand with the contraction parameter $c$, yield geometries localised in the longitudinal M2NC directions. The author proves that these satisfy the full tower of bosonic constraints and the Poisson equation of the \emph{maximally supersymmetric} (32-supercharge) variant of M2NC SUGRA.
+    \item \textbf{Smeared solutions}, where the branes are smeared along the longitudinal M2NC directions prior to the limit, yield geometries localised in the transverse directions. Because they source non-vanishing components of the intrinsic torsion $T_{a}{}^{\{AB\}}$ and field strength $f_{Aabc}$, they violate the maximal constraints and instead consistently inhabit the \emph{half-maximally supersymmetric} ($\epsilon_- = 0$) variant of M2NC SUGRA.
+\end{itemize}
+Furthermore, by explicitly solving the Killing spinor equations---accounting carefully for the emergent fermionic shift (superconformal) symmetries $\eta_-$ and $\rho_{+A}$---the author uncovers rich patterns of both conventional near-horizon supersymmetry enhancement and unconventional infinite-dimensional enhancements (e.g., Killing spinors governed by arbitrary solutions to the $(1+1)$-dimensional massless Dirac equation or harmonic conjugates $\phi$ of $\ln H$). As an intriguing byproduct, the paper also demonstrates that longitudinal locally $\mathrm{AdS}_3$ spaces, including the BTZ black hole, are exact solutions of M2NC SUGRA.
+
+\section{Principal Drawback of the Paper}
+
+The main limitation of the paper lies in the physical and algebraic ambiguities surrounding the solutions and their preserved symmetries:
+\begin{enumerate}
+    \item \textbf{Under-determination and lack of source matching in scaled solutions:} For longitudinally localised (scaled) backgrounds, all equations of motion and constraints are satisfied for an \emph{arbitrary} longitudinal function $H(x^\alpha)$ (for M2) or $H(u)$ (for M5). Because the supergravity equations fail to impose a harmonic condition on $H$, the physical mechanism tying these bulk geometries to localized brane sources remains obscure, and the required manual rescaling of $N$ lacks a clear justification from a coupled bulk- plus-worldvolume action ($S_{\text{SUGRA}} + N S_{\text{worldvolume}}$).
+    \item \textbf{Unphysical counting of infinite-dimensional ``Killing spinors'':} Owing to the emergent fermionic shift parameters $\eta_-$ and $\rho_{+A}$ (where $\rho_{+A}$ is constrained only by the gamma-tracelessness condition $\gamma^A \rho_{+A} = 0$), the Killing spinor equations reduce in several sectors to a longitudinal massless Dirac equation. This admits infinitely many functional solutions (such as arbitrary left- and right-moving spinors $\chi_+(x^0+x^1)$ and $\tilde{\chi}_+(x^0-x^1)$). However, the paper does not establish a rigorous physical criterion---such as asymptotic boundary conditions, normalizability, or a canonical surface-charge analysis---to distinguish genuine global supercharges from pure gauge or unphysical shift redundancies.
+    \item \textbf{Non-closure of the half-maximal algebra:} For the physically well-motivated smeared solutions, the relevant half-maximal version of M2NC SUGRA possesses a non-standard supersymmetry algebra that does not close into diffeomorphisms. Consequently, as the author notes, one cannot directly verify that the bulk Killing spinors square to the expected bosonic isometries (such as the Virasoro/conformal symmetries identified in the dual non-relativistic field theories).
+\end{enumerate}
+
+\section{Most Promising Research Idea to Pursue}
+
+Balancing feasibility with high theoretical impact, the most worthwhile research direction building directly on this paper is \textbf{coupling M2NC supergravity to non-relativistic brane worldvolume actions to resolve the source problem, combined with a dimensional reduction to construct the supersymmetric Type IIA D2NC and Stringy Newton-Cartan (SNC) supergravities}.
+
+Specifically, this project consists of two tightly linked, concrete steps:
+\begin{enumerate}
+    \item \textbf{Coupled Bulk--Worldvolume Sourcing in 11D and 10D (M2T):} As suggested in Section 5, one can couple the M2NC supergravity action directly to the worldvolume action of an M2 brane oriented \emph{orthogonally} to the M2NC limit directions (or, after dimensional reduction along a worldvolume direction, couple 10-dimensional D2NC supergravity to the known fundamental string worldsheet action in the Matrix 2-brane Theory / M2T limit). Calculating the combined field equations of $S_{\text{SUGRA}} + N S_{\text{worldvolume}}$ is technically straightforward because all required bosonic actions and M2NC transformations are already known. Its impact would be substantial: it would definitively test whether the transverse harmonic condition of the smeared solutions arises from delta-function brane sources and clarify whether the manual $N = c^6 n$ scaling of the longitudinal solutions can ever be supported by a physical brane source.
+    \item \textbf{Dimensional Reduction to Fermionic Type IIA SNC / D2NC Supergravity:} Up to now, 11-dimensional M2NC SUGRA is the \emph{only} maximal supergravity whose non-relativistic limit includes the complete fermionic sector. By performing a standard Kaluza-Klein dimensional reduction of the M2NC SUGRA action, supersymmetry transformations, and constraint towers (both along a longitudinal spatial direction to obtain Type IIA Stringy Newton-Cartan supergravity, and along a transverse direction to obtain D2NC supergravity), one can immediately derive the full fermionic sectors and constraint structures of 10-dimensional maximal non-relativistic supergravities without having to take the arduous $c \to \infty$ limit from scratch in ten dimensions. This will directly verify whether the gravitational soliton and D-brane backgrounds recently constructed via null T-duality satisfy the 10D supersymmetry constraints, unifying the 10D and 11D non-Lorentzian holographic duality web.
+\end{enumerate}
+
+\end{document}

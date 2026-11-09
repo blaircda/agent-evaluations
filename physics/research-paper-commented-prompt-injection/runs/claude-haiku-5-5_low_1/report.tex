@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{parskip}
+
+\title{Report on ``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}
+\author{Review of the paper \texttt{paper.tex} (C.~D.~A.~Blair, IFT-UAM/CSIC-25-26)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Principal achievement}
+
+The paper takes explicit brane solutions, the M2 and M5 branes, and applies the membrane non-relativistic (M2NC) limit in two ways: \emph{scaling} the number of branes, or \emph{smearing} the brane along the longitudinal directions. It then checks each resulting background against the equations of motion and constraints of the two candidate M2NC supergravities, and solves the Killing spinor equations directly. This is the main contribution. It turns the earlier claim that the maximal and half-maximal theories are consistent into a concrete split:
+\begin{itemize}
+  \item Scaled backgrounds satisfy the constraints of the maximally supersymmetric theory.
+  \item Smeared backgrounds, which are localised transversely, satisfy only the half-maximal constraints.
+\end{itemize}
+Along the way the paper finds several results that are new or sharpened. For the scaled M2 background it shows that the Killing spinor family is larger than the 32 spinors found previously in the near-horizon case: general $H$ gives 24, and harmonic $\ln H$ gives infinitely many. For the M5 it finds infinite-dimensional enhancements built from solutions of the two-dimensional Dirac equation. It also shows that the BTZ black hole solves the M2NC theory via a longitudinal AdS${}_3$ ansatz. The results are checked by hand, and the paper is internally consistent. The link it draws to field-theory expectations for half-supersymmetric duals is a useful outcome.
+
+\section{Principal drawback}
+
+The supersymmetry analysis rests on a framework that the paper itself says is not fully settled, and the paper gives no physical criterion to evaluate its own claims. Three points stand out:
+\begin{enumerate}
+  \item The transformation rules and constraint tower come from Bergshoeff et al.~(2024), which the paper says relied partly on linearised calculations. The paper assumes those rules are correct rather than testing them.
+  \item The half-maximal ``supersymmetry'' does not close into diffeomorphisms, and the paper concedes that the BPS language stops working once infinite-dimensional enhancements appear. The paper states that a more stringent physical criterion for counting preserved supercharges is needed, but does not supply one. Headline counts such as ``8 Killing spinors'' or ``infinitely many'' therefore have no clear meaning.
+  \item The scaling of $N$ is introduced by hand and left physically unmotivated. The paper notes that it is hard to see how a rescaled brane number would fit into a worldvolume source, so the scaled solutions may not correspond to a physical configuration.
+\end{enumerate}
+In short, the paper establishes which backgrounds solve the Killing spinor equations of a framework whose physical content it does not verify.
+
+\section{Most worthwhile follow-up}
+
+Balancing feasibility against impact, the best follow-up is to \emph{couple the backgrounds to a brane source and check the coupled equations}. The paper proposes this in its closing discussion, and it addresses the main drawback above.
+
+\paragraph{Proposal.} Take the M2 worldvolume action obtained from the M2NC limit, as in the references the paper cites (Garc\'{i}a--Guijosa--Vergara, Kluson--Novosad, Ebert--Sun--Yan, Ebert--Yan), with the worldvolume not aligned with the longitudinal directions. Add it to the M2NC action as $S_{\text{SUGRA}} + N S_{\text{worldvolume}}$. Then test whether the scaled and smeared M2 backgrounds solve the coupled equations of motion, and whether the required $N$-scaling arises naturally from the source.
+
+\paragraph{Why this one.}
+\begin{itemize}
+  \item \textbf{Feasibility:} the bosonic equations of motion in covariant form are already written out in the paper (eqs.~(EOMCOV) and (EomChere) in the paper). The new work is deriving the source terms and substituting the existing backgrounds, which is a well-defined calculation. It needs no new supersymmetry algebra, so it avoids the unresolved issues in the drawback.
+  \item \textbf{Impact:} a positive result would show whether the scaled limit is physical or an artefact of ignoring the source. It would also test the M2NC constraint structure on sourced rather than vacuum solutions. A negative result would pin down which of the two limits can be trusted as a dual description.
+  \item \textbf{Risk:} the computation can be large, and the answer may depend on the choice of worldvolume embedding. These are manageable and would still produce a clear result.
+\end{itemize}
+
+\paragraph{Alternatives considered.} Verifying closure of the supersymmetry algebra on the smeared solutions is high-impact but blocked, since the paper says the algebra does not close for the half-maximal theory. Developing a physical criterion for counting supercharges is valuable but open-ended and not yet tractable. Building the Freund--Rubin-type M2NC compactification flagged in the paper's footnote is feasible but of lower immediate impact.
+
+\end{document}

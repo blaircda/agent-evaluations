@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Report on ``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}}
+\author{Independent Scientific Assessment}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Overview}
+This report provides a concise, critical evaluation of the manuscript \emph{``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''} by Chris D.~A.~Blair (IFT-UAM/CSIC-25-26). The paper investigates the existence, constraint structures, and Killing spinor solutions of non-relativistic 11-dimensional supergravity (M2 Newton--Cartan / M2NC supergravity) obtained as membrane limits of relativistic M2 and M5 brane configurations.
+
+\section{Principal Achievement of the Paper}
+The principal achievement of the paper is establishing a systematic and precise correspondence between the geometric limit procedures applied to relativistic branes (parameter scaling versus transverse smearing) and the two distinct supersymmetric sectors of 11-dimensional non-relativistic supergravity:
+\begin{enumerate}
+    \item \textbf{Scaled Brane Limits and Maximal M2NC Supergravity:} 
+    Brane configurations obtained via an extra rescaling of the number of branes are localized in the longitudinal directions of the M2NC geometry. The paper demonstrates that these solutions systematically obey the intricate constraints of the \emph{maximally supersymmetric} (32 supercharges) formulation of M2NC supergravity. By directly solving the Killing spinor equations for the M2, M5, and longitudinal $\mathrm{AdS}_3$ geometries, the author reveals an unexpected, infinite-dimensional supersymmetry enhancement governed by arbitrary chiral solutions to lower-dimensional massless Dirac equations.
+    
+    \item \textbf{Smeared Brane Limits and Half-Maximal M2NC Supergravity:} 
+    Conversely, configurations obtained by smearing branes along the directions longitudinal to the non-relativistic limit are localized in transverse directions. The author shows that while these fail the constraints of the maximal theory, they consistently solve the bosonic constraints and equations of motion of the \emph{half-maximally supersymmetric} (16 supercharges) version of M2NC supergravity. This provides the first direct confirmation that smeared non-Lorentzian bulk duals are genuine supersymmetric supergravity solutions.
+\end{enumerate}
+
+\section{Principal Drawback of the Paper}
+The principal drawback of the paper lies in its reliance on heuristic, kinematical limiting prescriptions whose underlying microscopic physics and dynamical origins remain largely unexplained:
+\begin{enumerate}
+    \item \textbf{Ad Hoc Large-$N$ Parameter Scaling:} 
+    The longitudinally localized solutions require an ad hoc rescaling of the brane charge ($N \sim c^3$ or $c^{3/2}$ as the speed of light parameter $c \to \infty$) purely to prevent the background from collapsing into trivial flat space. The microscopic or physical mechanism that would justify such a scaling in a fundamental theory remains obscure.
+    
+    \item \textbf{Under-Determined Longitudinal Dynamics:} 
+    For the scaled solutions, the bulk equations of motion are trivially satisfied for arbitrary longitudinal profile functions $H(x^A)$. The geometry along the longitudinal directions is not dynamically fixed by the supergravity field equations themselves, but must be chosen by hand or guided by near-horizon symmetry considerations.
+    
+    \item \textbf{Absence of Microscopic Source Actions:} 
+    The analysis treats the geometries exclusively as source-free solutions. The lack of coupling to non-relativistic worldvolume brane source actions ($S_{\mathrm{SUGRA}} + N S_{\mathrm{brane}}$) leaves open whether these backgrounds can be consistently sourced by physical branes in a fully backreacted, dynamical setting.
+\end{enumerate}
+
+\section{Promising Research Idea Building on the Paper}
+\textbf{Coupling Non-Relativistic Brane Solutions to Microscopic Worldvolume Actions in Matrix 2-Brane Theory (M2T):}
+
+Balancing feasibility and prospective scientific impact, the most worthwhile research idea to pursue is the \textbf{explicit formulation and verification of the coupled bulk-plus-source field equations ($S_{\mathrm{SUGRA}} + N S_{\mathrm{brane}}$) for smeared and scaled branes in the dimensionally reduced 10-dimensional Matrix 2-brane Theory (M2T) limit}.
+
+\subsection*{Feasibility and Impact}
+\begin{itemize}
+    \item \textbf{High Feasibility:} 
+    Dimensional reduction of 11-dimensional M2NC supergravity along a longitudinal spatial isometry yields Stringy Newton--Cartan (SNC) type IIA supergravity, connecting directly to the D2 Newton--Cartan / M2T framework. In this 10-dimensional domain, string and brane worldvolume actions have already been rigorously constructed (e.g., Gomis--Yan, Blair--Lahnsteiner--Obers--Yan), and the equations of motion of the reduced supergravity are known. The coupled system can therefore be computed and verified concretely.
+    
+    \item \textbf{High Impact:}
+    Solving the coupled action problem would:
+    \begin{enumerate}
+        \item Determine whether the ad hoc large-$N$ scaling is physically required to balance the worldvolume tension against bulk Newton--Cartan fields, clarifying its microscopic origin.
+        \item Explain dynamically why delta-function source terms localize along longitudinal versus transverse directions in the respective limits.
+        \item Provide a firm dynamical underpinning for non-relativistic holography, matrix models, and their discrete lightcone quantization (DLCQ) dualities.
+    \end{enumerate}
+\end{itemize}
+
+\end{document}

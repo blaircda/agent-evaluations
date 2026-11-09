@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,top=2.0cm,left=2.5cm,right=2.5cm,bottom=2.0cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage{cite}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{vub}{RGB}{0,52,154}
+\usepackage[
+  colorlinks=true,
+  linkcolor=vub,
+  citecolor=vub,
+  urlcolor=vub
+]{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{\vspace{-1.4cm}\textbf{Report on \textit{Supersymmetric solutions of non-relativistic 11-dimensional supergravity}}\\[4pt]
+\normalsize C.~D.~A.~Blair (IFT-UAM/CSIC-25-26, \texttt{arXiv:2503.21577}) \cite{Blair:2025susy}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.4cm}
+
+\section*{Overview}
+This paper investigates supersymmetric backgrounds of 11-dimensional membrane Newton--Cartan supergravity (M2NC SUGRA) \cite{Blair:2021waq,Bergshoeff:2024nin}, which arises as the non-relativistic membrane decoupling limit ($c \to \infty$) of 11-dimensional supergravity. Consistency of local supersymmetry in this limit requires geometric constraints on the longitudinal ($\mathrm{SO}(1,2)$) and transverse ($\mathrm{SO}(8)$) vielbeins and fluxes, splitting the theory into two distinct branches \cite{Bergshoeff:2024nin}: a \emph{maximally supersymmetric} version (preserving 32 local supersymmetry parameters $\epsilon_\pm$, subject to a restrictive tower of bosonic torsion and curvature constraints that automatically imply all variational equations of motion, leaving only the non-variational Poisson equation) and a \emph{half-maximally supersymmetric} version (setting $\epsilon_- = 0$ with 16 parameters, requiring only $T_{ab}{}^A = 0$ and $f_{abcd} = 0$, where the variational equations of motion remain non-trivial). By explicitly analyzing the M2NC limits of intersecting M2 and M5 brane configurations---as well as a longitudinally embedded $\mathrm{AdS}_3$ geometry (and noting that the BTZ black hole is also an exact solution)---the author connects bulk supergravity solutions to recent proposals in non-Lorentzian holography \cite{Lambert:2024uue,Lambert:2024yjk,Fontanella:2024rvn,Fontanella:2024kyl,Blair:2024aqz,Lambert:2024ncn,Harmark:2025ikv}.
+
+\section{Principal Achievement of the Paper}
+The principal achievement of the paper is to \textbf{establish a sharp structural correspondence between the two competing prescriptions for engineering non-Lorentzian brane geometries (``scaling'' vs.\ ``smearing'') and the two constraint branches of M2NC supergravity, while explicitly solving their Killing spinor equations to reveal how emergent fermionic shift symmetries govern supersymmetry preservation and infinite-dimensional enhancement.}
+
+Specifically, this achievement encompasses three closely linked advances:
+\begin{enumerate}
+    \item \textbf{Classification of Scaled vs.\ Smeared Brane Limits in M2NC SUGRA:} Prior works engineered candidate bulk geometries for non-Lorentzian AdS/CFT directly at the level of relativistic solutions, either by introducing an \emph{ad hoc} large-$N$ rescaling of the harmonic function constant ($N \to c^p n$) to localize the solution in the longitudinal directions \cite{Lambert:2024uue,Fontanella:2024rvn,Fontanella:2024kyl}, or by \emph{smearing} the branes along longitudinal directions transverse to the physical brane to localize the solution in the doubly-transverse directions $x^I$ \cite{Blair:2024aqz,Lambert:2024ncn,Harmark:2025ikv}. It was previously unclear whether these limiting backgrounds actually solve the limiting supergravity theory. Blair demonstrates that:
+    \begin{itemize}
+        \item \emph{Scaled solutions} (for both the M2 and M5 branes, as well as a spherical-radial limit of the M5) satisfy the full constraint tower of the \textbf{maximally supersymmetric} M2NC SUGRA, with the M5 cases crucially relying on a non-vanishing anti-self-dual Lagrange multiplier field $\lambda_{abcd} \propto H^{-4/3}\partial_u H$ to satisfy the Poisson equation even when $c_{(3)}=0$.
+        \item \emph{Smeared solutions} (where $T_a{}^{\{AB\}} \neq 0$ and $f_{Aabc} \neq 0$) violate the maximal constraints and instead provide exact solutions of the \textbf{half-maximally supersymmetric} M2NC SUGRA, whose equations of motion genuinely enforce the transverse harmonic condition $\partial^I \partial_I H = 0$.
+    \end{itemize}
+    This result rehabilitates the half-maximal branch of M2NC SUGRA \cite{Bergshoeff:2024nin}: despite its unconventional supersymmetry algebra, it is shown to be the precise theory hosting the physically natural smeared brane backgrounds that connect via U/T-duality to discrete light-cone quantization (DLCQ) \cite{Blair:2024aqz,Harmark:2025ikv}.
+
+    \item \textbf{Complete Killing Spinor Analysis and Novel Supersymmetry Enhancements:} By solving $\delta\psi_{\pm\mu} = 0$ across all cases, the author uncovers a rich pattern of conventional and non-Lorentzian supersymmetry enhancements driven by the emergent fermionic shift (superconformal) parameters $\eta_-$ and $\rho_{+A}$ (constrained only by $\gamma^A \rho_{+A} = 0$):
+    \begin{itemize}
+        \item For the \emph{scaled M2} background, extending \cite{Bergshoeff:2024nin}, the author finds 24 Killing spinors for general $H(x^\alpha)$ and a continuous two-parameter $(\lambda,\tilde\lambda)$ family of Killing spinors whenever $\ln H$ is harmonic in the 2D longitudinal space (which includes the near-horizon limit $H \propto (x^\alpha x_\alpha)^{-3}$).
+        \item For the \emph{scaled M5} (and spherical M5) background, although the bosonic equations of motion leave $H(u)$ completely arbitrary, requiring 32 $\mathrm{AdS}$-type Killing spinors imposes the differential condition $\partial_u(H^{-4/3}\partial_u H) = 0$, which elegantly singles out the near-horizon profile $H \propto u^{-3}$. In addition, the background admits an infinite-dimensional family of Killing spinors parameterized by arbitrary solutions $\theta_+(x^0 \pm x^1)$ of the $(1+1)$-dimensional massless Dirac equation \cite{Blair:2020gng,Hampton:2026}.
+        \item For the \emph{smeared M2 and M5} backgrounds, near-horizon enhancement is absent; the smeared M2 preserves 8 constant Killing spinors (reflecting a $1/4$-BPS intersection of the physical M2 with the M2NC limit), whereas the smeared M5 preserves 8 conventional spinors enhanced to an infinite-dimensional left- and right-moving chiral family $\theta_+(x^0 \pm x^1)$.
+    \end{itemize}
+
+    \item \textbf{Holographic and Duality Matching:} Using dimensional reduction and T-duality along isometric worldvolume directions, the author maps the smeared M2NC--M5 Killing spinors to D2NC--D4, D3NC--D3, and D1NC--D3 configurations. This provides a compelling bulk supergravity explanation for two key field-theoretic observations of Lambert and Smith \cite{Lambert:2024yjk,Lambert:2024ncn}: why half of the bulk supersymmetries are absent (becoming purely local worldvolume symmetries in the dual gauge theory) and why an infinite-dimensional $(1+1)$-dimensional superconformal enhancement emerges when the intersection spans $x^0, x^1$ (and disappears upon T-dualizing along $x^1$).
+\end{enumerate}
+
+\section{Principal Drawback of the Paper}
+The principal drawback of the paper is the \textbf{lack of a physical criterion---via a supersymmetry algebra, conserved asymptotic charges, or brane source couplings---to distinguish genuine physical supersymmetries and backreacting geometries from gauge/shift artifacts of the under-constrained longitudinal sector.}
+
+This limitation manifests in three interrelated ways:
+\begin{enumerate}
+    \item \textbf{Ambiguity in Counting Physical Supercharges vs.\ Fermionic Shift Redundancies:} In M2NC SUGRA, the Killing spinor equations $\delta\psi_{\pm\mu} = 0$ include the local fermionic shift symmetry parameters $\eta_-$ and $\rho_{+A}$. Solving for $\rho_{+A}$ reduces the three longitudinal Killing spinor equations for $\epsilon_+$ to a single gamma-trace condition $\gamma^A \rho_{+A} = 0$ (an effective Dirac equation). Because this single condition is much weaker than covariant constancy along each longitudinal direction separately, it produces an ``embarrassment of riches''---including infinite-dimensional Killing spinor families even in flat M2NC space, 24 Killing spinors for an arbitrary profile $H(x^\alpha)$ in the non-near-horizon scaled M2, and a continuous two-parameter family $\epsilon_+(\lambda,\tilde\lambda)$ in Eq.~(3.39) when $\partial^\alpha\partial_\alpha \ln H = 0$. In fact, for the radially symmetric family $H = A(x^\alpha x_\alpha)^B$, the harmonic conjugate is $\phi = -2B\theta$ where $\theta = \tan^{-1}(x^2/x^1)$ is the polar angle; consequently, the spinors $\exp(\lambda\phi\gamma_0)\epsilon_+^{(0)}$ in Eq.~(3.39) are not even globally single-valued under $\theta \to \theta + 2\pi$ unless $\lambda B$ is appropriately quantized. Without computing the Killing superalgebra (via spinor bilinears) or asymptotic surface charges, it remains unclear which solutions of $\delta\psi_{\pm\mu} = 0$ generate genuine physical symmetries and which are unphysical or pure-gauge shift modes acting only on auxiliary gravitino components.
+
+    \item \textbf{Failure of Supersymmetry Algebra Closure in the Half-Maximal Branch:} For the smeared brane solutions---which are the most physically natural backgrounds for non-Lorentzian holography---the underlying half-maximal M2NC SUGRA has a non-standard supersymmetry algebra that does not close into diffeomorphisms \cite{Bergshoeff:2024nin}. As the author acknowledges in Section~4.2, this makes it impossible within the current formulation to check that the bulk Killing spinors (and their infinite-dimensional chiral enhancements $\theta_+(x^0\pm x^1)$) square to the expected bosonic Killing vectors and Virasoro enhancements of the smeared geometry \cite{Lambert:2024ncn}.
+
+    \item \textbf{Unconstrained Longitudinal Profiles and Absence of Brane Sources:} In the purely bosonic analysis without brane sources, longitudinal derivatives drop out of the equations of motion. As a result, the scaled solutions satisfy the equations of motion for \emph{any} function $H(x^\alpha)$ or $H(u)$, and the combined M2 ansatz in Section~3.2 allows $H(x^\alpha, x^I) = A(x^\alpha) + B(x^\alpha)/(x^I x^I)^2$ with arbitrary longitudinal functions $A, B$. Because the paper treats only source-free supergravity equations rather than the coupled bulk--brane system $S_{\text{SUGRA}} + N S_{\text{worldvolume}}$, it cannot determine how physical branes actually source these backgrounds or whether the \emph{ad hoc} large-$N$ scaling ($N = c^6 n$ or $c^3 n$) admits any consistent microscopic worldvolume interpretation.
+\end{enumerate}
+
+\section{Most Promising Research Idea to Pursue}
+Balancing feasibility and impact, the most worthwhile research direction building directly on this paper is to \textbf{couple M2NC supergravity (and its 10D D2NC dimensional reduction) to supersymmetric worldvolume brane sources ($S_{\text{SUGRA}} + N S_{\text{brane}}$) and combine this with a spinor-bilinear / $\kappa$-symmetry analysis to physically select the allowed harmonic functions and genuine conserved supercharges.}
+
+\subsection*{Concrete Research Plan}
+\begin{enumerate}
+    \item \textbf{Bosonic Source Coupling and Resolution of the Scaled vs.\ Smeared Dichotomy:}
+    Consider the intersecting M2 configuration of Section~3 (a physical M2 along $034$ in an M2NC limit along $012$). As noted in Section~5, dimensionally reducing along the worldvolume direction $x^4$ maps the 11D M2NC SUGRA to 10D D2 Newton--Cartan (D2NC) supergravity \cite{Blair:2021waq}, while the physical $034$ M2 brane reduces to a fundamental string oriented along $03$ in the Matrix 2-brane Theory (M2T) decoupling limit \cite{Blair:2023noj,Gomis:2023eav,Blair:2024aqz}. Crucially, both the 10D D2NC bulk action (from dimensional reduction of M2NC SUGRA) and the non-relativistic worldsheet action in this limit (constructed by Gomis and Yan \cite{Gomis:2023eav}) are already explicitly known, and the 11D M2 worldvolume action in M2NC backgrounds can likewise be obtained directly by taking the $c\to\infty$ limit in the $034$ embedding.
+    \begin{itemize}
+        \item Varying the coupled action $S_{\text{bulk}} + N S_{\text{worldvolume}}$ with respect to $\tau^A{}_\mu$, $e^a{}_\mu$, $c_{\mu\nu\rho}$, and $\lambda_{abcd}$ will insert explicit localized delta-function stress-energy and charge sources into the bulk equations of motion (Eq.~(2.15)).
+        \item This will directly test whether a stack of branes smeared along $x^\alpha$ uniquely fixes $H = 1 + \ell^4/(x^I x^I)^2$ (eliminating the arbitrary longitudinal functions $A(x^\alpha), B(x^\alpha)$ in Section~3.2 via source conservation and boundary conditions), and will clarify whether the scaled solutions ($N = c^6 n$, localized in $x^\alpha$) can ever be sourced by a finite worldvolume action or exist only as source-free near-horizon / asymptotic geometries \cite{Maskalaniec:2026}.
+    \end{itemize}
+
+    \item \textbf{Worldvolume $\kappa$-Symmetry and Killing Superalgebra Bilinears:}
+    To resolve the ambiguity in the Killing spinor spectrum caused by the shift symmetries $\eta_-$ and $\rho_{+A}$:
+    \begin{itemize}
+        \item Compute the bosonic variations generated by commuting two supersymmetry transformations, $[\delta(\epsilon_1, \eta_1, \rho_1), \delta(\epsilon_2, \eta_2, \rho_2)]$, on the explicit Killing spinors of Sections~2.3, 3.1, and 4.1 in the maximally supersymmetric theory. Imposing global single-valuedness (e.g., $\theta \sim \theta + 2\pi$ in the scaled M2 solution, which quantizes $\lambda, \tilde\lambda$) and identifying which spinor combinations produce non-trivial bosonic Killing vectors $\xi^\mu$ (as opposed to pure shift/dilatation gauge transformations) will isolate the physical Killing superalgebra.
+        \item Probe the M2 and M5 backgrounds with a supersymmetric worldvolume brane action and require compatibility between the bulk Killing spinors and the worldvolume $\kappa$-symmetry projection. Because the physical worldvolume fermions couple to the pullback of the gravitino, requiring worldvolume supersymmetry invariance provides an immediate physical filter that projects out unphysical bulk shift artifacts and resolves how the half-maximal smeared solutions realize superconformal/Virasoro symmetries on the probe brane worldvolume even when the bulk half-maximal algebra does not close off-shell into 11D diffeomorphisms.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Why This Balances Feasibility and Impact}
+\begin{itemize}
+    \item \textbf{High Feasibility:} Unlike proposals that require first constructing the full fermionic sector of 10-dimensional maximal Type IIA/IIB string or D$p$-brane Newton--Cartan supergravities from scratch (a formidable technical undertaking), all the ingredients needed for this project are already in place: the 11D M2NC SUGRA equations and supersymmetry variations (Section~2), the explicit candidate backgrounds and Killing spinors (Sections~3 and 4), the dimensional reduction to 10D D2NC supergravity \cite{Blair:2021waq}, and the corresponding non-relativistic string/membrane worldvolume actions \cite{Gomis:2023eav}.
+    \item \textbf{High Impact:} Executing this program would solve the two central open problems left by the paper and the broader non-Lorentzian holography literature: (i) it would place the choice between scaled and smeared bulk geometries on a rigorous microscopic footing by deriving how branes source Newton--Cartan gravity \cite{Maskalaniec:2026,Lambert:2026}, and (ii) it would establish a well-defined physical prescription for counting preserved supercharges and constructing Killing superalgebras in non-Lorentzian supergravities with emergent shift symmetries.
+\end{itemize}
+
+\begingroup\small\raggedright
+\begin{thebibliography}{99}
+
+\bibitem{Blair:2025susy}
+C.~D.~A.~Blair, \textit{Supersymmetric solutions of non-relativistic 11-dimensional supergravity}, JHEP \textbf{09} (2025) 125, \href{https://inspirehep.net/literature/2905034}{\texttt{arXiv:2503.21577}}.
+
+\bibitem{Blair:2021waq}
+C.~D.~A.~Blair, D.~Gallegos, and N.~Zinnato, \textit{A non-relativistic limit of M-theory and 11-dimensional membrane Newton-Cartan geometry}, JHEP \textbf{10} (2021) 015, \href{https://inspirehep.net/literature/1858447}{\texttt{arXiv:2104.07579}}.
+
+\bibitem{Bergshoeff:2024nin}
+E.~A.~Bergshoeff, C.~D.~A.~Blair, J.~Lahnsteiner, and J.~Rosseel, \textit{The surprising structure of non-relativistic 11-dimensional supergravity}, JHEP \textbf{12} (2024) 010, \href{https://inspirehep.net/literature/2813603}{\texttt{arXiv:2407.21648}}.
+
+\bibitem{Lambert:2024uue}
+N.~Lambert and J.~Smith, \textit{Non-relativistic M2-branes and the AdS/CFT correspondence}, JHEP \textbf{06} (2024) 009, \href{https://inspirehep.net/literature/2751465}{\texttt{arXiv:2401.14955}}.
+
+\bibitem{Lambert:2024yjk}
+N.~Lambert and J.~Smith, \textit{Non-relativistic intersecting branes, Newton-Cartan geometry and AdS/CFT}, JHEP \textbf{07} (2024) 224, \href{https://inspirehep.net/literature/2785809}{\texttt{arXiv:2405.06552}}.
+
+\bibitem{Fontanella:2024rvn}
+A.~Fontanella and J.~M.~Nieto~Garc\'ia, \textit{Constructing nonrelativistic AdS$_5$/CFT$_4$ holography}, Phys.\ Rev.\ D \textbf{111} (2025) 026003, \href{https://inspirehep.net/literature/2764652}{\texttt{arXiv:2403.02379}}.
+
+\bibitem{Fontanella:2024kyl}
+A.~Fontanella and J.~M.~Nieto~Garc\'ia, \textit{Nonrelativistic Holography from AdS$_5$/CFT$_4$}, Phys.\ Rev.\ Lett.\ \textbf{133} (2024) 151601, \href{https://inspirehep.net/literature/2825245}{\texttt{arXiv:2409.02267}}.
+
+\bibitem{Blair:2024aqz}
+C.~D.~A.~Blair, J.~Lahnsteiner, N.~A.~Obers, and Z.~Yan, \textit{Matrix theory reloaded: a BPS road to holography}, JHEP \textbf{02} (2025) 024, \href{https://inspirehep.net/literature/2837353}{\texttt{arXiv:2410.03591}}.
+
+\bibitem{Lambert:2024ncn}
+N.~Lambert and J.~Smith, \textit{Reciprocal non-relativistic decoupling limits of String Theory and M-Theory}, JHEP \textbf{12} (2024) 094, \href{https://inspirehep.net/literature/2842211}{\texttt{arXiv:2410.17074}}.
+
+\bibitem{Harmark:2025ikv}
+T.~Harmark, J.~Lahnsteiner, and N.~A.~Obers, \textit{Gravitational solitons and non-relativistic string theory}, JHEP \textbf{05} (2025) 143, \href{https://inspirehep.net/literature/2870182}{\texttt{arXiv:2501.10178}}.
+
+\bibitem{Blair:2020gng}
+C.~D.~A.~Blair, G.~Oling, and J.-H.~Park, \textit{Non-Riemannian isometries from double field theory}, JHEP \textbf{04} (2021) 072, \href{https://inspirehep.net/literature/1836436}{\texttt{arXiv:2012.07766}}.
+
+\bibitem{Hampton:2026}
+S.~D.~Hampton, H.-C.~Kim, J.-H.~Oh, and J.-H.~Park, \textit{Non-Riemannian Holography: Long Strings and Soft Hair}, \href{https://inspirehep.net/literature/3216322}{\texttt{arXiv:2610.25669}}.
+
+\bibitem{Blair:2023noj}
+C.~D.~A.~Blair, J.~Lahnsteiner, N.~A.~Obers, and Z.~Yan, \textit{Unification of Decoupling Limits in String and M Theory}, Phys.\ Rev.\ Lett.\ \textbf{132} (2024) 161603, \href{https://inspirehep.net/literature/2724720}{\texttt{arXiv:2311.10564}}.
+
+\bibitem{Gomis:2023eav}
+J.~Gomis and Z.~Yan, \textit{Worldsheet formalism for decoupling limits in string theory}, JHEP \textbf{07} (2024) 102, \href{https://inspirehep.net/literature/2724719}{\texttt{arXiv:2311.10565}}.
+
+\bibitem{Maskalaniec:2026}
+D.~Maskalaniec, Z.~Yan, and U.~Zorba, \textit{Non-Lorentzian supergravity from matrix theory}, \href{https://inspirehep.net/literature/3128477}{\texttt{arXiv:2603.10278}}.
+
+\bibitem{Lambert:2026}
+N.~Lambert and J.~Smith, \textit{Quantum Effects in Supersymmetric Galilean Yang-Mills}, \href{https://inspirehep.net/literature/3192684}{\texttt{arXiv:2608.18843}}.
+
+\end{thebibliography}
+\endgroup
+
+\end{document}

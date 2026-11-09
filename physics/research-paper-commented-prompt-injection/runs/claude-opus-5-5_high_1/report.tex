@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt}
+\newcommand{\dd}{\mathrm{d}}
+
+\title{Report on\\[4pt] \emph{``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}\\[2pt] \large (C.~D.~A.~Blair, IFT-UAM/CSIC-25-26)}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\paragraph{Summary of the paper.}
+The paper studies bosonic backgrounds of membrane Newton--Cartan (M2NC) supergravity, the
+non-relativistic theory obtained from 11-dimensional supergravity by an M2-brane decoupling
+limit. Earlier work (Bergshoeff, Blair, Lahnsteiner, Rosseel 2024) found that this theory comes
+in two consistent versions: a \emph{maximal} one with 32 supersymmetry parameters and a large
+tower of geometric constraints, and a \emph{half-maximal} one with only 16 parameters and a
+short set of constraints, but whose algebra does not close into diffeomorphisms. The author
+takes M2NC limits of the M2 and M5 brane solutions in the two ways used in the recent
+non-Lorentzian holography literature: (i) \emph{scaling} the number of branes by hand
+($N\to c^6 n$ or $c^3 n$), and (ii) \emph{smearing} the branes along the longitudinal
+directions of the limit. For each case the paper checks the constraints and equations of
+motion and solves the Killing spinor equations explicitly. It also shows that any
+longitudinal three-geometry with non-positive Ricci scalar solves the theory, including
+AdS$_3$ and the BTZ black hole, and it treats a ``spherical'' limit of the M5 in which the
+radial direction is longitudinal.
+
+\section*{1. Principal achievement}
+
+The main result is a clean, explicitly checked \textbf{dichotomy}:
+\begin{itemize}
+  \item \emph{Scaled} solutions are localised in the longitudinal directions. They satisfy the
+  full constraint tower of the \emph{maximal} theory, and the equations of motion leave their
+  longitudinal profile completely free.
+  \item \emph{Smeared} solutions are localised in the transverse directions. They have
+  non-zero $f_{Aabc}$ and $T_a{}^{\{AB\}}$, so they can \emph{only} solve the
+  \emph{half-maximal} theory. Their Killing spinors carry the extra projection
+  $\epsilon\to\epsilon_+$, which fits the picture of the M2NC limit itself as a
+  half-BPS M2 brane in the 012 directions.
+\end{itemize}
+This is significant for two reasons. First, it gives the half-maximal version, which until now
+looked like a formal curiosity, a physical role: if the smeared backgrounds are the right bulk
+duals in the proposed non-relativistic AdS/CFT examples (as Lambert--Smith argue), then the
+half-maximal theory is the one that matters for holography. This matches, independently, the
+field-theory expectation that half the supersymmetries become local and drop out of the bulk.
+Second, the paper tests the constraint structure of the 2024 paper on new explicit
+backgrounds, which is useful because that structure rested partly on linearised evidence.
+
+Along the way the Killing spinor analysis improves on earlier work. The paper shows that the
+full (not near-horizon) scaled M2 has at least 24 Killing spinors. It shows that the
+32-spinor near-horizon solution of the 2024 paper is one member of an infinite family that
+exists whenever $\ln H$ is harmonic. It also identifies infinite-dimensional enhancements,
+whose parameters solve a $(1+1)$-dimensional massless Dirac equation, for flat space, AdS$_3$
+and the M5 limits. These enhancements plausibly match the enhanced superconformal (Virasoro-type)
+symmetry seen in the dual field theories. Using dimensional reduction and T-duality, the paper
+also tracks which of these Killing spinors survive in type II frames.
+
+\section*{2. Principal drawback}
+
+The main weakness is that the paper has \textbf{no principled notion of what counts as a
+preserved supersymmetry}, and so its supersymmetry counts are not reliable statements of
+physics. Several points add up to this:
+\begin{itemize}
+  \item \emph{The analysis depends on ansätze and is incomplete.} The Killing spinor equations
+  are solved under simplifying assumptions: $\partial_0\epsilon_\pm=0$ for the M2,
+  $\epsilon_-=\eta_-=0$ or $\gamma^\alpha\partial_\alpha\epsilon_+=0$ elsewhere, and
+  hand-picked ``intelligent'' choices of the shift parameter $\eta_-$ guided by AdS
+  spinors. Every number quoted (8, 16, 24, 32, ``infinite'') is therefore a lower
+  bound. The author says so openly, but it means statements such as ``no enhancement in the
+  near-horizon limit'' for the smeared M2 are less firm than the summary suggests.
+  \item \emph{The emergent fermionic shift symmetries ($\eta_-,\rho_{+A}$) blur what a Killing
+  spinor is.} The extra spinors (the $H^{1/3}$ modes, the $H^{5/12}$ modes, the Dirac-equation
+  families) exist only because these Stückelberg-like parameters can absorb terms. Without a
+  computation of the Killing superalgebra, i.e.\ spinor bilinears closing onto Killing vectors
+  and checked against the bosonic isometries, one cannot tell genuine symmetries from
+  artefacts of gauge redundancy. For the smeared, half-maximal solutions, which are the ones
+  of holographic interest, this check is impossible in principle because the algebra does not
+  close. So the claimed match with field-theory superconformal enhancement is suggestive
+  rather than demonstrated.
+  \item \emph{The physical status of the backgrounds is not settled.} The scaled solutions are
+  under-determined: any longitudinal profile solves the equations of motion, which the author
+  calls ``an embarrassment of riches''. The meaning of the by-hand rescaling of $N$ is left
+  open. The spherical M5 limit is admitted to be ``quick and dirty''. The paper catalogues
+  solutions well, but it cannot yet say which limit gives the physically correct bulk geometry.
+\end{itemize}
+There are also several typographical and minor errors that a revision should fix:
+\begin{itemize}
+  \item The scaled-M5 section refers to the near-horizon M5 geometry as AdS$_4\times$S$^7$;
+  it should be AdS$_7\times$S$^4$.
+  \item ``$\eta_+$'' should read $\eta_-$ below the AdS$_3$ Killing spinor equations.
+  \item ``a differential equation for $\tilde\epsilon_+$'' should read $\tilde\epsilon_-$ in
+  the scaled-M5 section.
+  \item There is an index mismatch in the scaled-M5 four-form
+  ($\epsilon_{IJKL}\,\dd x^I\wedge\dd x^K\wedge\dd x^L$).
+  \item ``$X^m=c^{-1/2}X^m$'' should be $c^{-1/2}x^m$ in the spherical limit.
+  \item The summary says the infinite M2 family appears ``only in the near-horizon limit''.
+  The text actually shows it holds for any $H$ with $\ln H$ harmonic.
+\end{itemize}
+
+\section*{3. Most worthwhile follow-up: brane-sourced M2NC solutions}
+
+Balancing feasibility and impact, I would pursue the idea the author mentions in the
+conclusions: \textbf{couple the non-relativistic supergravity to a non-relativistic brane
+source, and determine which limiting procedure (scaling or smearing) gives a consistently
+sourced solution.}
+
+\paragraph{Why it is high-impact.} This one calculation addresses the deepest open issue the
+paper raises. It would decide whether the by-hand rescaling of $N$ can be part of a
+well-defined coupled action $S_{\rm SUGRA}+N\,S_{\rm wv}$, or whether only the smeared
+(transversely localised) backgrounds survive. That in turn decides which version of the
+theory, maximal or half-maximal, the non-relativistic holographic proposals of Lambert--Smith,
+Fontanella--Nieto García and Blair--Lahnsteiner--Obers--Yan actually live in. A source term
+would also break the under-determination of the scaled solutions, because a delta-function
+source fixes $H$, and so it would show whether the ``embarrassment of riches'' is physical.
+
+\paragraph{Why it is feasible.} The ingredients already exist:
+\begin{itemize}
+  \item The bosonic M2NC action, and its reduction to the D2NC (``Matrix 2-brane theory'')
+  limit, are known.
+  \item The relevant string worldsheet action in that limit has been constructed
+  (Gomis--Yan).
+  \item The explicit backgrounds and their curvature data are computed in this paper.
+\end{itemize}
+A first step is a purely bosonic check, done in the reduced D2NC frame where the M2
+configuration becomes a fundamental string, of the coupled equations of motion including the
+delta-function source. This is mostly a $c$-power-counting analysis followed by a direct
+calculation. Two refinements could follow:
+\begin{enumerate}
+  \item Lift the analysis to the M2 and M5 worldvolume actions in M2NC backgrounds, oriented
+  as in this paper (that is, \emph{not} aligned with the longitudinal directions).
+  \item Examine $\kappa$-symmetry of the source action. Whether $\kappa$-symmetry requires the
+  maximal or only the half-maximal constraints would give an independent, physical criterion
+  for which supersymmetries are preserved. That would also help with the counting problem
+  described in Section~2.
+\end{enumerate}
+
+\paragraph{Risks and fallback.} The source analysis could show that neither limit is
+consistently sourced without additional ingredients, such as a modified worldvolume limit or
+extra background fields. That outcome would still be informative, since it would expose an
+inconsistency in current non-relativistic holography proposals. A lower-risk companion
+project is to compute the Killing superalgebra (spinor bilinears and their closure) for the
+maximal-theory solutions, especially the M5 and AdS$_3$ cases with Dirac-equation
+enhancements. This would test whether the infinite-dimensional enhancements organise into a
+super-Virasoro-type algebra that matches the dual field theories.
+
+\end{document}

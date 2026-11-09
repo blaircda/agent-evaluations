@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{enumitem}
+\newcommand{\MNC}{M2NC}
+
+\title{Report on ``Supersymmetric solutions of non-relativistic\\ 11-dimensional supergravity'' (C.~D.~A.~Blair)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Summary of the paper}
+Eleven-dimensional supergravity admits a non-relativistic ``membrane Newton--Cartan'' limit (\MNC{} SUGRA).
+Consistency of supersymmetry in the limit requires constraints on the bosonic geometry, and earlier work found two consistent versions: a maximally supersymmetric one (32 parameters, with a heavy tower of constraints) and a ``half-maximal'' one (16 parameters, $\epsilon_-=0$, far fewer constraints).
+The paper takes the \MNC{} limits of the M2 and M5 brane solutions, done in two ways.
+In the \emph{scaled} limit the number of branes is rescaled by hand.
+In the \emph{smeared} limit the brane is smeared over the longitudinal directions.
+It then asks which version of the theory each limit solves and whether it is supersymmetric.
+It also gives a simple longitudinal AdS$_3$ solution, which includes the BTZ black hole.
+
+\section{Principal achievement}
+The paper gives a clean, explicit and checked classification.
+Scaled limits, which are localised in the longitudinal directions, solve the \emph{maximally} supersymmetric theory.
+Smeared limits, which are localised in the transverse directions, have non-vanishing $f_{Aabc}$ and $T_a{}^{\{AB\}}$, so they solve only the \emph{half-maximal} theory.
+All of these backgrounds are shown to be supersymmetric by solving the Killing spinor equations in closed form.
+The solutions include the 8-spinor smeared M2 and M5 cases and an AdS-type 32-spinor solution for the near-horizon scaled M5.
+
+The analysis also corrects and extends earlier results.
+For the scaled M2, a general harmonic-in-$\ln H$ family of backgrounds is found with infinitely many Killing spinors, and 24 for generic $H$, where only 32 at the near-horizon point had been reported.
+Several backgrounds show a non-Lorentzian enhancement of supersymmetry, in which arbitrary solutions of the 2d massless Dirac equation appear.
+This is traced to the fermionic shift symmetries.
+The resulting picture matches field-theory expectations for non-relativistic AdS/CFT: half of the supersymmetries become local, and there is an enhanced superconformal symmetry.
+It also gives the otherwise odd half-maximal theory a concrete physical role.
+It additionally suggests that the scaled/smeared distinction tracks maximal/half-maximal supersymmetry, which is a useful organising principle for the growing family of non-Lorentzian brane backgrounds.
+
+\section{Principal drawback}
+The central weakness is that everything is tested against a framework with no independent footing, so the conclusions are only as secure as that framework.
+The constraints and supersymmetry rules of the \MNC{} theory are taken from earlier work that, as the author admits, relied partly on linearised evidence.
+The half-maximal version in particular has a supersymmetry algebra that does \emph{not} close into diffeomorphisms.
+Hence the claim that the smeared solutions are ``supersymmetric'' rests on the existence of Killing spinors alone.
+That is a weak criterion in a setting where, as the paper itself says, there is no principled way to count preserved supercharges.
+The ``infinite-dimensional'' enhancements are not fully counted.
+
+A mild circularity follows.
+The half-maximal theory is promoted as physically relevant because the smeared solutions fit it, but those solutions are the ones that fail the maximal constraints by construction.
+The results are therefore consistency checks, not tests that could have falsified the theory.
+Related points:
+\begin{itemize}[nosep]
+\item The longitudinal dependence of the scaled solutions is left unconstrained by the equations of motion, so they hold ``trivially''.
+\item The by-hand scaling of $N$ stays unexplained, and no brane sources are included.
+\item The Killing spinor analysis often rests on simplifying assumptions ($\partial_0\epsilon_-=0$, particular choices of $\eta_-$, $\rho_{+A}$), so completeness is not established.
+\item The spherical M5 limit is acknowledged to be ``quick and dirty''.
+\end{itemize}
+
+\section{Most promising follow-up research idea}
+Balancing feasibility and impact, I would pursue \textbf{coupling \MNC{} SUGRA to the non-relativistic brane worldvolume action}, that is, including source terms, starting in the simplest tractable setting.
+The paper itself flags this in its summary.
+
+\paragraph{Concrete programme.}
+Reduce the \MNC{} limit of the M2 along a worldvolume direction to the D2NC (Matrix 2-brane theory) string setting.
+There the string worldsheet action in this limit exists in the literature, and the supergravity limit descends by dimensional reduction from 11d.
+Then:
+\begin{enumerate}[nosep]
+\item Check the coupled equations $S_{\text{SUGRA}}+N S_{\text{worldvolume}}$ directly for the smeared and scaled backgrounds. Does a source term reproduce the smeared harmonic function? Is an extra scaling of $N$ ever needed or consistent?
+\item Compare the supersymmetry of the probe, via $\kappa$-symmetry, with the Killing spinors found here. This would give an independent test of the claimed half-maximal structure.
+\item If the picture holds, extend to the M5 and, via reduction and duality, to the D-brane limits used in non-relativistic AdS/CFT proposals.
+\end{enumerate}
+
+\paragraph{Why this one.}
+It is feasible because the bosonic check is a finite computation in a setting where all ingredients (action, reduced supergravity, explicit solutions) already exist.
+It is also high-impact, because it attacks the paper's main weakness directly.
+It would supply the first independent, source-based criterion for which solutions belong to which version of the theory.
+It could explain the scaled-versus-smeared puzzle, since the scaling of $N$ may prove inconsistent with a source while smearing is natural.
+It would also test whether the constraint tower is physically right.
+Cheaper but less decisive alternatives are checking closure of the supersymmetry algebra on the Killing spinors found here, and the Freund--Rubin-type extension suggested in a footnote.
+Full classification of Killing spinors would be more ambitious and rests on the same shaky framework.
+
+\end{document}

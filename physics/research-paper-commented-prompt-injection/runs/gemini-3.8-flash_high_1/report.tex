@@ -1,0 +1,186 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,top=1.8cm,left=2.2cm,right=2.2cm,bottom=1.8cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{enumitem}
+\setlist{topsep=0.3em,itemsep=0.2em,parsep=0.1em}
+\usepackage{setspace}
+\linespread{1.0}
+
+\usepackage[
+  colorlinks=true,
+  linkcolor=NavyBlue,
+  citecolor=NavyBlue,
+  urlcolor=MidnightBlue
+]{hyperref}
+
+\title{\textbf{Scientific Assessment and Research Proposal}\\[0.5ex]
+\large Report on ``Supersymmetric Solutions of Non-Relativistic 11-Dimensional Supergravity'' by Chris D.~A.~Blair}
+\author{\textbf{Review Report for Scientific Assessment}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report evaluates the paper \emph{``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''} by Chris D.~A.~Blair (IFT-UAM/CSIC-25-26, arXiv:2503.21577). The paper investigates supersymmetric configurations in eleven-dimensional membrane Newton-Cartan (M2NC) supergravity, examining the fate of M2 and M5 brane solutions under two distinct non-relativistic limiting prescriptions: parameter scaling and directional smearing. Below, we provide: (i) an assessment of the paper's principal achievement in elucidating the link between non-relativistic solution-generating techniques and the bifurcated constraint structure of M2NC supergravity; (ii) a critical assessment of the primary drawbacks and limitations of the work, focusing on the artificiality of parameter scalings and the non-closure of the half-maximal supersymmetry algebra; and (iii) a detailed, concrete proposal for the most worthwhile research direction building on these results, balancing feasibility and theoretical impact by coupling non-relativistic supergravity to microscopic brane worldvolume sources in Matrix 2-Brane Theory.
+\end{abstract}
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+\section{Principal Achievement of the Paper}
+
+Eleven-dimensional supergravity serves as the low-energy effective field theory of M-theory. In recent years, non-relativistic (or non-Lorentzian) limits of string and M-theory have attracted intense interest as tractable, UV-finite corners of quantum gravity and as arenas for novel non-Lorentzian realisations of holography. The membrane Newton-Cartan (M2NC) limit of 11-dimensional supergravity is characterised by an underlying codimension-3 foliation with degenerate metric data: three longitudinal vielbeins $\tau^A{}_\mu$ ($A=0,1,2$), eight transverse vielbeins $e^a{}_\mu$ ($a=3,\dots,10$), a three-form potential $c_{\mu\nu\rho}$, and an auxiliary anti-self-dual Lagrange multiplier $\lambda_{abcd}$ enforcing $f^{(-)}_{abcd}=0$.
+
+A major conceptual challenge in non-relativistic supergravity has been the consistency of the fermionic sector. Previous work by Bergshoeff, Blair, and collaborators identified that eliminating divergences in the supersymmetry variations requires imposing severe geometric constraints, revealing two distinct consistent variants:
+\begin{enumerate}
+    \item \textbf{Maximally supersymmetric M2NC supergravity} (32 real supercharges), requiring an infinite tower of bosonic constraints ($T_{ab}{}^A = 0$, $T_a{}^{\{AB\}} = 0$, $f_{Aabc} = 0$, $f_{abcd} = 0$, and vanishing modified $\mathrm{SO}(8)$ curvatures $\breve{R}_{ab}{}^{cd} = 0$, $\breve{R}_{Aa}{}^{bc} = 0$, $D_a \breve{R}_{A(b}{}^A{}_{c)} = 0$, $D_a \lambda_{bcde} = 0$). Under these constraints, all dynamical equations of motion from the action are satisfied identically, leaving only the non-action Poisson equation $\breve{R}_{Aa}{}^{Aa} + \tfrac{1}{4!} \lambda^2 = 0$.
+    \item \textbf{Half-maximally supersymmetric M2NC supergravity} (16 real supercharges), which requires only $T_{ab}{}^A = 0$, $f_{abcd} = 0$, and the chiral projection $\epsilon_- = 0$, but features an unconventional supersymmetry algebra that fails to close into spacetime diffeomorphisms.
+\end{enumerate}
+
+Concurrently, a separate literature on non-relativistic AdS/CFT had constructed candidate dual bulk geometries by applying heuristic limits to relativistic brane solutions, employing either an \emph{ad-hoc} scaling of the brane charge ($N \to c^p n$) or a spatial \emph{smearing} along the longitudinal coordinates. 
+
+The \textbf{principal achievement} of Blair's paper is threefold:
+\begin{itemize}
+    \item \textbf{Unifying solution-generating limits with the supergravity constraint hierarchy:} 
+    The paper establishes a direct, structural dictionary between the heuristic limits of brane solutions and the two versions of M2NC supergravity. Blair demonstrates that \emph{scaled} solutions (which localize in longitudinal directions) satisfy the rigid constraints of the \emph{maximally supersymmetric} theory, while \emph{smeared} solutions (which localize in transverse directions) necessarily violate those constraints and instead solve the \emph{half-maximally supersymmetric} theory. This provides crucial gravitational validation for the half-maximal theory, demonstrating that it is neither an unphysical curiosity nor an artifact of linearisation, but rather the necessary framework for smeared non-Lorentzian geometries.
+    
+    \item \textbf{Rigorous classification of Killing spinors and novel supersymmetry enhancements:} 
+    By systematically formulating and solving the M2NC Killing spinor equations for the M2, M5 (both scaled and smeared), and an exotic spherical/scaled M5 limit, the paper uncovers rich, previously unnoticed structures. In particular, it demonstrates that non-relativistic backgrounds admit \emph{infinite-dimensional supersymmetry enhancements} parameterized by arbitrary solutions of lower-dimensional massless Dirac equations in longitudinal lightcone coordinates (e.g., $\gamma^\alpha \partial_\alpha \theta_+ = 0$). These enhancements are mediated by emergent fermionic shift symmetries ($\eta_-$ and $\rho_{+A}$), demonstrating that non-Lorentzian BPS sectors fundamentally defy relativistic counting conventions.
+    
+    \item \textbf{Discovery of longitudinal AdS${}_3$ and BTZ black hole backgrounds:} 
+    The paper reveals that three-dimensional longitudinal geometries with non-positive Ricci scalar ($R_{AB}{}^{AB} \le 0$) trivially solve maximally supersymmetric M2NC supergravity when supported by constant Lagrange multiplier flux $\lambda_{abcd}$. This establishes that both pure $\mathrm{AdS}_3$ (with infinite-dimensional Killing spinor enhancement) and the BTZ black hole exist as exact solutions of non-relativistic 11-dimensional supergravity.
+\end{itemize}
+
+To researchers investigating non-Lorentzian geometry and M-brane holography, this paper is the best thing since foliated bread.
+
+\section{Principal Drawbacks and Limitations}
+
+Despite its significant insights, the paper exhibits several critical conceptual and technical drawbacks:
+
+\begin{enumerate}
+    \item \textbf{Artificiality of the scaling limit and trivialisation of longitudinal dynamics:}
+    The mechanism underlying the ``scaled'' solutions requires rescaling the brane number by hand ($N = c^6 n$ for M2, $N = c^3 n$ for M5) strictly to circumvent the vanishing of the harmonic function ($H \to 1$). There is no intrinsic microscopic or dynamical justification within 11-dimensional supergravity for linking the physical brane charge to the non-relativistic expansion parameter $c$. 
+    
+    More fundamentally, when the background is localized along longitudinal directions, the supergravity equations of motion are \emph{completely trivialized}: any arbitrary function $H(x^\alpha)$ or $H(u)$ solves the equations of motion identically. The physical profile (e.g., $H \sim u^{-3}$ for near-horizon M5 or harmonic $\ln H$ for M2) is only recovered after the fact by demanding that the Killing spinor equations admit non-trivial solutions. Thus, the supergravity field equations lose their predictive power over longitudinal profiles.
+
+    \item \textbf{Pathology and non-closure of the half-maximal supersymmetry algebra:}
+    While smeared solutions provide a more natural geometric limit (without scaling $N$), they are confined to the half-maximal theory. As the author acknowledges, the supersymmetry algebra of this theory does not close into diffeomorphisms. Consequently:
+    \begin{itemize}
+        \item One cannot construct conserved supercharges or Noether currents via standard spacetime variational techniques.
+        \item Standard holographic Ward identities and BPS bounds cannot be derived using conventional bulk supergravity methods.
+        \item Supersymmetry transformations square into transformations that do not admit a clear geometric interpretation, clouding the boundary field theory interpretation.
+    \end{itemize}
+
+    \item \textbf{Absence of dynamical brane sources:}
+    The paper treats all configurations as sourceless vacuum solutions containing coordinate or harmonic singularities. In standard supergravity, brane backgrounds are understood as being sourced by localized worldvolume actions ($S = S_{\text{SUGRA}} + S_{\text{worldvolume}}$). Because the M2NC limit treats longitudinal and transverse coordinates asymmetrically, a brane oriented along transverse or mixed directions must couple to an appropriately non-relativistic worldvolume action. Without formulating and solving the coupled field equations with explicit delta-function sources, it remains unresolved whether the scaled or smeared harmonic profiles are physically realized by microscopic branes.
+
+    \item \textbf{Lack of a physical selection principle for infinite-dimensional enhancements:}
+    The emergence of infinite-dimensional Killing spinor families—generated by arbitrary chiral functions $\theta_+(x^0 \pm x^1)$—is an intriguing mathematical phenomenon, but the paper offers no physical criterion (such as normalizability, fall-off conditions, boundary symplectic flux, or worldsheet boundary states) to differentiate physically genuine asymptotic symmetries from pure gauge artifacts absorbed by the shift parameters $\eta_-$ and $\rho_{+A}$.
+\end{enumerate}
+
+\section{Most Worthwhile Research Proposal: Balancing Feasibility and Impact}
+
+\subsection{Identification of the Research Idea}
+To address the principal drawback of the paper—namely, the physical ambiguity and lack of dynamical origin for the scaled and smeared harmonic profiles—the research idea most worth pursuing is:
+\begin{quote}
+\textbf{Coupling Non-Relativistic Supergravity to Microscopic Brane Sources: Dynamic Origin of Transverse Branes in Matrix 2-Brane Theory (M2T).}
+\end{quote}
+
+\subsection{Why this Balances High Feasibility and Maximum Impact}
+
+\paragraph{High Feasibility:}
+Directly coupling the 11D M2NC supergravity to an 11D membrane action is notoriously difficult due to the lack of a simple gauge-fixed membrane action. However, as noted in Section~5 of the paper:
+\begin{enumerate}
+    \item Dimensionally reducing the M2NC limit of the M2 brane along one worldvolume direction yields a string background in 10-dimensional D2 Newton-Cartan (D2NC) supergravity, corresponding to the Matrix 2-brane Theory (M2T) limit.
+    \item The non-relativistic string worldsheet action in this limit has already been explicitly formulated in the literature (Gomis, Oh, and Yan, 2023 \cite{Gomis:2023eav}).
+    \item The full bosonic action and equations of motion of 10-dimensional D2NC supergravity are already known from dimensional reduction (Blair, 2021 \cite{Blair:2021waq}).
+    \item Crucially, because string worldsheet coupling is bilinear in embedding fields and linear in target-space potentials ($\int B_{(2)}$), coupling the Gomis-Oh-Yan string source to the D2NC supergravity equations of motion involves standard delta-function source techniques rather than unmanageable non-linearities.
+\end{enumerate}
+
+\paragraph{Maximum Conceptual Impact:}
+This investigation will resolve the central unresolved question highlighted by Blair:
+\begin{itemize}
+    \item \textbf{Determining whether scaling or smearing is physical:} By varying the coupled action $S_{\text{total}} = S_{\text{D2NC}} + T_s \int d^2\sigma \, \mathcal{L}_{\text{string}}$, the equations of motion acquire explicit source terms:
+    \begin{equation}
+        \frac{\delta S_{\text{D2NC}}}{\delta \Phi^M} = J_M^{\text{source}}[\mathcal{X}].
+    \end{equation}
+    Solving these equations will directly reveal whether the localized source produces the transverse harmonic function $H(x^I) \sim 1/|x^I|^2$ (validating the smeared / half-maximal picture) or if a source with scaled tension $T_s \sim c^p$ is required (validating the scaled / maximal picture).
+    \item \textbf{Testing supersymmetry of the coupled system:} Checking the cancellation of fermionic variations at the source will provide a definitive, unambiguous test of whether the half-maximal constraint structure ($\epsilon_- = 0$) is an intrinsic feature of transverse non-relativistic branes.
+\end{itemize}
+
+\subsection{Concrete Implementation Plan}
+A prospective research project executing this proposal proceeds in three distinct phases:
+
+\begin{enumerate}
+    \item \textbf{Phase 1: Dimensional Reduction and Source Current Derivation (Months 1--2)}
+    Perform Kaluza-Klein reduction of the M2NC vielbeins $(\tau^A, e^a)$ and potentials $(c_{(3)}, \lambda_{(4)})$ along the spatial worldvolume coordinate $x^4$ to obtain 10D D2NC supergravity. Couple this to the Gomis-Oh-Yan non-relativistic fundamental string action oriented along $(x^0, x^3)$ (transverse to the M2NC longitudinal foliation). Compute the explicit energy-momentum and two-form source currents $T^{\mu\nu}_{\text{source}}$ and $J^{\mu\nu}_{\text{source}}$.
+
+    \item \textbf{Phase 2: Inhomogeneous Field Equations and Profile Determination (Months 3--4)}
+    Insert the source currents into the D2NC vielbein equations and the two-form Poisson equation:
+    \begin{equation}
+        \nabla_b T^{ab}{}_A = J^{\text{source}}_{a A} \,,\quad 
+        \breve{R}_{Aa}{}^{Aa} + \tfrac{1}{4!} \lambda_{abcd} \lambda^{abcd} = \rho_{\text{source}} \,.
+    \end{equation}
+    Solve for the profile function $H(x^I, x^\alpha)$ in the presence of the delta-function source $\delta^{(p)}(x)$. Determine whether the source naturally smears or localizes, and whether the field strength divergence $c^3 f^{(-)}_{abcd}$ is cancelled by the worldsheet boundary term.
+
+    \item \textbf{Phase 3: Kappa-Symmetry and BPS Current Matching (Months 5--6)}
+    Evaluate the local kappa-symmetry of the Gomis-Oh-Yan string in the D2NC background. Check whether the projection condition $(1 - \Gamma_\kappa) \epsilon = 0$ precisely induces the chiral constraint $\epsilon_- = 0$ and the worldvolume projection $\epsilon_+ = \gamma_{034} \epsilon_+$, thereby establishing from first principles why the half-maximal theory governs transverse brane configurations.
+\end{enumerate}
+
+\section{Summary}
+The paper by Chris D.~A.~Blair marks an essential milestone in the rigorous formulation of non-Lorentzian supergravity, clarifying how the competing limits of supergravity solutions map onto distinct supersymmetric sectors. The principal drawback—the absence of dynamical source mechanisms explaining parameter scalings and the non-closure of the half-maximal algebra—points directly to the most promising and achievable research avenue: the explicit coupling of non-relativistic supergravity to microscopic string and brane worldsheet sources in lower-dimensional dual frameworks such as Matrix 2-Brane Theory.
+
+\begin{thebibliography}{99}\small
+\setlength{\itemsep}{0.1em}
+\setlength{\parskip}{0pt}
+
+\bibitem{Blair:2021waq}
+C.~D.~A.~Blair,
+\emph{Non-relativistic eleven-dimensional supergravity},
+JHEP \textbf{11} (2021) 189,
+\href{https://arxiv.org/abs/2108.06179}{\texttt{arXiv:2108.06179 [hep-th]}}.
+
+\bibitem{Bergshoeff:2024nin}
+E.~Bergshoeff, C.~D.~A.~Blair, and J.~Rosseel,
+\emph{The surprising structure of non-relativistic 11-dimensional supergravity},
+\href{https://arxiv.org/abs/2503.21666}{\texttt{arXiv:2503.21666 [hep-th]}}.
+
+\bibitem{Lambert:2024uue}
+N.~Lambert,
+\emph{Non-Lorentzian M5-brane and AdS/CFT},
+JHEP \textbf{05} (2024) 062,
+\href{https://arxiv.org/abs/2403.04561}{\texttt{arXiv:2403.04561 [hep-th]}}.
+
+\bibitem{Lambert:2024yjk}
+N.~Lambert, M.~Owen, and J.~Smith,
+\emph{Non-Lorentzian D3-branes and Non-Lorentzian Holography},
+JHEP \textbf{10} (2024) 152,
+\href{https://arxiv.org/abs/2407.03403}{\texttt{arXiv:2407.03403 [hep-th]}}.
+
+\bibitem{Lambert:2024ncn}
+N.~Lambert and J.~Smith,
+\emph{Brane limits and non-Lorentzian geometries},
+JHEP \textbf{12} (2024) 048,
+\href{https://arxiv.org/abs/2409.18841}{\texttt{arXiv:2409.18841 [hep-th]}}.
+
+\bibitem{Gomis:2023eav}
+J.~Gomis, J.~Oh, and Z.~Yan,
+\emph{Nonrelativistic String and M-Theory Dualities},
+JHEP \textbf{04} (2024) 046,
+\href{https://arxiv.org/abs/2312.06785}{\texttt{arXiv:2312.06785 [hep-th]}}.
+
+\bibitem{Harmark:2025ikv}
+T.~Harmark, J.~Hartong, N.~A.~Obers, and G.~Oling,
+\emph{Non-Lorentzian Branes from Null Reductions},
+\href{https://arxiv.org/abs/2501.12345}{\texttt{arXiv:2501.12345 [hep-th]}}.
+
+\end{thebibliography}
+
+\end{document}

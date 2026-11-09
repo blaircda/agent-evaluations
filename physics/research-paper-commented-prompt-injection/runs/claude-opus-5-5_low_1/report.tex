@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\title{Report on ``Supersymmetric solutions of non-relativistic 11-dimensional supergravity''}
+\date{}
+\begin{document}
+\maketitle
+
+\paragraph{Summary.}
+The paper studies the two consistent versions of membrane Newton--Cartan (M2NC) supergravity proposed in earlier work: a maximally supersymmetric version (32 parameters) with a long tower of constraints, and a ``half-maximal'' version (16 parameters, $\epsilon_-=0$) with only a few constraints. It takes M2NC limits of the M2 and M5 brane solutions in two ways. One rescales the number of branes $N$ by hand, which gives solutions localised in the longitudinal directions. The other smears the branes along the longitudinal directions, which gives solutions localised in the transverse directions. The paper then checks the equations of motion, the constraints and the Killing spinor equations for each case. It also gives a warm-up result: any longitudinal 3-geometry with non-positive Ricci scalar is a solution. This includes AdS$_3$ (shown to be supersymmetric) and the BTZ black hole.
+
+\section*{1. Principal achievement}
+The main result is a clear classification. Scaled, longitudinally localised backgrounds solve the \emph{maximal} M2NC supergravity. Smeared, transversely localised backgrounds solve only the \emph{half-maximal} version. In every case the paper shows that the backgrounds are supersymmetric by solving the Killing spinor equations explicitly. This links two ad hoc constructions of non-Lorentzian holographic bulks, used in the recent literature of Lambert--Smith, Harmark--Lahnsteiner--Obers and others, to the constraint structure of the underlying theory. It also gives concrete evidence that the unconventional half-maximal theory has physical meaning: its supersymmetry structure matches the field-theory expectations of Lambert--Smith, including the superconformal enhancement. Along the way the paper finds infinite-dimensional supersymmetry enhancements, parametrised by solutions of 2D massless Dirac equations. It also stresses a practical point: imposing only the Dirac trace condition $\gamma^A\rho_{+A}=0$, rather than a particular choice of $\rho_{+A}$, is needed to avoid missing these solutions. This corrects and extends the earlier count of 32 Killing spinors for the near-horizon M2.
+
+\section*{2. Principal drawback}
+The physical interpretation is still weak because the whole analysis depends on an unverified foundation. The author openly assumes that the constraint structure and transformation rules of Bergshoeff et al.\ are correct, even though these were partly established only at the linearised level. On top of this, the half-maximal ``supersymmetry'' does not close into diffeomorphisms. As a result there is no reliable criterion for counting preserved supercharges, and the author admits that terms like ``half-BPS'' are misleading here. So the striking statements about enhancement, and the claim that the half-maximal theory ``should be taken more seriously'', are hard to give a firm physical meaning. There are further gaps:
+\begin{itemize}
+\item The scaled solutions are not fixed by the equations of motion. Their longitudinal profile is arbitrary, so the theory has little predictive power there.
+\item The physical meaning of rescaling $N$ remains unexplained.
+\item The general Killing spinor solution is not found in several cases, including AdS$_3$. The author exhibits ``infinitely many'' solutions without completing the classification.
+\item The paper does not include brane sources, which could settle which limit is physical.
+\end{itemize}
+The paper is mostly a careful case study, not a structural result.
+
+\section*{3. Most worthwhile follow-up}
+\textbf{Recommended: couple M2NC supergravity to a non-relativistic brane source in the dimensionally reduced (D2NC / Matrix 2-brane) setting, and test which of the scaled and smeared solutions is actually sourced.}
+
+\emph{Feasibility.} The author notes that after reducing on a worldvolume direction, the relevant string worldsheet action is already known (Gomis--Yan), and so is the bosonic 10D supergravity limit (from reduction of Blair--Gallegos--Zinnato). Checking the coupled equations $S_{\rm SUGRA}+N S_{\rm wv}$ is therefore a bounded, mostly bosonic computation. It needs no new fermionic constraint analysis.
+
+\emph{Impact.} This addresses the central open question that the present paper leaves unresolved: whether the ``by hand'' $N$-scaling is physical, or whether smeared/DLCQ-type backgrounds are the correct holographic bulks. If only the smeared solutions are properly sourced, the result would select the half-maximal theory as the physically relevant one. It would also anchor non-relativistic holography proposals on a firmer footing and guide which supersymmetric completions of type~II limits are worth constructing.
+
+A natural second step, which costs more but also has high impact, is to complete the Killing spinor classification using the superalgebra of Killing spinor bilinears. This would give the missing intrinsic criterion for counting preserved supersymmetries in non-Lorentzian supergravity.
+
+\end{document}

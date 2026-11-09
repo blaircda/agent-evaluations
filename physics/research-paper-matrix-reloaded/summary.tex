@@ -1,152 +1,166 @@
-\documentclass[10pt]{article}
-\usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{booktabs,tabularx,array,multirow}
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{amssymb}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\newcommand{\TT}{$T\bar T$}
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage[hidelinks]{hyperref}
 
-\title{Summary of agent reports on \emph{Matrix theory reloaded} (\texttt{paper.tex})}
+\newcommand{\MpT}{M$p$T}
+\newcommand{\TTbar}{$T\bar T$}
+\newcommand{\yes}{$\checkmark$}
+
+\title{Summary of agent reports on\\ \emph{Matrix Theory Reloaded: A BPS Road to Holography}}
 \author{}
-\date{6 November 2026}
+\date{}
 
 \begin{document}
 \maketitle
-\vspace{-2em}
+\vspace{-3em}
 
 \section*{Setup}
-Twelve runs: three models (Haiku~5.5, Sonnet~5.5, Opus~5.5) $\times$ two effort levels (low, high) $\times$ two repeats.
-Each run wrote a \texttt{report.tex} giving (1)~the principal achievement, (2)~the principal drawback and
-(3)~the most worthwhile follow-up. I put each answer into a category based on what the report presents as its
-\emph{headline} choice. Points raised only as supporting detail are counted separately in Table~\ref{tab:mentions}.
+There are 20 runs in \texttt{runs/}: five models (Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5; Gemini 3.8 Flash; Gemini 4 Argon), two effort levels (low, high) and two repeats each. Every run produced a \texttt{report.tex} covering (1) the principal achievement, (2) the principal drawback, and (3) the follow-up idea that best balances feasibility and impact. Below, each report's choices are sorted into categories. Where a report lists several items, it is classified by the item it presents as the main one.
 
-\section*{1. Principal achievement}
-All 12 runs chose the same principal achievement.
-\begin{itemize}
-\item \textbf{A1 -- Unified BPS-limit framework (12/12).} The BPS decoupling limit that defines matrix theory (M$p$T),
-  when applied at the asymptotic infinity of a D$p$-brane geometry, \emph{is} the near-horizon limit. This places matrix theory,
-  AdS/CFT and IMSY, non-Lorentzian holography and the DLCQ$^n$/DLCQ$^m$ classification in one scheme.
-\end{itemize}
-Every run also named the $p$-brane \TT{} flow equations as the main concrete result. Most runs treated them as a
-by-product. Two Haiku runs (\texttt{high\_1}, \texttt{low\_2}) gave them equal billing as a second headline
-achievement. Two runs checked the flow equations numerically: Haiku \texttt{high\_2} ($p=1,2$) and
-Opus \texttt{high\_2} ($p=0,2,3,4,5$, up to 6 scalars). Both found that the equations hold.
+\section*{1. Principal achievement: unanimous}
+All \textbf{20/20} reports name the same achievement: \emph{conceptual unification}. The matrix-theory (\MpT) BPS decoupling limit, applied at asymptotic infinity of a D$p$-brane solution, \emph{is} the Maldacena/IMSY near-horizon limit. One framework then links matrix theory, AdS/CFT, non-Lorentzian holography and \TTbar.
+Every report also highlights the $p$-brane \TTbar\ flow equations (free scalars $\to$ Nambu--Goto for all $p$; Maxwell $\to$ DBI for $p=1,2$; the simple 3D M2/D2 flow) as the main \emph{concrete} result. Most also cite the DLCQ$^n$/DLCQ$^m$ classification as part of the achievement.
+Only two reports say they checked the formulas themselves: Haiku high~1 (by hand, $p=1,2$) and Opus high~1 (numerically, $p=1,\dots,5$).
 
 \section*{2. Principal drawback}
-\begin{itemize}
-\item \textbf{D1 -- Kinematic or conjectural only, with no dynamical test (8/12).} The evidence consists of matching limits
-  and scalings. No observable (spectrum, correlator, thermodynamics, symmetry algebra) is compared across any new
-  duality, so the DLCQ$^n$/DLCQ$^m$ conjecture works as a classification rather than a falsifiable claim.
-\item \textbf{D2 -- Unverified non-Lorentzian bulk backgrounds (3/12).} The headline weakness is that the new geometries
-  are not shown to solve the M$p$T supergravity equations and torsion constraints, and that they rely on an
-  ad hoc rescaling of $\ell$ (that is, of $N$).
-\item \textbf{D3 -- The ``intrinsic'' \TT{} generation of the bulk is not derived (1/12).} $\Omega(r)$ is inserted by
-  hand from the known solution instead of following from the flow.
-\end{itemize}
-These categories overlap heavily. Every report mentions the unverified backgrounds somewhere (Table~\ref{tab:mentions}).
-The difference lies in which point the report puts first.
-
-\section*{3. Recommended follow-up}
-\begin{itemize}
-\item \textbf{F1 -- Formulate or use M$p$T supergravity, verify the non-Lorentzian backgrounds and compute their
-  isometry and super-algebras (7/12).} Variants differ in the starting case ($p=0$, $p=0,1$, or M2) and in whether
-  the supergravity equations must first be derived.
-\item \textbf{F2 -- Non-abelian and/or supersymmetric extension of the $p$-brane \TT{} flows (2/12).} Test against the
-  Myers action, BFSS/BMN, or BLG/ABJM.
-\item \textbf{F3 -- Dynamical holographic test of a specific new duality (2/12).}
-  Opus \texttt{high\_1}: DLCQ$^1$/DLCQ$^2$ via the M5 uplift (AdS$_7\times S^4$ with a null circle), matching symmetries, sources and the protected spectrum.
-  Opus \texttt{high\_2}: large-$N$ thermodynamics of the $p=2$ (ABJM) flow compared with non-extremal M2-branes in asymptotically flat space.
-\item \textbf{F4 -- Derive $\Omega(r)$ from the non-Lorentzian equations of motion (M2 case) (1/12).} This tests the intrinsic-bulk claim.
-\end{itemize}
-
-\section*{Breakdown by model and effort}
+Almost every report lists much the same set of weaknesses. They differ in which one they put first. The four headline framings are:
+\begin{description}
+\item[K] \textbf{Kinematic, untested holography} (8): the DLCQ$^n$/DLCQ$^m$ conjecture is a classification of limits. No observable (spectrum, correlator, index, thermodynamics) is matched on both sides.
+\item[G] \textbf{Unverified non-Lorentzian bulk geometries} (7): they are not shown to solve \MpT\ supergravity (equations of motion and torsional constraints). They rely on an ad hoc $\ell$/$N$ rescaling or on smearing (Gemini Argon stresses that these two procedures give inequivalent geometries).
+\item[C] \textbf{Classical, abelian, probe-level character} (4): the flows and bulk constructions lack quantum and non-abelian control, and higher-dimensional \TTbar\ is not well defined quantum mechanically.
+\item[T] \textbf{Bulk-from-\TTbar\ is an ansatz} (1): the position-dependent coupling $\lambda(X)=\Omega^{-2}$ is assumed, not derived from a flow.
+\end{description}
 
 \begin{table}[h]
 \centering
-\caption{Headline choice per run. A1 = unified BPS/near-horizon framework. Drawbacks: D1 = no dynamical test,
-D2 = unverified backgrounds, D3 = $\Omega(r)$ put in by hand. Follow-ups: F1 = M$p$T supergravity check,
-F2 = non-abelian/susy flows, F3 = dynamical holographic test, F4 = derive $\Omega(r)$. The runner-up is the
-alternative that the report ranked second, if it named one.}
-\label{tab:runs}
-\small
-\begin{tabularx}{\textwidth}{llccc>{\raggedright\arraybackslash}p{3.4cm}Y}
+\caption{Headline drawback by model and effort (counts; 2 runs per cell).}
+\begin{tabular}{l cccc cccc}
 \toprule
-Model & Effort/run & Ach. & Drawback & Follow-up & Follow-up detail & Runner-up \\
+& \multicolumn{4}{c}{Low effort} & \multicolumn{4}{c}{High effort}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Model & K & G & C & T & K & G & C & T\\
 \midrule
-Haiku  & low\_1  & A1 & D2 & F1 & Start at $p=0$, then $p\le3$ & Susy abelian \TT{} flow \\
-Haiku  & low\_2  & A1 & D2 & F2 & Non-abelian flow vs.\ Myers/BFSS/BMN & Supergravity check (F1) \\
-Haiku  & high\_1 & A1 & D2 & F1 & CAS check + isometry algebra & Derive $\Omega(r)$ from flow (F4) \\
-Haiku  & high\_2 & A1 & D3 & F4 & $p=2$, $\Omega(r)$ unknown in EOM & none ranked \\
+Claude Haiku 5.5  & -- & 2 & -- & -- & 1 & -- & -- & 1\\
+Claude Sonnet 5.5 & 2 & -- & -- & -- & 1 & 1 & -- & --\\
+Claude Opus 5.5   & 2 & -- & -- & -- & 2 & -- & -- & --\\
+Gemini 3.8 Flash  & -- & -- & 2 & -- & -- & -- & 2 & --\\
+Gemini 4 Argon    & -- & 2 & -- & -- & -- & 2 & -- & --\\
 \midrule
-Sonnet & low\_1  & A1 & D1 & F1 & Formulate EOM, verify, symmetries & Non-abelian/susy flows (F2) \\
-Sonnet & low\_2  & A1 & D1 & F2 & M2/D2 flow vs.\ BLG/ABJM, Myers & Supergravity / observables \\
-Sonnet & high\_1 & A1 & D1 & F1 & Build sugra ($p=0,1$), then observables & Non-abelian flows (F2) \\
-Sonnet & high\_2 & A1 & D1 & F1 & Sugra + isometries + one observable & Non-abelian flows (F2) \\
+Total             & 4 & 4 & 2 & 0 & 4 & 3 & 2 & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The framing depends on the model family far more than on effort. Opus always uses~K, Flash always~C, and Argon always~G. Table~\ref{tab:issues} shows that the individual criticisms overlap heavily whatever the headline.
+
+\begin{table}[h]
+\centering
+\caption{Specific weaknesses raised anywhere in each report's drawback section. E: EOM/torsion of non-Lorentzian backgrounds unchecked; R: ad hoc $\ell$/$N$ rescaling or smearing; O: no observable matched across a proposed duality; A: flows classical/bosonic/abelian; P: $p\ge3$ gauge-field flows incomplete; B: Poincar\'e patch or asymptotic breakdown (strong coupling, $\alpha'$); H: bulk-from-\TTbar\ heuristic.}
+\label{tab:issues}
+\small
+\begin{tabular}{llc ccccccc}
+\toprule
+Model & Effort & Run & E & R & O & A & P & B & H\\
 \midrule
-Opus   & low\_1  & A1 & D1 & F1 & Expand sugra ($p=0$ or 2), superalgebra & Non-abelian/susy 3d flow (F2) \\
-Opus   & low\_2  & A1 & D1 & F1 & M2T sugra, superalgebra match & Non-abelian/susy flows (F2) \\
-Opus   & high\_1 & A1 & D1 & F3 & M0T/D4 via M5 uplift: symmetries, spectrum & Quantise $p=2$ flow \\
-Opus   & high\_2 & A1 & D1 & F3 & ABJM $T\bar T$ thermodynamics vs.\ M2 & none ranked \\
+Haiku  & low  & 1 & \yes & \yes & \yes & \yes & \yes & \yes & \\
+Haiku  & low  & 2 & \yes & \yes & \yes & \yes &      & \yes & \\
+Haiku  & high & 1 & \yes &      & \yes & \yes & \yes &      & \yes\\
+Haiku  & high & 2 & \yes & \yes & \yes & \yes & \yes &      & \\
+Sonnet & low  & 1 & \yes & \yes & \yes & \yes &      & \yes & \\
+Sonnet & low  & 2 & \yes & \yes & \yes & \yes & \yes & \yes & \\
+Sonnet & high & 1 & \yes & \yes & \yes & \yes & \yes & \yes & \\
+Sonnet & high & 2 & \yes & \yes & \yes & \yes & \yes & \yes & \\
+Opus   & low  & 1 & \yes & \yes & \yes & \yes &      & \yes & \\
+Opus   & low  & 2 & \yes & \yes & \yes & \yes &      & \yes & \\
+Opus   & high & 1 & \yes & \yes & \yes & \yes & \yes & \yes & \yes\\
+Opus   & high & 2 & \yes & \yes & \yes & \yes & \yes & \yes & \\
+Flash  & low  & 1 & \yes & \yes &      & \yes &      & \yes & \\
+Flash  & low  & 2 & \yes & \yes &      & \yes &      & \yes & \\
+Flash  & high & 1 & \yes & \yes & \yes & \yes &      & \yes & \\
+Flash  & high & 2 & \yes & \yes &      & \yes & \yes & \yes & \\
+Argon  & low  & 1 & \yes & \yes &      & \yes & \yes & \yes & \yes\\
+Argon  & low  & 2 & \yes & \yes &      & \yes &      &      & \\
+Argon  & high & 1 & \yes & \yes & \yes & \yes & \yes &      & \yes\\
+Argon  & high & 2 & \yes & \yes &      & \yes & \yes &      & \yes\\
+\midrule
+\multicolumn{3}{l}{Total (of 20)} & 20 & 19 & 13 & 20 & 12 & 14 & 5\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section*{3. Recommended follow-up direction}
+The recommendations split evenly. Ten are on the \emph{gravity side}, testing the holographic proposals (S, Q, D). Ten are on the \emph{worldvolume side}, developing the \TTbar\ flows (M, N, P, H).
+\begin{description}
+\item[S] \textbf{Supergravity check of the non-Lorentzian backgrounds} (7): formulate (or reduce from 11D non-relativistic supergravity) the \MpT\ field equations, test the proposed solutions, settle smearing vs.\ $N$-rescaling, then compute isometries and supersymmetry.
+\item[Q] \textbf{Quantitative test of one DLCQ$^1$/DLCQ$^2$ pair} (2): the M0T limit of the D4 throat vs.\ DLCQ (2,0) theory/instanton quantum mechanics, by matching symmetry algebras, then a protected spectrum or index.
+\item[D] \textbf{D1--D5 testbed} (1): a DLCQ$^0$/DLCQ$^2$ partial-decoupling limit, with \TTbar\ on the symmetric orbifold CFT and spectrum matching.
+\item[M] \textbf{The 3D (p=2) M2/D2 flow} (4): study it as a genuine field-theory deformation (quantum solvability, Burgers-type spectrum), make it supersymmetric and non-abelian, and apply it to BLG/ABJM.
+\item[N] \textbf{Non-abelian extension of the flows} (4), compared with the non-abelian DBI/Myers action: at $p=1$ or $p=1,2$ (Haiku, Sonnet) or for $p=0$ BFSS/BMN matrix quantum mechanics (Flash).
+\item[P] \textbf{Position-dependent flow} (1): derive the flow for $\lambda(X)$ and check that it generates the near-horizon background.
+\item[H] \textbf{Cutoff holography} (1): match the $p=2$ flow to the radial Hamilton--Jacobi equation of AdS$_4$ at finite cutoff.
+\end{description}
+
+\begin{table}[h]
+\centering
+\caption{Recommended follow-up by model and effort (counts; 2 runs per cell).}
+\begin{tabular}{l ccccccc ccccccc}
+\toprule
+& \multicolumn{7}{c}{Low effort} & \multicolumn{7}{c}{High effort}\\
+\cmidrule(lr){2-8}\cmidrule(lr){9-15}
+Model & S & Q & D & M & N & P & H & S & Q & D & M & N & P & H\\
+\midrule
+Haiku  & 1 & -- & -- & -- & 1 & -- & -- & 1 & -- & -- & -- & -- & 1 & --\\
+Sonnet & 2 & -- & -- & -- & -- & -- & -- & 1 & -- & -- & -- & 1 & -- & --\\
+Opus   & -- & -- & -- & 2 & -- & -- & -- & -- & 2 & -- & -- & -- & -- & --\\
+Flash  & -- & -- & -- & -- & 2 & -- & -- & -- & -- & 1 & -- & -- & -- & 1\\
+Argon  & -- & -- & -- & 2 & -- & -- & -- & 2 & -- & -- & -- & -- & -- & --\\
+\midrule
+Total  & 3 & 0 & 0 & 4 & 3 & 0 & 0 & 4 & 2 & 1 & 0 & 1 & 1 & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Effort effect.} At high effort, 7 of 10 runs recommend a gravity-side test (S/Q/D). At low effort, 7 of 10 recommend developing the flows (M/N). The shift is clearest for Opus (low: p=2 flow; high: M0T/D4 duality test) and Argon (low: non-abelian p=2 flow on ABJM; high: supergravity verification). Both repeats agree in 8 of the 10 model--effort cells. The two exceptions are Haiku high (P vs.\ S) and Flash high (H vs.\ D). The supergravity check (S) is the single most common choice (7/20). It also appears as the runner-up or ``more ambitious'' alternative in most of the remaining reports.
+
+\section*{Per-run classification}
+\begin{table}[h]
+\centering
+\small
+\begin{tabularx}{\textwidth}{llcccX}
+\toprule
+Model & Effort & Run & Drawback & Next & Follow-up in brief\\
+\midrule
+Haiku  & low  & 1 & G & N & Non-abelian $p=1$ flow vs.\ non-abelian DBI\\
+Haiku  & low  & 2 & G & S & EOM check of M2/D2 near-horizon backgrounds\\
+Haiku  & high & 1 & T & P & Position-dependent $p=1,2$ flow generating the bulk\\
+Haiku  & high & 2 & K & S & $1/\omega$ expansion of type II equations on one background\\
+Sonnet & low  & 1 & K & S & Formulate bosonic \MpT\ supergravity; verify solutions\\
+Sonnet & low  & 2 & K & S & \MpT\ supergravity test, then isometries and a probe observable\\
+Sonnet & high & 1 & G & S & \MpT\ supergravity for $p=0,1$; test double-limit solutions\\
+Sonnet & high & 2 & K & N & Non-abelian $p=1,2$ flows vs.\ known $F^4$, $F^6$ terms\\
+Opus   & low  & 1 & K & M & 3D flow: well-posedness, quantum solvability, BLG/ABJM\\
+Opus   & low  & 2 & K & M & 3D flow: Burgers-type solvability, susy, non-abelian\\
+Opus   & high & 1 & K & Q & M0T/D4 vs.\ instanton QM: sugra, symmetry, index\\
+Opus   & high & 2 & K & Q & M0T/D4 via null-reduced AdS$_7\times S^4$: algebra, KK spectrum\\
+Flash  & low  & 1 & C & N & Non-abelian $p=0$ flow of BFSS matrix QM\\
+Flash  & low  & 2 & C & N & Non-abelian $p=0$ flow for BFSS/BMN; $\alpha'^3R^4$ matching\\
+Flash  & high & 1 & C & H & $p=2$ flow vs.\ AdS$_4$ cutoff Hamilton--Jacobi evolution\\
+Flash  & high & 2 & C & D & D1--D5 partial decoupling with symmetric-orbifold \TTbar\\
+Argon  & low  & 1 & G & M & Non-abelian, susy $p=2$ flow applied to 3D SYM and ABJM/BLG\\
+Argon  & low  & 2 & G & M & Same, with comparison to M2 amplitudes and AdS$_4$\\
+Argon  & high & 1 & G & S & Sourced \MpT\ sugra from 11D; localisation puzzle; M0T/D4 probe\\
+Argon  & high & 2 & G & S & 11D non-rel.\ sugra and Killing spinors; smeared vs.\ rescaled; $B_{ij}\neq0$\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\begin{table}[h]
-\centering
-\caption{Counts of headline choices by model and effort (two runs per cell).}
-\label{tab:counts}
-\begin{tabular}{l cc cc cc c}
-\toprule
- & \multicolumn{2}{c}{Haiku} & \multicolumn{2}{c}{Sonnet} & \multicolumn{2}{c}{Opus} & \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
-Category & low & high & low & high & low & high & Total \\
-\midrule
-A1 Unified BPS/near-horizon framework & 2 & 2 & 2 & 2 & 2 & 2 & 12 \\
-\midrule
-D1 No dynamical test / kinematic only & 0 & 0 & 2 & 2 & 2 & 2 & 8 \\
-D2 Unverified non-Lorentzian backgrounds & 2 & 1 & 0 & 0 & 0 & 0 & 3 \\
-D3 $\Omega(r)$ inserted by hand & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
-\midrule
-F1 M$p$T supergravity check + symmetries & 1 & 1 & 1 & 2 & 2 & 0 & 7 \\
-F2 Non-abelian / susy \TT{} flows & 1 & 0 & 1 & 0 & 0 & 0 & 2 \\
-F3 Dynamical holographic test & 0 & 0 & 0 & 0 & 0 & 2 & 2 \\
-F4 Derive $\Omega(r)$ from EOM & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Specific weaknesses mentioned anywhere in the drawback section (not only as the headline).}
-\label{tab:mentions}
-\begin{tabular}{l cc cc cc c}
-\toprule
- & \multicolumn{2}{c}{Haiku} & \multicolumn{2}{c}{Sonnet} & \multicolumn{2}{c}{Opus} & \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
-Weakness & low & high & low & high & low & high & Total \\
-\midrule
-Backgrounds not shown to solve M$p$T sugra & 2 & 2 & 2 & 2 & 2 & 2 & 12 \\
-Flows only classical/bosonic/abelian       & 2 & 2 & 2 & 2 & 2 & 2 & 12 \\
-Ad hoc rescaling of $\ell$ (i.e.\ of $N$)  & 2 & 0 & 2 & 2 & 2 & 2 & 10 \\
-No observable / quantitative test          & 1 & 1 & 2 & 2 & 2 & 2 & 10 \\
-Strong coupling / quantum effects at infinity, $p>3$ & 2 & 1 & 2 & 2 & 2 & 0 & 9 \\
-Poincar\'e patch only                      & 1 & 0 & 2 & 1 & 1 & 0 & 5 \\
-$\Omega(r)$ put in by hand (circularity)   & 0 & 2 & 0 & 0 & 0 & 2 & 4 \\
-Paper excessively long                     & 0 & 0 & 0 & 1 & 0 & 1 & 2 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section*{Observations}
-\begin{itemize}
-\item \textbf{Achievement:} all runs agree, regardless of model or effort.
-\item \textbf{Drawback by model:} every Sonnet and Opus run framed the main weakness as the lack of any \emph{dynamical} test.
-  Haiku framed it more narrowly, as specific unverified steps (the backgrounds, or the $\Omega(r)$ input).
-\item \textbf{Follow-up:} the modal choice, verifying the non-Lorentzian backgrounds in M$p$T supergravity (F1), is the
-  ``safe'' option. It appears in every model. The non-abelian \TT{} extension was the most common runner-up (6 runs) and was the main pick in 2 low-effort runs.
-  Only Opus at high effort proposed a dynamical holographic test (F3). Both of those proposals were the most detailed and specific in the set (M5 uplift; ABJM thermodynamics with a $T_{\max}$ comparison).
-\item \textbf{Effort:} higher effort produced longer reports (Opus high: 130--166 lines versus 19--35 at low) and more independent checking,
-  such as numerical verification of the flow equations. It changed the follow-up choice mainly for Opus.
-\end{itemize}
+\paragraph{Style note.} The Claude reports are short (4--9\,kB of source) and similar in length across efforts. The Gemini reports are longer, especially at high effort (16--21\,kB), and use more emphatic language (``landmark'', ``first rigorous proof'', ``None'' listed as the main bottleneck).
 
 \end{document}
