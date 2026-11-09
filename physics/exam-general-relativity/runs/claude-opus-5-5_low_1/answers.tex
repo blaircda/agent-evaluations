@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsfonts,amssymb,fullpage,tikz}
+\newcommand{\bh}{\bar{h}}
+\begin{document}
+\begin{center}{\bf\Large General Relativity --- Final Examination: Answers}\end{center}
+
+%-------------------------------------------------
+\section*{Question 1}
+Under $x^\mu\to x'^\mu(x)$, the Riemann tensor is a $(1,3)$ tensor, so
+\[
+R'^\mu{}_{\nu\rho\sigma}=\frac{\partial x'^\mu}{\partial x^\alpha}\frac{\partial x^\beta}{\partial x'^\nu}\frac{\partial x^\gamma}{\partial x'^\rho}\frac{\partial x^\delta}{\partial x'^\sigma}\,R^\alpha{}_{\beta\gamma\delta}.
+\]
+The Ricci tensor in the new coordinates is obtained by setting $\rho=\mu$ and summing:
+\[
+R'_{\nu\sigma}=R'^\mu{}_{\nu\mu\sigma}
+=\left(\frac{\partial x'^\mu}{\partial x^\alpha}\frac{\partial x^\gamma}{\partial x'^\mu}\right)\frac{\partial x^\beta}{\partial x'^\nu}\frac{\partial x^\delta}{\partial x'^\sigma}R^\alpha{}_{\beta\gamma\delta}.
+\]
+By the chain rule, $\dfrac{\partial x^\gamma}{\partial x'^\mu}\dfrac{\partial x'^\mu}{\partial x^\alpha}=\dfrac{\partial x^\gamma}{\partial x^\alpha}=\delta^\gamma_\alpha$, so
+\[
+R'_{\nu\sigma}=\frac{\partial x^\beta}{\partial x'^\nu}\frac{\partial x^\delta}{\partial x'^\sigma}\,\delta^\gamma_\alpha R^\alpha{}_{\beta\gamma\delta}
+=\frac{\partial x^\beta}{\partial x'^\nu}\frac{\partial x^\delta}{\partial x'^\sigma}\,R^\alpha{}_{\beta\alpha\delta}
+=\frac{\partial x^\beta}{\partial x'^\nu}\frac{\partial x^\delta}{\partial x'^\sigma}\,R_{\beta\delta},
+\]
+which is exactly the transformation law of a $(0,2)$ tensor.
+
+%-------------------------------------------------
+\section*{Question 2}
+Convention: $\hat\nabla_\mu V^\rho=\partial_\mu V^\rho+\hat\Gamma_{\mu\nu}{}^\rho V^\nu$, $\hat\nabla_\mu \omega_\nu=\partial_\mu\omega_\nu-\hat\Gamma_{\mu\nu}{}^\rho\omega_\rho$. Write $H_{\mu\nu}{}^\rho=g^{\rho\sigma}H_{\mu\nu\sigma}$.
+
+\paragraph{a) Torsion.} $T_{\mu\nu}{}^\rho=\hat\Gamma_{\mu\nu}{}^\rho-\hat\Gamma_{\nu\mu}{}^\rho$. The Levi-Civita part is symmetric and cancels, so
+\[
+T_{\mu\nu}{}^\rho=\tfrac{1}{12}g^{\rho\sigma}(H_{\mu\nu\sigma}-H_{\nu\mu\sigma})=\tfrac{1}{6}H_{\mu\nu}{}^\rho\neq0
+\]
+(for $H\neq0$). Hence the connection is \emph{not} torsion-free.
+
+\paragraph{Metric compatibility.} Since $\nabla_\mu g_{\nu\lambda}=0$ for Levi-Civita,
+\[
+\hat\nabla_\mu g_{\nu\lambda}=\nabla_\mu g_{\nu\lambda}-\tfrac{1}{12}H_{\mu\nu}{}^{\sigma}g_{\sigma\lambda}-\tfrac{1}{12}H_{\mu\lambda}{}^{\sigma}g_{\nu\sigma}
+=-\tfrac{1}{12}\left(H_{\mu\nu\lambda}+H_{\mu\lambda\nu}\right)=0,
+\]
+by antisymmetry of $H$ in its last two indices. So the connection \emph{is} metric compatible.
+
+\paragraph{b) Geodesics.} The geodesic equation for $\hat\Gamma$ is
+\[
+\frac{d^2x^\rho}{d\lambda^2}+\hat\Gamma_{\mu\nu}{}^\rho\frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}
+=\frac{d^2x^\rho}{d\lambda^2}+\Gamma_{\mu\nu}{}^\rho\frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}+\tfrac{1}{12}g^{\rho\sigma}H_{\mu\nu\sigma}\frac{dx^\mu}{d\lambda}\frac{dx^\nu}{d\lambda}=0.
+\]
+The last term contracts $H_{\mu\nu\sigma}$, antisymmetric in $\mu\nu$, with $\dot x^\mu\dot x^\nu$, symmetric in $\mu\nu$, so it vanishes:
+$H_{\mu\nu\sigma}\dot x^\mu\dot x^\nu=-H_{\nu\mu\sigma}\dot x^\mu\dot x^\nu=-H_{\mu\nu\sigma}\dot x^\nu\dot x^\mu\Rightarrow=0$.
+Hence the equation reduces to the Levi-Civita geodesic equation; the geodesics coincide. (Only the symmetric part of a connection enters the geodesic equation.)
+
+%-------------------------------------------------
+\section*{Question 3}
+\paragraph{a)} The metric components blow up or degenerate at
+\begin{itemize}
+\item $r=2GM$ (the horizon): $g_{tt}=-f\to0$, $g_{rr}=1/f\to\infty$;
+\item $r=0$: $g_{tt}\to\infty$, $g_{rr}\to0$.
+\end{itemize}
+(Also $\theta=0,\pi$, the trivial polar-coordinate singularity of the sphere.) To decide which are physical one computes coordinate-invariant scalars, e.g.\ the Kretschmann scalar
+\[
+R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}=\frac{48G^2M^2}{r^6}.
+\]
+This is finite ($=3/(4G^4M^4)$) at $r=2GM$, so the horizon is only a \emph{coordinate singularity}: nothing local happens to the infalling observer there (for a large black hole tidal forces at the horizon are tiny). It diverges at $r=0$, which is a genuine \emph{curvature singularity}: tidal forces grow without bound and you would be spaghettified. That is what to worry about---and once inside $r<2GM$, $r$ is timelike, so reaching $r=0$ in finite proper time (at most $\pi GM$) is unavoidable.
+
+\paragraph{b)} Differentiate $v$:
+\[
+\frac{dv}{dr}\Big|_t=1+\frac{2GM}{2GM}\frac{1}{r/2GM-1}=1+\frac{2GM}{r-2GM}=\frac{r}{r-2GM}=\frac1{f},
+\qquad dv=dt+\frac{dr}{f}.
+\]
+So $dt=dv-dr/f$ and
+\[
+-f\,dt^2=-f\,dv^2+2\,dv\,dr-\frac{dr^2}{f}.
+\]
+The last term cancels $+dr^2/f$, giving
+\[
+\boxed{ds^2=-\left(1-\frac{2GM}{r}\right)dv^2+2\,dv\,dr+r^2(d\theta^2+\sin^2\theta\,d\phi^2).}
+\]
+At $r=2GM$ all components are finite and $\det g=-r^4\sin^2\theta\neq0$, so the metric is perfectly regular there and can be continued smoothly to $0<r<2GM$. Ingoing radial null rays are $v=$ const, which cross $r=2GM$ without incident. This confirms that $r=2GM$ was an artefact of the $(t,r)$ coordinates, while $r=0$ remains singular (the metric and curvature invariants still diverge there) in any coordinates.
+
+%-------------------------------------------------
+\section*{Question 4}
+\paragraph{a)} The metric has the FLRW form
+\[
+ds^2=-dt^2+a(t)^2\left[d\chi^2+\sin^2\chi\, d\Omega_2^2\right],\qquad a(t)=L\cosh(t/L),
+\]
+with spatial slices round 3-spheres ($k=+1$). Each slice is therefore homogeneous and isotropic, consistent with the cosmological principle (and with observations of the CMB/large-scale structure). Moreover it solves Einstein's equations with a positive cosmological constant $\Lambda=3/L^2$ (equivalently, the Friedmann equation $\dot a^2/a^2+1/a^2=\sinh^2/(L^2\cosh^2)+1/(L^2\cosh^2)=1/L^2=\Lambda/3$). For $t\gg L$, $a\approx\tfrac L2 e^{t/L}$: accelerated exponential expansion, which describes the late-time dark-energy-dominated universe (and also inflation). The scale factor is $a(t)=L\cosh(t/L)$.
+
+\paragraph{b)} Causal structure is determined by light cones, i.e.\ by which vectors are timelike, null or spacelike. Since $\Omega^2>0$,
+\[
+g_{\mu\nu}V^\mu V^\nu=\Omega^2\,\bar g_{\mu\nu}V^\mu V^\nu
+\]
+has the same sign as $\bar g_{\mu\nu}V^\mu V^\nu$. Hence the same vectors are timelike/null/spacelike in both metrics, the light cones coincide, and the same curves are causal; so the causal relations between points are identical. (Null geodesics are also the same curves up to reparametrisation.)
+
+\paragraph{c)} With $\cosh(t/L)=1/\cos\eta$: as $t$ ranges over $(-\infty,\infty)$, $\eta\in(-\pi/2,\pi/2)$ (choosing $\eta$ with the same sign as $t$). Also $\sinh(t/L)=\sqrt{\cosh^2-1}=\tan\eta$. Differentiating,
+\[
+\frac1L\sinh(t/L)\,dt=\frac{\sin\eta}{\cos^2\eta}d\eta\;\Rightarrow\;\frac{\tan\eta}{L}dt=\frac{\tan\eta}{\cos\eta}d\eta\;\Rightarrow\;dt=\frac{L\,d\eta}{\cos\eta}.
+\]
+Then
+\[
+ds^2=\frac{L^2}{\cos^2\eta}\left[-d\eta^2+d\chi^2+\sin^2\chi\,d\Omega_2^2\right],
+\]
+conformal (by b)) to the metric of the Einstein static universe $-d\eta^2+d\chi^2+\sin^2\chi d\Omega^2$, restricted to $-\pi/2<\eta<\pi/2$, $0\le\chi\le\pi$. The Penrose diagram is therefore a square of width $\pi$ (in $\chi$) and height $\pi$ (in $\eta$); radial null rays are at $45^\circ$.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.3]
+\draw[thick] (0,0) -- (3.1416,0) -- (3.1416,3.1416) -- (0,3.1416) -- cycle;
+\draw[dashed] (0,0) -- (3.1416,3.1416);
+\draw[dashed] (3.1416,0) -- (0,3.1416);
+\node[above] at (1.57,3.14) {$\mathcal I^+$ ($\eta=\pi/2$, $t\to+\infty$)};
+\node[below] at (1.57,0) {$\mathcal I^-$ ($\eta=-\pi/2$, $t\to-\infty$)};
+\node[left,align=right] at (0,1.57) {$\chi=0$\\(north pole)};
+\node[right,align=left] at (3.14,1.57) {$\chi=\pi$\\(south pole)};
+\draw[gray] (0,1.57) -- (3.14,1.57); \node[gray,above] at (2.4,1.57) {\small $t=0$};
+\end{tikzpicture}
+\end{center}
+Each interior point represents a 2-sphere; the vertical edges are the poles of the $S^3$ (not boundaries), and the top and bottom edges $\mathcal I^\pm$ are spacelike past and future null infinity. Because $\mathcal I^\pm$ are spacelike, there are particle and event horizons: the dashed diagonals are the past/future event horizons of an observer at $\chi=0$ (resp.\ $\chi=\pi$). A light ray leaving the north pole at $\eta=-\pi/2$ only just reaches the south pole at $\eta=\pi/2$, so observers at antipodes can never communicate.
+
+%-------------------------------------------------
+\section*{Question 5}
+\paragraph{a)} Under $h_{\mu\nu}\to h_{\mu\nu}+\partial_\mu\xi_\nu+\partial_\nu\xi_\mu$, we have $\partial^\mu\bh_{\mu\nu}\to\partial^\mu\bh_{\mu\nu}+\Box\xi_\nu$, so we can always choose $\xi$ with $\Box\xi_\nu=-\partial^\mu\bh_{\mu\nu}$ to reach the Lorenz (de Donder) gauge $\partial^\mu\bh_{\mu\nu}=0$. Then the second and third terms on the left vanish and
+\[
+\Box\bh_{\mu\nu}=\partial^\rho\partial_\rho\bh_{\mu\nu}=-16\pi G\,T_{\mu\nu}.
+\]
+In vacuum $\Box\bh_{\mu\nu}=(-\partial_t^2+\nabla^2)\bh_{\mu\nu}=0$: a wave equation, with solutions $\bh_{\mu\nu}=C_{\mu\nu}e^{ik\cdot x}$, $k^\mu k_\mu=0$, i.e.\ ripples in spacetime propagating at the speed of light. Residual gauge freedom ($\Box\xi=0$) allows one to go to transverse-traceless gauge, $h_{0\mu}=0$, $h=0$, $\partial^ih_{ij}=0$, leaving two physical polarisations $h_+,h_\times$ --- gravitational waves.
+
+\paragraph{b)} The perturbation is in TT gauge. First, free particles initially at rest stay at fixed coordinate position: the geodesic equation at $U^\mu=(1,0,0,0)$ gives
+\[
+\frac{dU^\mu}{d\tau}=-\Gamma^\mu_{00}=-\tfrac12\eta^{\mu\nu}(2\partial_0h_{0\nu}-\partial_\nu h_{00})=0,
+\]
+since $h_{0\nu}=0$. So the particles remain at $x^i=(0,0,0)$, $(L_x,0,0)$, $(0,L_y,0)$. The full metric is
+\[
+ds^2=-dt^2+(1+h_+(t-z))dx^2+(1-h_+(t-z))dy^2+dz^2.
+\]
+Proper distance between first two particles at fixed $t$, along $y=z=0$:
+\[
+\Delta s=\int_0^{L_x}\sqrt{g_{xx}}\,dx=\int_0^{L_x}\sqrt{1+h_+(t)}\,dx=L_x\sqrt{1+h_+(t)}\approx L_x\left(1+\tfrac12h_+(t)\right),
+\]
+to first order in $h_+$ (using $z=0$). Similarly, along $x=z=0$:
+\[
+\Delta s=\int_0^{L_y}\sqrt{1-h_+(t)}\,dy=L_y\sqrt{1-h_+(t)}\approx L_y\left(1-\tfrac12h_+(t)\right).
+\]
+So the $+$ polarisation stretches the $x$ separation while squeezing the $y$ one, and vice versa half a period later.
+
+\paragraph{c)} \emph{Physics of the binary.} The two bodies orbit with a time-varying mass quadrupole, so they radiate gravitational waves at twice the orbital frequency, carrying away energy and angular momentum. Losing energy, the orbit shrinks; by Kepler's law the orbital frequency increases, which increases the radiated power (which scales as a high power of the frequency, $P\propto (GM_c\omega)^{10/3}/G$), so the shrinking accelerates. Stages:
+\begin{itemize}
+\item \textbf{Inspiral:} slow, adiabatic decay of quasi-circular orbit. The signal is a ``chirp'': a sinusoid with both frequency and amplitude increasing slowly with time ($f\propto(t_c-t)^{-3/8}$, $h\propto f^{2/3}$). The rate of frequency increase determines the chirp mass $M_c=(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$; the amplitude, combined with this, gives the distance.
+\item \textbf{Merger:} when the bodies reach the innermost stable orbit they plunge together and coalesce (for black holes, horizons merge into a single distorted horizon). Strong-field, highly nonlinear, requires numerical relativity; the amplitude and frequency peak here.
+\item \textbf{Ringdown:} the single remnant (a perturbed Kerr black hole) settles down by emitting quasi-normal modes: a damped sinusoid of roughly constant frequency with exponentially decaying amplitude. Its frequency and damping time determine the final mass and spin.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[xscale=1.4,yscale=1.0]
+\draw[->] (0,0) -- (10,0) node[right] {$t$};
+\draw[->] (0,-1.8) -- (0,1.8) node[above] {$h(t)$};
+\draw[blue,thick,domain=0:8,samples=600,smooth] plot (\x,{ (8.3-\x)^(-0.25)*cos(deg(40*(8.3-\x)^(0.625))) });
+\draw[blue,thick,domain=8:9.8,samples=200,smooth] plot (\x,{ 1.35*exp(-3.5*(\x-8))*cos(deg(40*0.3^(0.625) - 26*(\x-8))) });
+\draw[dashed] (6.5,-1.8)--(6.5,1.8); \draw[dashed] (8.2,-1.8)--(8.2,1.8);
+\node at (3.2,-1.6) {inspiral}; \node at (7.35,-1.6) {merger}; \node at (9.1,-1.6) {ringdown};
+\end{tikzpicture}
+\end{center}
+
+\emph{Detection.} LIGO is a Michelson interferometer with arms (4\,km) along $x$ and $y$; the mirrors are suspended so they are effectively freely falling in the horizontal plane, like the test particles of part b). A wave of the form in b) incident along $z$ changes the arm lengths by $\delta L_x=+\tfrac12h_+L$, $\delta L_y=-\tfrac12h_+L$, so the round-trip light travel times in the two arms differ, $\Delta T\approx 2h_+L/c$. The interference of the recombined beams at the photodetector (set near a dark fringe) therefore changes, and the output intensity oscillates in time tracking $h_+(t)$, i.e.\ the detector measures the strain $h(t)=\Delta L/L\sim10^{-21}$ directly, producing the chirp waveform sketched above. Matching it against template waveforms reveals the component masses (inspiral), the strong-field dynamics (merger) and the remnant's mass and spin (ringdown).
+
+\end{document}

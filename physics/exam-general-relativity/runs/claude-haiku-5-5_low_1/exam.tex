@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref,amsmath,amsfonts,fullpage,color}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bh}{\bar{h}}
+\usepackage{enumitem}
+\newcounter{quesno}
+\newcommand{\ques}[1]{\vspace{3em}\stepcounter{quesno}
+\noindent{\bf Question \thequesno.} \emph{(#1 points)\\}
+}
+\begin{document}
+
+\begin{center}
+
+{\bf\Large General Relativity}
+
+\vspace{1em}
+{\bf\large Final Examination}
+\vspace{1em}
+{\bf Time:} 4 hours
+
+
+\end{center} 
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+\noindent
+{\bf Instructions:} 
+For full marks, all questions must be solved.
+
+\vspace{1em}
+\hrule
+
+\ques{2} 
+The components of the Riemann tensor in some coordinates are $R^\mu{}_{\nu\rho\sigma}$.
+Write down how they transform under a change of coordinates.
+Define the Ricci tensor by $R_{\mu\nu} = R^\rho{}_{\mu\rho\nu}$, and show explicitly that this transforms as a tensor under change of coordinates.
+
+\ques{3}
+Consider a manifold on which we have both a metric, $g_{\mu\nu}$, and a totally antisymmetric $(0,3)$ tensor, $H_{\mu\nu\rho} = H_{[\mu\nu\rho]}$.
+We can define a connection with components $\hat\Gamma_{\mu\nu}{}^\rho$ by:
+\be
+\hat \Gamma_{\mu\nu}{}^\rho = \Gamma_{\mu\nu}{}^\rho + \frac{1}{12} g^{\rho \sigma} H_{\mu\nu\sigma}
+\label{stringconn}
+\ee
+where $\Gamma_{\mu\nu}{}^\rho$ denotes the components of the usual Levi-Civita connection.
+
+\begin{enumerate}[label=\alph*)]
+\item (\emph{2 points}) Is the new connection $\hat\Gamma_{\mu\nu}{}^\rho$ defined in equation \eqref{stringconn} torsion-free? Is it metric compatible? 
+\item (\emph{1 point}) Show that the geodesics of the connection $\hat\Gamma_{\mu\nu}{}^\rho$ are the same as the geodesics of the Levi-Civita connection. 
+\end{enumerate}
+
+
+\ques{4}
+The Schwarzschild metric is:
+\be
+ds^2 = - f(r) dt^2 + f(r)^{-1} dr^2 + r^2 d \theta^2 + r^2 \sin^2 \theta d\phi^2 
+\ee
+where $f(r) = 1 - \frac{2GM}{r}$. 
+
+\begin{enumerate}[label=\alph*)]
+\item  (\emph{2 points}) Suppose you are sufficiently interested in physics that you decide to fall into a Schwarzschild black hole to see what happens. 
+Your friends and family think this might be unsafe, as they have noticed there are singularities in the Schwarzschild metric. 
+Where do these singularities occur, which should you be genuinely concerned about, and why? 
+\item (\emph{2 points}) Determine the Schwarzschild metric in the ingoing Eddington-Finkelstein coordinates $(v,r,\theta,\phi)$, where
+\be
+v = t + r + 2GM \ln\left| \frac{r}{2GM} - 1 \right|
+\ee
+and explain how this supports your answer to part a). 
+\end{enumerate} 
+
+
+\ques{5}
+The metric of de Sitter is:
+\be
+ds^2 =- dt^2 +  L^2  \cosh^2 (t/L) \left( d\chi^2 + \sin^2 \chi \left( d\theta^2 + \sin^2\theta d\phi^2 \right)\right)  \,.
+\label{dsmetric} 
+\ee
+where $t \in (-\infty, \infty)$, $\chi \in (0,\pi)$ and $(\theta,\phi)$ are the usual coordinates on a two-sphere (and together $\chi, \theta,\phi$ parametrise a three-sphere).
+
+\begin{enumerate}[label=\alph*)]
+\item (\emph{2 points})  Explain why this metric is a candidate cosmological solution that could describe our universe. What is the scale factor?  
+\item (\emph{1 point}) Explain why two metrics that are related by $g_{\mu\nu} = \Omega^2 \bar g_{\mu\nu}$, can be said to have the same causal structure. 
+\item (\emph{2 points}) For de Sitter, make the coordinate transformation
+\be
+\cosh \frac{t}{L} = \frac{1}{\cos \eta} \,,
+\ee
+and draw the Penrose diagram. 
+
+\end{enumerate}
+
+\ques{6}
+The linearised Einstein equation is
+\be
+- \frac{1}{2} \partial^\rho\partial_\rho \bh_{\mu\nu} + \partial^\rho \partial_{(\mu} \bh_{\nu)\rho}
+- \frac{1}{2} \eta_{\mu\nu} \partial^\rho \partial^\sigma \bh_{\rho\sigma} = 8 \pi G T_{\mu\nu} \,,
+\ee
+when written in terms of $\bh_{\mu\nu} = h_{\mu\nu} - \frac{1}{2} h \eta_{\mu\nu}$. 
+
+\begin{enumerate}[label=\alph*)]
+\item (\emph{1 point}) By making an appropriate gauge choice, explain why the linearised Einstein equation leads to \emph{gravitational waves}.
+\item (\emph{2 point}) Consider an experiment involving two freely falling test particles, arranged so that one is at spatial position $x^i = (0,0,0)$ and the other at spatial position $x^i=(L_x,0,0)$.
+Suppose a gravitational wave travelling along the $z$-axis passes through the laboratory, corresponding to the following metric perturbation:
+\be
+h_{\mu\nu} = \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & h_{+}(t-z) & 0 & 0 \\
+0 & 0 & - h_{+}(t-z) & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix} \,.
+\ee
+Show that the proper distance between the test particles is given by: 
+\be
+\Delta s \approx L_x \left( 1 + \frac{1}{2} h_{+}(t) \right) \,.
+\ee
+If a third test particle is introduced at $x^i=(0,L_y,0)$ show that the proper distance between it and the particle at the origin is
+\be
+\Delta s \approx L_y \left( 1 - \frac{1}{2} h_{+}(t) \right) \,.
+\ee
+\item (\emph{3 points}) Consider a binary system consisting of two massive bodies in a circular orbit, which are emitting gravitational waves.
+Explain \emph{qualitatively} what happens to the system, and sketch the corresponding gravitational wave signal which would be observed by a detector such as LIGO.
+You should mention the following terms: \emph{inspiral}, \emph{merger}, \emph{ringdown}, explain how the interferometer detects a wave such as that described in part b), and connect the features of the signal to the physics of the binary pair. 
+
+\end{enumerate}
+
+
+\end{document}

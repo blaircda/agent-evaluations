@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2cm,landscape]{geometry}
+\usepackage{booktabs,array,amsmath,amssymb}
+\newcolumntype{C}{>{\centering\arraybackslash}p{0.75cm}}
+\begin{document}
+
+\begin{center}
+{\bf\Large General Relativity Final Examination --- Marking Summary}
+\end{center}
+
+\noindent Each script in \texttt{runs/} was marked against \texttt{solutions.tex}. The paper has five questions worth 20 points in total
+(Q1: 2; Q2: 2+1; Q3: 2+2; Q4: 2+1+2; Q5: 1+2+3). Half marks were allowed.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{l l *{11}{C} c}
+\toprule
+ & & \textbf{Q1} & \multicolumn{2}{c}{\textbf{Q2}} & \multicolumn{2}{c}{\textbf{Q3}} & \multicolumn{3}{c}{\textbf{Q4}} & \multicolumn{3}{c}{\textbf{Q5}} & \textbf{Total} \\
+\cmidrule(lr){3-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}
+\textbf{Model} & \textbf{Effort} & (2) & a (2) & b (1) & a (2) & b (2) & a (2) & b (1) & c (2) & a (1) & b (2) & c (3) & \textbf{(20)} \\
+\midrule
+claude-haiku-5-5  & low  & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 1.5 & 1 & 2 & 3 & \textbf{19.5} \\
+claude-haiku-5-5  & high & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+claude-sonnet-5-5 & low  & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+claude-sonnet-5-5 & high & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+claude-opus-5-5   & low  & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+claude-opus-5-5   & high & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+gemini-3.8-flash  & low  & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+gemini-3.8-flash  & high & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+gemini-4-argon    & low  & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+gemini-4-argon    & high & 2 & 2 & 1 & 2 & 2 & 2 & 1 & 2   & 1 & 2 & 3 & \textbf{20} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Comments on individual scripts}
+\begin{description}
+\item[claude-haiku-5-5 (low), 19.5/20.] All derivations are correct and complete. Q4c loses half a mark: the conformal metric and
+the square Penrose diagram are right, but the light rays drawn in the TikZ figure have arrows running from the top corners
+($\mathcal{I}^+$) down to the centre. These are past-directed, and they contradict the accompanying text, which says light rays
+from the poles reach $\mathcal{I}^+$.
+\item[claude-haiku-5-5 (high), 20/20.] Complete and correct. It derives the Kretschmann scalar from orthonormal-frame Riemann components,
+checks the Friedmann equations, and gives a quadrupole-formula inspiral estimate.
+\item[claude-sonnet-5-5 (low), 20/20.] Concise but every required step is present. The Penrose diagram is correct, with horizons, and Q5c connects chirp mass, distance,
+total mass and remnant spin to the signal.
+\item[claude-sonnet-5-5 (high), 20/20.] Complete and correct, with a detailed discussion of horizons in the de Sitter Penrose diagram and of
+interferometric detection.
+\item[claude-opus-5-5 (low), 20/20.] Complete and correct. It includes the differential light-travel time $\Delta T \approx 2h_+L/c$ and the
+extraction of the binary's parameters from the signal.
+\item[claude-opus-5-5 (high), 20/20.] Complete and correct throughout. It analyses null rays in Eddington--Finkelstein coordinates and identifies
+the static patch in the Penrose diagram, and its pgfplots chirp waveform is physically motivated.
+\item[gemini-3.8-flash (low), 20/20.] Complete and correct. It shows that light cones are preserved (Q4b), gives a labelled Penrose diagram and
+a waveform sketch. The link between signal and binary physics ($f_{\rm GW}=2f_{\rm orb}$, ISCO, quasi-normal modes giving $M_f, a_f$)
+is adequate.
+\item[gemini-3.8-flash (high), 20/20.] Complete and very detailed, with full step-by-step derivations. It includes the inverse EF metric, the infall
+proper time, the chirp-mass formula and standard sirens. (There is a cosmetic typo \verb|\ partial| in the restated question; the answers are unaffected.)
+\item[gemini-4-argon (low), 20/20.] Complete and correct. It adds the event-horizon and causal-trapping discussion in Q3, and shows how amplitude and frequency
+scale with orbital separation in Q5c.
+\item[gemini-4-argon (high), 20/20.] Complete and correct, with comparable depth to the low-effort script and a clean Penrose diagram and waveform.
+\end{description}
+
+\subsection*{Marking notes}
+\begin{itemize}
+\item The reference solutions contain a few slips. Scripts were marked on correct physics rather than on literal agreement with the key:
+  \begin{itemize}
+  \item Q4a: the key gives the scale factor as $L^2\cosh^2(t/L)$. The correct value is $a(t)=L\cosh(t/L)$ ($a^2 = L^2\cosh^2$), and every script gave this.
+  \item Q2a: the key writes the antisymmetric part $\hat\Gamma_{[\mu\nu]}{}^\rho = \tfrac{1}{12}H_{\mu\nu}{}^\rho$. The torsion tensor
+        $T = \hat\Gamma_{\mu\nu}{}^\rho-\hat\Gamma_{\nu\mu}{}^\rho = \tfrac16 H_{\mu\nu}{}^\rho$, which is what all scripts found. Both say ``not torsion-free''.
+  \item Q2b: the key's final line should read $\hat\Gamma_{(\nu\rho)}{}^\mu = \Gamma_{\nu\rho}{}^\mu$ (symmetric part), not $[\nu\rho]$.
+  \item Q4c: the key's range ``from $\cos\eta=-1$ \ldots\ to $\cos\eta=-1$'' should read $\eta$ from $-\pi/2$ to $+\pi/2$.
+  \end{itemize}
+\item All ten scripts reached the correct conclusions on every part: not torsion-free but metric compatible; $r=0$ is a curvature singularity
+  and $r=2GM$ a coordinate singularity; the ingoing EF metric; $a(t)=L\cosh(t/L)$; a square Penrose diagram with spacelike
+  $\mathcal{I}^\pm$; Lorenz gauge leading to $\Box\bar h_{\mu\nu}=-16\pi G T_{\mu\nu}$; and $\Delta s \approx L(1\pm\tfrac12 h_+)$.
+  Every script also included a sketch of the chirp signal.
+\item \texttt{summary.csv}: grades are given for the ten rows of the current run grid, which match the directories in \texttt{runs/}.
+  The first four rows come from earlier \texttt{claude-haiku-5-5} launches, including two with run index 2. Their outputs are no longer
+  on disk because later runs overwrote them, so their grade field is left blank.
+\end{itemize}
+
+\end{document}

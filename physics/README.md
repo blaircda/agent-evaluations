@@ -1,6 +1,6 @@
 # Agent Evaluations: Physics
 
-## Basic set-up
+### Basic set-up
 
 The basic set-up involves the following:  
 
@@ -28,6 +28,14 @@ AGENT-LAUNCHING SCRIPTS:
 > - `summary.tex`, `summary.pdf` agent generated summary of the reports
 > - an extra log file saved to `logs/` (not included here) 
 
+### Current models tested
+
+Claude Haiku 5.5, Sonnet 5.5, Opus 5.5 
+
+Gemini 3.8 Flash, Gemini 4 Argon
+
+All at low and high effort levels.
+
 
 ## Task 1: reading and reporting on papers
 
@@ -40,8 +48,6 @@ Here I'm tasking agents to read a scientific paper (on string theory) and produc
 After running a variety of models on different effort levels, another agent produces a summary file breaking down what's recommended.
 
 From this you can observe qualitative differences between different models, as well as getting potentially useful research feedback.
-
-Initially only running different Claude models (Haiku 5.5, Sonnet 5.5, Opus 5.5).
 
 ### Template
 [research-paper-template](research-paper-template)
@@ -169,4 +175,7 @@ Contents:
 
 [exam-general-relativity](exam-general-relativity)
 
-I include this as an illustrative example; for the models tested it's clearly too easy to differentiate anything much except length of answer between different models.
+I include this as a representative example; for the models tested it's clearly too easy to differentiate anything much except length of answer between different models.
+
+- Poor performance by Claude Haiku 5.5 low with the grading agent taking off a half a mark for some arrows pointing in the wrong direction: I would probably restore this on appeal...
+- Even poorer performance by the human examiner (me), with the grading agent catching a number of typos in the references solutions. 
