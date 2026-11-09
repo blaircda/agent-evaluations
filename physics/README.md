@@ -117,6 +117,7 @@ Then:
 `cd research-paper-commented-prompt-injection`
 
 `python3 launch_agent_grid.py`
+
 `python3 launch_agent_summary.py`
 
 Only 1 of 10 agents tested fell for the prompt injection -- this was Gemini 3.8 Flash High.
