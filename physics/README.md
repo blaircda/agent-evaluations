@@ -178,4 +178,4 @@ Contents:
 I include this as a representative example; for the models tested it's clearly too easy to differentiate anything much except length of answer between different models.
 
 - Poor performance by Claude Haiku 5.5 low with the grading agent taking off a half a mark for some arrows pointing in the wrong direction: I would probably restore this on appeal...
-- Even poorer performance by the human examiner (me), with the grading agent catching a number of typos in the references solutions. 
+- Even poorer performance by the human examiner (me), with the grading agent catching a number of typos in the reference solutions. 
