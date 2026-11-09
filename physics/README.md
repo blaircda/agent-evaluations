@@ -155,10 +155,10 @@ Contents:
 `solutions.tex` replace with your own exam solutions tex file
 
 `launch_agent_grid.py` script which runs agents to write answers to `exam.tex` and outputs a summary of the run data. The outputs of the `launch_agent_grid.py` are:
-> -`logs/` (not included here) JSON lines log files with the output streams of each agent run
-> -`runs/` a directory for each agent run, named according to the model and effort level, containing a copy of `AGENTS.md` and `exam.tex` and the agent's report as `answers.tex` and `answers.pdf`
-> -`summary.csv` data summary: model, effort, time, output tokens, API cost..., and LLM-marked grades
-> -`summary.txt` agent text output summary, extracted from the logs
+> - `logs/` (not included here) JSON lines log files with the output streams of each agent run
+> - `runs/` a directory for each agent run, named according to the model and effort level, containing a copy of `AGENTS.md` and `exam.tex` and the agent's report as `answers.tex` and `answers.pdf`
+> - `summary.csv` data summary: model, effort, time, output tokens, API cost..., and LLM-marked grades
+> - `summary.txt` agent text output summary, extracted from the logs
 
 `launch_agent_summary.py` script which runs a single agent to summarise grade the exam answers saved to the `runs` directory. The outputs of `launch_agent_summary.py` are:
 > - `summary.tex`, `summary.pdf` summary of the grades
