@@ -36,7 +36,7 @@ Each experiment uses a small number of Python scripts to automatically launch an
 
 `launch_agent_grid.py` script which runs agents to follow `AGENTS.md` and work with files, and outputs a summary of the run data. In practice, the agent run happens in a clean working directory outside of the experimental folder, to prevent the experimental setup being visible to the agent. At the end of the agent run, the results are copied back.
 The outputs of `launch_agent_grid.py` are:
-> - `logs/` JSON lines log files with the output streams of each agent run
+> - `logs/` JSON lines log files with the output streams of each agent run (not uploaded here)
 > - `runs/` a directory for each agent run, named according to the model and effort level, containing a copy of all agent inputs and whatever outputs they generate directly
 > `summary.csv` data summary: model, effort, time, output tokens...
 > `summary.txt` agent text output summary, extracted from the logs
@@ -45,7 +45,7 @@ The outputs of `launch_agent_grid.py` are:
 
 `launch_agent_summary.py` script which runs a single agent to assess or summarise the work of the agents saved to the `runs` directory, perhaps modifying `summary.csv` and generating some or all of the following:
 > - `summary.md` agent generated summary
-> - an extra log file saved to `logs/` (not included here)
+> - an extra log file saved to `logs/` (not uploaded here)
 
 ## Physics evaluations
 
@@ -56,7 +56,9 @@ The outputs of `launch_agent_grid.py` are:
 [Link to code and results](physics/exam-general-relativity)
 
 I assigned 12 agents across different models with an actual General Relativity exam, which I had set for Masters students in Brussels and Antwerp in 2020.
-They all perform extremely well - unsurprisingly at this point.
+They all perform extremely well - perhaps unsurprisingly at this point.
+
+Future follow-up: find some harder questions, or weaker models!
 
 ### How do different agents evaluate the same article?
 
@@ -64,7 +66,7 @@ They all perform extremely well - unsurprisingly at this point.
 
 I ran multiple evaluations  (2 agents and 2 effort levels per 5 models) of a research paper from my physics career, asking for a report containing 1) the principal achievement, 2) the principal drawback, 3) the most worthwhile next research goal to pursue taking into account feasibility and impact.
 The reports were fairly uniform on 1) and 2), with somewhat differing emphases, and varied more on 3).
-For this, the problem selection breakdown (ignore the technical columns), with my comments, was: 
+For this, the problem selection breakdown, with my comments, was: 
 
 | model | effort | SUGRA++ | Quant. Holo|TTbar - 3d|TTbar - NonAb|TTbar - Cutoff|TTbar - D1D5|TTbar - position|
 |---|---|---|---|---|---|---|---|---|
@@ -82,7 +84,7 @@ me | debatable| interesting; feasible (for me); already done some | highest impa
 
 Qualitative observations:
 
-The different columns here correspond to different physics directions - do not worry about the meanings.
+The different columns here correspond to different physics directions - apologies for the unavoidably technical headers.
 I have arranged them in order of roughly how feasible/interesting they are to me from left to right.
 Some weak clustering can be detected based on this - one expects there is a correlation between the future problems posed in the paper (reflecting my own biases) and the choices of the agents. A future version of this experiment could delete the Conclusions section of the paper beforehand.
 
