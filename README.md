@@ -65,6 +65,21 @@ They all perform extremely well - unsurprisingly at this point.
 I ran multiple evaluations of a research paper from my physics career, asking for a report containing 1) the principal achievement, 2) the principal drawback, 3) the most worthwhile next research goal to pursue taking into account feasibility and impact.
 The main interest here is the qualitative differences observable in which problems different agents choose to select for future research.
 
+Average duration, calls and output token data for this case:
+
+|                               |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
+|:---------------------|-------:|---------------:|--------------:|-------------:|------------------:|----------------:|
+| claude-haiku-5-5|high  |        98.5088 |          13.5 |         15   |           13176.5 |         19273   |
+|                 |low   |        35.8378 |           8.5 |         10.5 |            1767   |          5965   |
+| claude-opus-5-5|high   |       318.714  |          13   |         14.5 |            3852   |         10733.5 |
+|                 |low    |        50.9618 |           8.5 |          8   |             111.5 |          3821   |
+| claude-sonnet-5-5|high |        40.9385 |           6   |          7.5 |             746   |          4908.5 |
+|                 |low  |        23.2186 |           5   |          5   |              74   |          2742   |
+| gemini-3.8-flash|high  |       355.36   |          40.5 |         39.5 |           10421   |         24528   |
+|                 |low   |       103.365  |          20   |         18.5 |               0   |          4454.5 |
+| gemini-4-argon|high    |       384.943  |          17.5 |         22   |           11299.5 |         20290   |
+|                 |low     |       147.759  |          11.5 |         14.5 |               0   |          4412   |
+
 ### How do agents deal with commented prompt injections?
 
 [Link](physics/research-paper-commented-prompt-injection)
@@ -117,10 +132,10 @@ The most noticeable feature here is that all Claude models opted for the same ba
 
 If interested, one can further classify and study the implementations in each case, using the [summary CSV file](finance/data-cashflows-simple-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-simple-irr/runs).
 
-One can also compare the **averaged performance data**:
+Average duration, calls and output token data for this case:
 
 |    model | effort                           |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
-|:------------------------------|---------------:|--------------:|-------------:|------------------:|----------------:|
+|:----------------------|--------|---------------:|--------------:|-------------:|------------------:|----------------:|
 | claude-haiku-5-5|high  |       17.7529  |           3.8 |          3.6 |            1675.6 |          3050.8 |
 |  |low   |       12.0276  |           3   |          3   |             664.2 |          1829.2 |
 | claude-opus-5-5|high   |       16.9421  |           3.8 |          3.4 |             171.2 |          1489.4 |
@@ -162,7 +177,7 @@ claude-haiku-5-5 |  high|    library|      3|
 Whereas before all Claude models opted for the same approach, now all Gemini models chose a uniform approach (based on numpy-financial) while the Claude models showed greater variability.
 Again one can go deeper into the specific implementations from this starting point, using the [summary CSV file](finance/data-cashflows-mixed-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-mixed-irr/runs).
 
-Average performance data for this case:
+Average duration, calls and output token data for this case:
 
 |       model                |    effort    |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
 |:----------------------|--------|---------------:|--------------:|-------------:|------------------:|----------------:|
