@@ -1,51 +1,51 @@
-model,effort,run,exit,wall_seconds,status,n_results,model_calls,tool_calls,model_seconds,input_fresh,input_cached,output_tokens,thinking_tokens,method
-claude-haiku-5-5,low,1,0,23.74820068700501,success,1,5,4,21.22,17402,100342,3730,2027,"grid scan + bisection, closest to zero"
-claude-haiku-5-5,low,2,0,26.22987559199828,success,1,7,6,22.733,13891,155483,3641,939,"grid scan + bisection, closest to zero"
-claude-haiku-5-5,low,3,0,18.88928466699872,success,1,4,4,17.384,16758,75100,3356,1971,"grid scan + bisection, lowest root"
-claude-haiku-5-5,low,4,0,30.33795375200134,success,1,7,8,28.787,9218,167649,5668,2293,"grid scan + bisection, closest to zero"
-claude-haiku-5-5,low,5,0,16.63092472199787,success,1,3,3,15.356,3871,61881,2947,1774,"grid scan + bisection, lowest root"
-claude-haiku-5-5,high,1,0,29.143620923998242,success,1,5,5,27.726,16362,109176,5406,3725,"polynomial roots (np.roots), closest to zero"
-claude-haiku-5-5,high,2,0,43.05974193599832,success,1,7,7,33.789,9658,169334,6535,4352,"grid scan + bisection, closest to zero"
-claude-haiku-5-5,high,3,0,41.15499460899446,success,1,7,6,39.066,11923,180012,7631,4698,"grid scan + bisection, closest to zero"
-claude-haiku-5-5,high,4,0,55.26612903199566,success,1,5,4,34.56,10027,116103,6988,4940,"polynomial roots (np.roots), closest to zero"
-claude-haiku-5-5,high,5,0,49.98012664700218,success,1,8,7,39.43,11042,201292,7406,4678,"polynomial roots (np.roots), closest to zero"
-claude-sonnet-5-5,low,1,0,15.451150817993039,success,1,3,2,9.134,12811,49265,1007,222,"grid scan + bisection, closest to zero"
-claude-sonnet-5-5,low,2,0,11.854357133001031,success,1,3,2,8.744,867,61351,930,0,"grid scan + bisection, closest to zero"
-claude-sonnet-5-5,low,3,0,20.016887321995455,success,1,6,5,18.038,3966,124231,1977,301,"grid scan + bisection, lowest non-negative root"
-claude-sonnet-5-5,low,4,0,9.111227740999311,success,1,3,2,7.758,749,61351,753,126,"polynomial roots (np.roots), closest to zero"
-claude-sonnet-5-5,low,5,0,10.773857692998718,success,1,3,2,8.762,568,61351,953,143,"grid scan + bisection, closest to zero"
-claude-sonnet-5-5,high,1,0,14.238559837001958,success,1,4,3,12.383,11847,73082,1519,531,"polynomial roots (np.roots), closest to zero"
-claude-sonnet-5-5,high,2,0,14.103489853994688,success,1,3,2,12.122,3678,59354,1489,240,"polynomial roots (np.roots), closest to zero"
-claude-sonnet-5-5,high,3,0,25.374441802996444,success,1,4,3,14.021,1645,84212,1668,386,"grid scan + bisection, closest to zero"
-claude-sonnet-5-5,high,4,0,12.540824038995197,success,1,4,3,10.76,3840,81558,1219,179,"polynomial roots (np.roots), closest to zero"
-claude-sonnet-5-5,high,5,0,14.232298151000577,success,1,4,3,12.105,1449,83594,1391,421,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,low,1,0,35.71812052399764,success,1,8,9,33.544,14886,161655,2471,331,"grid scan + bisection, closest to zero"
-claude-opus-5-5,low,2,0,26.156724249005492,success,1,5,4,24.185,2270,104628,1685,323,"grid scan + bisection, closest to zero"
-claude-opus-5-5,low,3,0,42.51133717199991,success,1,9,9,40.063,3200,195295,2679,562,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,low,4,0,22.592849569002283,success,1,4,5,21.362,2031,83159,1674,201,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,low,5,0,30.865673754000454,success,1,4,5,23.982,2422,83152,2026,334,"grid scan + bisection, closest to zero"
-claude-opus-5-5,high,1,0,25.37057309899683,success,1,4,4,23.605,12090,74703,1941,391,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,high,2,0,25.160274112997286,success,1,4,4,23.824,2514,84446,2035,789,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,high,3,0,31.1419951650023,success,1,6,5,29.604,3703,132910,2335,720,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,high,4,0,26.940589286998147,success,1,4,3,25.468,3642,81679,1501,213,"polynomial roots (np.roots), closest to zero"
-claude-opus-5-5,high,5,0,29.077424910996342,success,1,5,4,27.07,2624,108174,2171,474,"polynomial roots (np.roots), closest to zero"
-gemini-3.8-flash,low,1,0,383.1314039459976,success,1,71,70,280.547348751,302384,2137582,9104,0,numpy_financial.irr
-gemini-3.8-flash,low,2,0,112.09402602200134,success,1,35,35,97.630518159,184382,496539,3736,0,numpy_financial.irr
-gemini-3.8-flash,low,3,0,299.36228138700244,success,1,84,83,284.106057412,339032,2850679,15705,0,numpy_financial.irr
-gemini-3.8-flash,low,4,0,89.0787113999977,success,1,27,26,77.894817811,152255,299721,2898,0,numpy_financial.irr
-gemini-3.8-flash,low,5,0,148.73174632700102,success,1,46,45,133.046766238,282164,839774,4868,0,numpy_financial.irr
-gemini-3.8-flash,high,1,0,251.81429665500036,success,1,45,44,234.541983666,183850,1126205,20223,15446,numpy_financial.irr
-gemini-3.8-flash,high,2,0,276.498809839999,success,1,61,60,257.114846251,243000,2232611,18093,12188,numpy_financial.irr
-gemini-3.8-flash,high,3,0,232.3274880989993,error,1,41,40,216.532757269,173754,946185,21920,17517,numpy_financial.irr
-gemini-3.8-flash,high,4,0,373.91842603799887,success,1,54,53,339.750698846,293646,1652559,29577,22687,numpy_financial.irr
-gemini-3.8-flash,high,5,0,241.3524829329981,success,1,44,43,230.19966318,196423,1405916,19305,14792,numpy_financial.irr
-gemini-4-argon,low,1,0,52.59758579499612,success,1,7,6,42.940465767999996,25320,69682,962,0,numpy_financial.irr
-gemini-4-argon,low,2,0,56.10587946799933,success,1,7,6,45.757960924,22321,45926,1147,0,numpy_financial.irr
-gemini-4-argon,low,3,0,129.19918339099968,success,1,11,11,113.453078946,35072,104193,1486,0,numpy_financial.irr
-gemini-4-argon,low,4,0,87.75030268300179,success,1,10,9,71.287130272,31037,93655,1062,0,numpy_financial.irr
-gemini-4-argon,low,5,0,110.16710154699831,success,1,12,11,92.355984109,36708,116226,1417,0,numpy_financial.irr
-gemini-4-argon,high,1,0,248.0356041039995,success,1,12,12,231.506012531,39321,150466,7976,6061,numpy_financial.irr
-gemini-4-argon,high,2,0,135.9511029619971,success,1,12,12,117.397136026,39228,159643,6223,4869,numpy_financial.irr
-gemini-4-argon,high,3,0,227.01114012700418,success,1,16,16,203.835069201,47238,242767,11399,9275,numpy_financial.irr
-gemini-4-argon,high,4,0,168.33650327500072,success,1,14,14,147.643726617,46581,242359,8057,6054,numpy_financial.irr
-gemini-4-argon,high,5,0,211.23973375499918,success,1,14,14,192.635329523,42511,183660,8292,6687,numpy_financial.irr
+model,effort,run,exit,wall_seconds,status,n_results,model_calls,tool_calls,model_seconds,input_fresh,input_cached,output_tokens,thinking_tokens
+claude-haiku-5-5,low,1,0,23.74820068700501,success,1,5,4,21.22,17402,100342,3730,2027
+claude-haiku-5-5,low,2,0,26.22987559199828,success,1,7,6,22.733,13891,155483,3641,939
+claude-haiku-5-5,low,3,0,18.88928466699872,success,1,4,4,17.384,16758,75100,3356,1971
+claude-haiku-5-5,low,4,0,30.33795375200134,success,1,7,8,28.787,9218,167649,5668,2293
+claude-haiku-5-5,low,5,0,16.63092472199787,success,1,3,3,15.356,3871,61881,2947,1774
+claude-haiku-5-5,high,1,0,29.143620923998242,success,1,5,5,27.726,16362,109176,5406,3725
+claude-haiku-5-5,high,2,0,43.05974193599832,success,1,7,7,33.789,9658,169334,6535,4352
+claude-haiku-5-5,high,3,0,41.15499460899446,success,1,7,6,39.066,11923,180012,7631,4698
+claude-haiku-5-5,high,4,0,55.26612903199566,success,1,5,4,34.56,10027,116103,6988,4940
+claude-haiku-5-5,high,5,0,49.98012664700218,success,1,8,7,39.43,11042,201292,7406,4678
+claude-sonnet-5-5,low,1,0,15.451150817993039,success,1,3,2,9.134,12811,49265,1007,222
+claude-sonnet-5-5,low,2,0,11.854357133001031,success,1,3,2,8.744,867,61351,930,0
+claude-sonnet-5-5,low,3,0,20.016887321995455,success,1,6,5,18.038,3966,124231,1977,301
+claude-sonnet-5-5,low,4,0,9.111227740999311,success,1,3,2,7.758,749,61351,753,126
+claude-sonnet-5-5,low,5,0,10.773857692998718,success,1,3,2,8.762,568,61351,953,143
+claude-sonnet-5-5,high,1,0,14.238559837001958,success,1,4,3,12.383,11847,73082,1519,531
+claude-sonnet-5-5,high,2,0,14.103489853994688,success,1,3,2,12.122,3678,59354,1489,240
+claude-sonnet-5-5,high,3,0,25.374441802996444,success,1,4,3,14.021,1645,84212,1668,386
+claude-sonnet-5-5,high,4,0,12.540824038995197,success,1,4,3,10.76,3840,81558,1219,179
+claude-sonnet-5-5,high,5,0,14.232298151000577,success,1,4,3,12.105,1449,83594,1391,421
+claude-opus-5-5,low,1,0,35.71812052399764,success,1,8,9,33.544,14886,161655,2471,331
+claude-opus-5-5,low,2,0,26.156724249005492,success,1,5,4,24.185,2270,104628,1685,323
+claude-opus-5-5,low,3,0,42.51133717199991,success,1,9,9,40.063,3200,195295,2679,562
+claude-opus-5-5,low,4,0,22.592849569002283,success,1,4,5,21.362,2031,83159,1674,201
+claude-opus-5-5,low,5,0,30.865673754000454,success,1,4,5,23.982,2422,83152,2026,334
+claude-opus-5-5,high,1,0,25.37057309899683,success,1,4,4,23.605,12090,74703,1941,391
+claude-opus-5-5,high,2,0,25.160274112997286,success,1,4,4,23.824,2514,84446,2035,789
+claude-opus-5-5,high,3,0,31.1419951650023,success,1,6,5,29.604,3703,132910,2335,720
+claude-opus-5-5,high,4,0,26.940589286998147,success,1,4,3,25.468,3642,81679,1501,213
+claude-opus-5-5,high,5,0,29.077424910996342,success,1,5,4,27.07,2624,108174,2171,474
+gemini-3.8-flash,low,1,0,383.1314039459976,success,1,71,70,280.547348751,302384,2137582,9104,0
+gemini-3.8-flash,low,2,0,112.09402602200134,success,1,35,35,97.630518159,184382,496539,3736,0
+gemini-3.8-flash,low,3,0,299.36228138700244,success,1,84,83,284.106057412,339032,2850679,15705,0
+gemini-3.8-flash,low,4,0,89.0787113999977,success,1,27,26,77.894817811,152255,299721,2898,0
+gemini-3.8-flash,low,5,0,148.73174632700102,success,1,46,45,133.046766238,282164,839774,4868,0
+gemini-3.8-flash,high,1,0,251.81429665500036,success,1,45,44,234.541983666,183850,1126205,20223,15446
+gemini-3.8-flash,high,2,0,276.498809839999,success,1,61,60,257.114846251,243000,2232611,18093,12188
+gemini-3.8-flash,high,3,0,232.3274880989993,error,1,41,40,216.532757269,173754,946185,21920,17517
+gemini-3.8-flash,high,4,0,373.91842603799887,success,1,54,53,339.750698846,293646,1652559,29577,22687
+gemini-3.8-flash,high,5,0,241.3524829329981,success,1,44,43,230.19966318,196423,1405916,19305,14792
+gemini-4-argon,low,1,0,52.59758579499612,success,1,7,6,42.940465767999996,25320,69682,962,0
+gemini-4-argon,low,2,0,56.10587946799933,success,1,7,6,45.757960924,22321,45926,1147,0
+gemini-4-argon,low,3,0,129.19918339099968,success,1,11,11,113.453078946,35072,104193,1486,0
+gemini-4-argon,low,4,0,87.75030268300179,success,1,10,9,71.287130272,31037,93655,1062,0
+gemini-4-argon,low,5,0,110.16710154699831,success,1,12,11,92.355984109,36708,116226,1417,0
+gemini-4-argon,high,1,0,248.0356041039995,success,1,12,12,231.506012531,39321,150466,7976,6061
+gemini-4-argon,high,2,0,135.9511029619971,success,1,12,12,117.397136026,39228,159643,6223,4869
+gemini-4-argon,high,3,0,227.01114012700418,success,1,16,16,203.835069201,47238,242767,11399,9275
+gemini-4-argon,high,4,0,168.33650327500072,success,1,14,14,147.643726617,46581,242359,8057,6054
+gemini-4-argon,high,5,0,211.23973375499918,success,1,14,14,192.635329523,42511,183660,8292,6687

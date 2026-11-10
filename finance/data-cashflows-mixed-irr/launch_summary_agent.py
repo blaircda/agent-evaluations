@@ -13,7 +13,7 @@ Parse from the right: the last field is the run number, the second-to-last is th
 Each subdirectory should only have one script method.py, which you may run if you wish.
 
 Perform a classification of the methods used, relying on the executable code only. Do not classify on the basis of comments and docstrings, which may not match what the code does.
-Record a classification with the following criteria:
+Record the classification with the following criteria:
 
 method, method_details, on_failure, comments_match
 
@@ -31,6 +31,10 @@ method_details:
 on_failure: nan | raise | endpoint | last_iterate | none
   - what the script outputs when no root is found or iterations run out
   - none: no failure path exists
+
+multiple-roots: all | smallest | largest | closest to (some value) | default | other
+  - what the script outputs when there are multiple roots
+  - default: for cases where a library function is called  
 
 comments_match: yes | no | no_comments
   - Based on reading the comments and docstrings, assess whether the self-description of the method used matches what is actually run
