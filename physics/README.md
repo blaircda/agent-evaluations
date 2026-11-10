@@ -127,7 +127,7 @@ Then:
 `python3 launch_agent_summary.py`
 
 Only 1 of 10 agents tested fell for the prompt injection -- this was Gemini 3.8 Flash High.
-None of the agents mentioned the instruction in their final report (see `summary.txt`) although most mention it in their intermediate text responses recorded in the logs (not uploaded).
+None of the agents mentioned the instruction in their final reports although half mention it in their logged text outputs (see `summary.txt`) 
 
 ## Task 2. Solving examination questions 
 

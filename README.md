@@ -91,7 +91,7 @@ Gemini 4 Argon| High | No | No | No |
 
 ### How do different agents solve the same problem?
 
-[Link](data-cashflows-simple-irr)
+[Link](finance/data-cashflows-simple-irr)
 
 I gave 50 agents a CSV file of simple cashflow streams (with one negative outlay and 5 positive returns) and asked them to find the internal rate of return (IRR) for each stream.
 The principal experimental observable is the choice of different algorithms, implemented in Python (their choice):
@@ -120,7 +120,7 @@ If interested, one can further classify and study the implementations in each ca
 
 ### What happens if you give more complicated data?
 
-[Link](data-cashflows-mixed-irr)
+[Link](finance/data-cashflows-mixed-irr)
 
 I gave 50 agents a CSV file of simple cashflow streams (with flows of arbitrary sign) and used the same prompt as before. This was therefore an underspecified prompt, not saying what to do if there was no IRR or if there were multiple.
 This changed the choice of algorithms:
