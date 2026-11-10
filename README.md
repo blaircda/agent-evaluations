@@ -188,7 +188,7 @@ Average duration, calls and output token data for this case:
 
 [Link to code and results](finance/data-cashflows-mixed-irr)
 
-I gave 50 agents a CSV file of simple cashflow streams (with flows of arbitrary sign) and used the same prompt as before. This was therefore an underspecified prompt, not saying what to do if there was no IRR or if there were multiple.
+I gave 50 agents a CSV file of less simple cashflow streams (including a set with flows of arbitrary sign) and used the same prompt as before. This was therefore an underspecified prompt, not saying what to do if there was no IRR or if there were multiple.
 This changed the choice of algorithms:
 
 |model|effort|method|count|
