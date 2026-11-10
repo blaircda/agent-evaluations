@@ -1,6 +1,6 @@
 # Agent Evaluations: Physics
 
-See the [main README](main README) for the summary of the results of these experiments.
+See the [main README](../README.md) for the summary of the results of these experiments.
 
 ### Basic set-up
 

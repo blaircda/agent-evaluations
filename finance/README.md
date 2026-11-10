@@ -1,6 +1,6 @@
 # Agent Evaluations: Data/coding for finance
 
-See the [main README](main README) for the summary of the results of these experiments.
+See the [main README](../README.md) for the summary of the results of these experiments.
 
 ## Task: calculating internal rates of return for cashflow streams
 
