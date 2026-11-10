@@ -26,7 +26,7 @@ The basic set-up involves the following ingredients.
 
 Files: for instance, `data.csv` containing data, or `paper.tex` containing a scientific article
 
-**AUTOMATIC LAUNCHERS**
+**AUTOMATIC LAUNCHERS:**
 
 Each experiment uses a small number of Python scripts to automatically launch and record the performance and outputs of different agents.
 
@@ -62,10 +62,37 @@ They all perform extremely well - unsurprisingly at this point.
 
 [Link to code and results](physics/research-paper-matrix-reloaded)
 
-I ran multiple evaluations of a research paper from my physics career, asking for a report containing 1) the principal achievement, 2) the principal drawback, 3) the most worthwhile next research goal to pursue taking into account feasibility and impact.
-The main interest here is the qualitative differences observable in which problems different agents choose to select for future research.
+I ran multiple evaluations  (2 agents and 2 effort levels per 5 models) of a research paper from my physics career, asking for a report containing 1) the principal achievement, 2) the principal drawback, 3) the most worthwhile next research goal to pursue taking into account feasibility and impact.
+The reports were fairly uniform on 1) and 2), with somewhat differing emphases, and varied more on 3).
+For this, the problem selection breakdown, with my comments, was: 
 
-Average duration, calls and output token data for this case:
+| model | effort | SUGRA++ | Quant. Holo - specific example|TTbar - 3d|TTbar - NonAb|TTbar - Cutoff|TTbar - D1D5|TTbar - position|
+|---|---|---|---|---|---|---|---|---|
+|claude-haiku-5.5|high|1||||||1|
+||low|1|||1|||
+|claude-sonnet-5.5|high|1|||1||||
+||low|2||||||
+|claude-opus-5.5|high||2||||||
+||low|||2||||
+|gemini-3.8-flash|high|||||1|1||
+||low||||2|||
+|gemini-4-argon|high|2|||||||
+||low|||2|||||
+me | debatable| interesting; feasible (for me); already done some | highest impact; feasible (with the right collaborators ) | very interesting; feasible (for me) | interesting; feasible but technical (for me) | unsure about this | unsure about this | unsure about this
+
+My subjective opinions on this: the most interesting precise physics suggestions came from Claude Opus 5.5 (High).
+The most surprising (to me) were those of Gemini 3.8 Flash (High).
+
+Some qualitative observations from the runs:
+
+Claude report filesize 4-9KB, average 6.3KB. More concise, less mathematical expressions. 
+Gemini report filesize 7-21KB, average 14KB. More verbose (unnecessary use of abstract, introduction, conclusion sections, often includes references, uncalled-for grandiose language like "Demystifying"), Really Fond of Capitalising Terms, more mathematical expressions.
+
+Claude's future problem choice was often framed in terms of specifically addressing a drawback of the paper - a natural follow-up would be to redo this experiment without asking for drawbacks.
+
+Various models reported not having read all of the paper - this could be quantified from the logs.
+
+Finally, average duration, calls and output token data for this case:
 
 |   model | effort                           |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
 |:----------------------|--------|---------------:|--------------:|-------------:|------------------:|----------------:|
@@ -79,6 +106,7 @@ Average duration, calls and output token data for this case:
 |                 |low   |       103.365  |          20   |         18.5 |               0   |          4454.5 |
 | gemini-4-argon|high    |       384.943  |          17.5 |         22   |           11299.5 |         20290   |
 |                 |low     |       147.759  |          11.5 |         14.5 |               0   |          4412   |
+
 
 ### How do agents deal with commented prompt injections?
 
