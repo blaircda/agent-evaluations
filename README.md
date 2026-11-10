@@ -115,7 +115,22 @@ The principal experimental observable is the choice of different algorithms, imp
 Here *library* means a library function (e.g. np.roots) was called rather than a custom function being written; *hybrid* means some combination of basic algorithms.
 The most noticeable feature here is that all Claude models opted for the same basic algorithm.
 
-If interested, one can further classify and study the implementations in each case.
+If interested, one can further classify and study the implementations in each case, using the [summary CSV file](finance/data-cashflows-simple-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-simple-irr/runs).
+
+One can also compare the **averaged performance data**:
+
+|    model | effort                           |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
+|:------------------------------|---------------:|--------------:|-------------:|------------------:|----------------:|
+| claude-haiku-5-5|high  |       17.7529  |           3.8 |          3.6 |            1675.6 |          3050.8 |
+|  |low   |       12.0276  |           3   |          3   |             664.2 |          1829.2 |
+| claude-opus-5-5|high   |       16.9421  |           3.8 |          3.4 |             171.2 |          1489.4 |
+|  |low    |       15.1578  |           3.6 |          3.2 |              77.2 |           930   |
+| claude-sonnet-5-5|high |        9.72976 |           3   |          2   |             153.4 |          1027   |
+|  |low  |        7.15257 |           3   |          2   |               0   |           623.6 |
+| gemini-3.8-flash|high  |      177.169   |          25.6 |         24.8 |            7073.4 |         10172.2 |
+|  |low   |       62.6862  |          15.6 |         14.8 |               0   |          1691   |
+| gemini-4-argon|high    |       60.9328  |           5.2 |          5.2 |            1404.4 |          2045   |
+| |low     |       38.9346  |           4.4 |          4.2 |               0   |           572.6 |
 
 
 ### What happens if you give more complicated data?
@@ -145,7 +160,22 @@ claude-haiku-5-5 |  high|    library|      3|
 |                 | low|     library|      5|
 
 Whereas before all Claude models opted for the same approach, now all Gemini models chose a uniform approach (based on numpy-financial) while the Claude models showed greater variability.
-Again one can go deeper into the specific implementations from this starting point.
+Again one can go deeper into the specific implementations from this starting point, using the [summary CSV file](finance/data-cashflows-mixed-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-mixed-irr/runs).
+
+Average performance data for this case:
+
+|       model                |    effort    |   wall_seconds |   model_calls |   tool_calls |   thinking_tokens |   output_tokens |
+|:----------------------|--------|---------------:|--------------:|-------------:|------------------:|----------------:|
+| claude-haiku-5-5|high  |        43.7209 |           6.4 |          5.8 |            4478.6 |          6793.2 |
+|  |low   |        23.1672 |           5.2 |          5   |            1800.8 |          3868.4 |
+| claude-opus-5-5|high   |        27.5382 |           4.6 |          4   |             517.4 |          1996.6 |
+|  |low    |        31.5689 |           6   |          6.4 |             350.2 |          2107   |
+| claude-sonnet-5-5|high |        16.0979 |           3.8 |          2.8 |             351.4 |          1457.2 |
+|  |low  |        13.4415 |           3.6 |          2.6 |             158.4 |          1124   |
+| gemini-3.8-flash|high  |       275.182  |          49   |         48   |           16526   |         21823.6 |
+|  |low   |       206.48   |          52.6 |         51.8 |               0   |          7262.2 |
+| gemini-4-argon|high    |       198.115  |          13.6 |         13.6 |            6589.2 |          8389.4 |
+|  |low     |        87.164  |           9.4 |          8.6 |               0   |          1214.8 |
 
 
 ### Future follow-ups
