@@ -1,5 +1,7 @@
 # Agent Evaluations: Physics
 
+See the [main README](main README) for the summary of the results of these experiments.
+
 ### Basic set-up
 
 The basic set-up involves the following:  
@@ -20,12 +22,12 @@ AGENT-LAUNCHING SCRIPTS:
 
 `launch_agent_grid.py` script which runs agents to follow `AGENTS.md` and work with files, and outputs a summary of the run data. The outputs of `launch_agent_grid.py` are:
 > - `logs/` (not included here) JSON lines log files with the output streams of each agent run
-> - `runs/` a directory for each agent run, named according to the model and effort level, containing a copy of `AGENTS.md` and `paper.tex` and the agent's report as `report.tex` and `report.pdf`
-> `summary.csv` data summary: model, effort, time, output tokens, API cost...
+> - `runs/` a directory for each agent run, named according to the model and effort level, containing a copy of `AGENTS.md` and `paper.tex` and the agent outputs
+> `summary.csv` data summary: model, effort, time, output tokens...
 > `summary.txt` agent text output summary, extracted from the logs
 
-`launch_agent_summary.py` script which runs a single agent to summarise the work of the agents saved to the `runs` directory. The outputs of `launch_agent_summary.py` will be similar to:
-> - `summary.tex`, `summary.pdf` agent generated summary of the reports
+`launch_summary_agent.py` script which runs a single agent to summarise the work of the agents saved to the `runs` directory. The outputs of `launch_summary_agent.py` will be similar to:
+> - `summary.tex`, `summary.pdf` agent-generated summary of the task results
 > - an extra log file saved to `logs/` (not included here) 
 
 ### Current models tested
@@ -35,7 +37,6 @@ Claude Haiku 5.5, Sonnet 5.5, Opus 5.5
 Gemini 3.8 Flash, Gemini 4 Argon
 
 All at low and high effort levels.
-
 
 ## Task 1: reading and reporting on papers
 
@@ -68,7 +69,7 @@ Contents:
 > `summary.csv` data summary: model, effort, time, output tokens, API cost...
 > `summary.txt` agent text output summary, extracted from the logs
 
-`launch_agent_summary.py` script which runs a single agent to summarise the reports saved to the `runs` directory. The outputs of `launch_agent_summary.py` are:
+`launch_summary_agent.py` script which runs a single agent to summarise the reports saved to the `runs` directory. The outputs of `launch_summary_agent.py` are:
 > - `summary.tex`, `summary.pdf` agent generated summary of the reports
 > - an extra log file saved to `logs/` (not included here) 
 
@@ -87,7 +88,7 @@ saving the arXiv source of [this paper](https://arxiv.org/abs/2410.03591) as `pa
 `cd research-paper-matrix-reloaded`
 
 `python3 launch_agent_grid.py`
-`python3 launch_agent_summary.py`
+`python3 launch_summary_agent.py`
  
 [research-paper-matrix-reloaded-earlier-version](research-paper-matrix-reloaded)
 
@@ -124,7 +125,7 @@ Then:
 
 `python3 launch_agent_grid.py`
 
-`python3 launch_agent_summary.py`
+`python3 launch_summary_agent.py`
 
 Only 1 of 10 agents tested fell for the prompt injection -- this was Gemini 3.8 Flash High.
 None of the agents mentioned the instruction in their final reports although half mention it in their logged text outputs (see `summary.txt`) 
@@ -150,7 +151,7 @@ Contents:
 > - `summary.csv` data summary: model, effort, time, output tokens, API cost..., and LLM-marked grades
 > - `summary.txt` agent text output summary, extracted from the logs
 
-`launch_agent_summary.py` script which runs a single agent to summarise grade the exam answers saved to the `runs` directory. The outputs of `launch_agent_summary.py` are:
+`launch_summary_agent.py` script which runs a single agent to summarise grade the exam answers saved to the `runs` directory. The outputs of `launch_summary_agent.py` are:
 > - `summary.tex`, `summary.pdf` summary of the grades
 > - `summary.csv` adds a grade field
 > - an extra log file saved to `logs/` (not included here) 
