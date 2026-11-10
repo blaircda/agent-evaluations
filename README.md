@@ -64,9 +64,9 @@ They all perform extremely well - unsurprisingly at this point.
 
 I ran multiple evaluations  (2 agents and 2 effort levels per 5 models) of a research paper from my physics career, asking for a report containing 1) the principal achievement, 2) the principal drawback, 3) the most worthwhile next research goal to pursue taking into account feasibility and impact.
 The reports were fairly uniform on 1) and 2), with somewhat differing emphases, and varied more on 3).
-For this, the problem selection breakdown, with my comments, was: 
+For this, the problem selection breakdown (ignore the technical columns), with my comments, was: 
 
-| model | effort | SUGRA++ | Quant. Holo - specific example|TTbar - 3d|TTbar - NonAb|TTbar - Cutoff|TTbar - D1D5|TTbar - position|
+| model | effort | SUGRA++ | Quant. Holo|TTbar - 3d|TTbar - NonAb|TTbar - Cutoff|TTbar - D1D5|TTbar - position|
 |---|---|---|---|---|---|---|---|---|
 |claude-haiku-5.5|high|1||||||1|
 ||low|1|||1|||
@@ -80,10 +80,14 @@ For this, the problem selection breakdown, with my comments, was:
 ||low|||2|||||
 me | debatable| interesting; feasible (for me); already done some | highest impact; feasible (with the right collaborators ) | very interesting; feasible (for me) | interesting; feasible but technical (for me) | unsure about this | unsure about this | unsure about this
 
-My subjective opinions on this: the most interesting precise physics suggestions came from Claude Opus 5.5 (High).
-The most surprising (to me) were those of Gemini 3.8 Flash (High).
+Qualitative observations:
 
-Some qualitative observations from the runs:
+The different columns here correspond to different physics directions - do not worry about the meanings.
+I have arranged them in order of roughly how feasible/interesting they are to me from left to right.
+Some weak clustering can be detected based on this - one expects there is a correlation between the future problems posed in the paper (reflecting my own biases) and the choices of the agents. A future version of this experiment could delete the Conclusions section of the paper beforehand.
+
+The most interesting (to me) and precise physics suggestions came from Claude Opus 5.5 (High).
+The most surprising (to me) were those of Gemini 3.8 Flash (High).
 
 Claude report filesize 4-9KB, average 6.3KB. More concise, less mathematical expressions. 
 Gemini report filesize 7-21KB, average 14KB. More verbose (unnecessary use of abstract, introduction, conclusion sections, often includes references, uncalled-for grandiose language like "Demystifying"), Really Fond of Capitalising Terms, more mathematical expressions.
@@ -91,6 +95,8 @@ Gemini report filesize 7-21KB, average 14KB. More verbose (unnecessary use of ab
 Claude's future problem choice was often framed in terms of specifically addressing a drawback of the paper - a natural follow-up would be to redo this experiment without asking for drawbacks.
 
 Various models reported not having read all of the paper - this could be quantified from the logs.
+
+I neither forbade nor encouraged web access in this experiment.
 
 Finally, average duration, calls and output token data for this case:
 
@@ -158,7 +164,7 @@ The principal experimental observable is the choice of different algorithms, imp
 Here *library* means a library function (e.g. np.roots) was called rather than a custom function being written; *hybrid* means some combination of basic algorithms.
 The most noticeable feature here is that all Claude models opted for the same basic algorithm.
 
-If interested, one can further classify and study the implementations in each case, using the [summary CSV file](finance/data-cashflows-simple-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-simple-irr/runs).
+If interested, one can further classify and study the implementations in each case, using the [summary CSV file](finance/data-cashflows-simple-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-simple-irr/runs)).
 
 Average duration, calls and output token data for this case:
 
@@ -203,7 +209,7 @@ claude-haiku-5-5 |  high|    library|      3|
 |                 | low|     library|      5|
 
 Whereas before all Claude models opted for the same approach, now all Gemini models chose a uniform approach (based on numpy-financial) while the Claude models showed greater variability.
-Again one can go deeper into the specific implementations from this starting point, using the [summary CSV file](finance/data-cashflows-mixed-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-mixed-irr/runs).
+Again one can go deeper into the specific implementations from this starting point, using the [summary CSV file](finance/data-cashflows-mixed-irr/summary.csv) (agent-generated, but verifiable against the [explicit saved agent runs](finance/data-cashflows-mixed-irr/runs)).
 
 Average duration, calls and output token data for this case:
 
@@ -221,6 +227,4 @@ Average duration, calls and output token data for this case:
 |  |low     |        87.164  |           9.4 |          8.6 |               0   |          1214.8 |
 
 
-### Future follow-ups
-
-Change the prompt AND the data.
+A future follow-up here will be to change the data AND the prompt.
